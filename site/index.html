@@ -446,68 +446,56 @@
   <div class="section-inner">
     <div class="section-eyebrow">PRICING</div>
     <h2>Honest pricing. <span class="compass-gradient-text">No "contact sales."</span></h2>
-    <div class="price-grid">
+    <div class="price-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:1100px;margin:0 auto;">
       <div class="price-card">
         <div class="price-tier">Free</div>
         <div class="price">$0</div>
-        <div class="price-sub">1 truck · forever free</div>
+        <div class="price-sub">1 driver · forever free</div>
         <ul>
           <li>Q&A on 100 skills</li>
           <li>Monthly safety meeting</li>
-          <li>Basic compliance calendar</li>
-          <li>Community support</li>
+          <li>Basic calendar</li>
+          <li>30 AI messages/mo</li>
         </ul>
         <a href="/app/signup.html?tier=free" class="ghost-cta">Start free</a>
       </div>
-      <div class="price-card">
-        <div class="price-tier">Starter</div>
-        <div class="price">$79<span>/mo</span></div>
-        <div class="price-sub">1–10 trucks · 14-day trial</div>
-        <ul>
-          <li>Everything in Free</li>
-          <li>Driver file management</li>
-          <li>SMS/email reminders</li>
-          <li>Document generation</li>
-        </ul>
-        <a href="/app/signup.html?tier=starter" class="compass-cta">Start trial</a>
-      </div>
       <div class="price-card featured">
         <div class="price-flag">Most popular</div>
-        <div class="price-tier">Pro</div>
-        <div class="price">$299<span>/mo</span></div>
-        <div class="price-sub">11–50 trucks · 14-day trial</div>
+        <div class="price-tier">Compass</div>
+        <div class="price">$10<span>/driver/mo</span></div>
+        <div class="price-sub">$49/mo minimum · auto-pause inactive</div>
         <ul>
-          <li>Everything in Starter</li>
-          <li>Audit prep generator</li>
-          <li>CSA monitoring + DataQ</li>
-          <li>ELD/MVR/Clearinghouse integrations</li>
-          <li>Custom workflows</li>
+          <li>Unlimited AI + workflows</li>
+          <li>Audit prep + DataQ + CSA</li>
+          <li>All integrations (ELD/MVR/etc.)</li>
+          <li>IFTA, 2290, maintenance</li>
+          <li>SMS + email reminders</li>
         </ul>
-        <a href="/app/signup.html?tier=pro" class="compass-cta">Start trial</a>
+        <a href="/app/signup.html?tier=pro" class="compass-cta">Start 14-day trial</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Enterprise</div>
-        <div class="price">$999<span>/mo</span></div>
-        <div class="price-sub">100+ trucks · all-inclusive</div>
+        <div class="price">From $2,500<span>/mo</span></div>
+        <div class="price-sub">Unlimited · custom contract</div>
         <ul>
-          <li>Unlimited trucks</li>
-          <li>Dedicated escalation + CSM</li>
-          <li>Premium SLA (4hr)</li>
+          <li>Unlimited drivers</li>
+          <li>Dedicated CSM + 4hr SLA</li>
           <li>SSO + custom integrations</li>
+          <li>White-glove onboarding</li>
+          <li>$5K+ for specialty fleets</li>
         </ul>
-        <a href="/app/signup.html?tier=enterprise" class="ghost-cta">Start trial</a>
+        <a href="mailto:joshua@x3fleetsafety.com?subject=Compass Enterprise" class="ghost-cta">Talk to us</a>
       </div>
       <div class="price-card partner">
         <div class="price-flag partner-flag">Partner</div>
         <div class="price-tier">Partner</div>
         <div class="price">$499<span>/mo flat</span></div>
-        <div class="price-sub">Unlimited seats · white-label</div>
+        <div class="price-sub">Unlimited carriers · white-label</div>
         <ul>
-          <li>For safety consultants + fractional SDs</li>
+          <li>For safety consultants</li>
           <li>White-label your brand</li>
           <li>Unlimited carrier clients</li>
-          <li>"First Carrier in 60 Days" sprint</li>
-          <li>Reseller license — keep 100%</li>
+          <li>Reseller — keep 100%</li>
         </ul>
         <a href="/partners.html" class="compass-cta">Apply</a>
       </div>
@@ -619,15 +607,12 @@ function updateROI() {
   const drivers = parseInt(document.getElementById('drivers').value);
   document.getElementById('trucks-out').textContent = trucks;
   document.getElementById('drivers-out').textContent = drivers;
-  let tier, monthly;
-  if (trucks <= 10) { tier = 'Starter $79/mo'; monthly = 79; }
-  else if (trucks <= 50) { tier = 'Pro $299/mo'; monthly = 299; }
-  else if (trucks <= 150) {
-    const overage = (trucks - 50) * 7;
-    monthly = 299 + overage;
-    tier = `Pro $299 + $${overage}/mo overage = $${monthly}/mo`;
+  let monthly = Math.max(49, drivers * 10);
+  let tier = drivers === 1 ? 'Free $0 (1 driver)' : `Compass $${monthly}/mo (${drivers} drivers × $10)`;
+  if (drivers >= 250) {
+    tier = 'Enterprise — Talk to us';
+    monthly = 2500;
   }
-  else { tier = 'Enterprise $999/mo (unlimited)'; monthly = 999; }
   const annual = monthly * 12;
   const sd = 130000;
   const savings = sd - annual;
