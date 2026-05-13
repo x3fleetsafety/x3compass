@@ -525,27 +525,110 @@ footer {
   .corpus-num { font-size: 64px; }
 }
 
-/* Brand wordmark — HTML text alongside icon-only SVG (bulletproof font rendering) */
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand-icon { flex-shrink: 0; display: block; }
-.brand-word {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-weight: 900;
-  font-size: 26px;
-  letter-spacing: -0.02em;
-  color: var(--compass-paper);
-  white-space: nowrap;
-  line-height: 1;
-}
-.brand-word:after {
-  content: '';
-}
+
 /* Use gradient on "Compass" portion via a sibling span when desired (handled inline) */
 
 /* Gradient styling on "Compass" portion of brand */
-.brand-word-accent {
+
+/* ========================================== */
+/*  BRAND LOGO — X3 box + COMPASS + tagline   */
+/* ========================================== */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand:hover { text-decoration: none; }
+
+/* The yellow X3 box (matches X3 Fleet Safety parent brand) */
+.brand-x3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0F2540;
+  color: #FBBF24;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(45, 212, 191, 0.35);
+  min-width: 48px;
+  min-height: 42px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.3);
+}
+
+/* The stacked wordmark + tagline */
+.brand-stack {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+/* COMPASS in gradient (current brand) */
+.brand-compass {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.04em;
   background: linear-gradient(90deg, #2DD4BF 0%, #22D3EE 50%, #8B5CF6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: 1;
+}
+
+/* Tagline in monospace caps (mirrors "EXPERT · EXPERIENCED · EXCEPTIONAL") */
+.brand-tag {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: #94A3B8;
+  line-height: 1;
+}
+
+/* Sidebar variant — slightly smaller for /app/ pages with 240px sidebar */
+.app-sidebar .brand {
+  padding: 24px 16px !important;
+  display: flex;
+}
+.app-sidebar .brand-x3 {
+  font-size: 18px;
+  padding: 8px 10px;
+  min-width: 40px;
+  min-height: 36px;
+}
+.app-sidebar .brand-compass {
+  font-size: 16px;
+}
+.app-sidebar .brand-tag {
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+/* Footer variant — minimal (no tagline) */
+.brand-footer .brand-stack {
+  gap: 0;
+}
+.brand-footer .brand-x3 {
+  font-size: 16px;
+  padding: 6px 10px;
+  min-width: 36px;
+  min-height: 32px;
+}
+.brand-footer .brand-compass {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .brand-tag { display: none; }
+  .brand-x3 { font-size: 18px; min-width: 42px; min-height: 38px; }
+  .brand-compass { font-size: 18px; }
 }

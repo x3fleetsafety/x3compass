@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" role="img" aria-label="X3 Compass">
+  <defs>
+    <linearGradient id="word-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="50%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- X3 box (navy with yellow X3) -->
+  <rect x="6" y="14" width="62" height="52" rx="6" fill="#0F2540" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.35"/>
+  <text x="37" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="-1" fill="#FBBF24">X3</text>
+
+  <!-- COMPASS in gradient + tagline -->
+  <text x="86" y="46" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="30" letter-spacing="1" fill="url(#word-grad)">COMPASS</text>
+  <text x="86" y="64" font-family="ui-monospace, monospace" font-weight="700" font-size="8" letter-spacing="2" fill="#94A3B8">AUTOMATED · ACCURATE · AUDITED</text>
+</svg>

@@ -1,43 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="X3 Compass mark">
-  <defs>
-    <linearGradient id="cm-north" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#67E8F9"/>
-      <stop offset="100%" stop-color="#2DD4BF"/>
-    </linearGradient>
-    <linearGradient id="cm-east" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2DD4BF"/>
-      <stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-    <linearGradient id="cm-ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#67E8F9" stop-opacity="0.55"/>
-      <stop offset="50%" stop-color="#2DD4BF" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.55"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Outer ring (subtle, defines the compass face) -->
-  <circle cx="32" cy="32" r="29" stroke="url(#cm-ring)" stroke-width="2" fill="#0A1929"/>
-  <circle cx="32" cy="32" r="24.5" stroke="url(#cm-ring)" stroke-width="0.5" fill="none" opacity="0.5"/>
-
-  <!-- Four bold needle-arrows arranged as an X (45° from cardinal) -->
-  <!-- NE arrow (top-right) — bright teal -->
-  <path d="M32 32 L48 16 L44 28 Z" fill="url(#cm-north)"/>
-  <path d="M32 32 L48 16 L36 20 Z" fill="url(#cm-north)" opacity="0.55"/>
-
-  <!-- SE arrow (bottom-right) — cyan -->
-  <path d="M32 32 L48 48 L44 36 Z" fill="url(#cm-east)"/>
-  <path d="M32 32 L48 48 L36 44 Z" fill="url(#cm-east)" opacity="0.45"/>
-
-  <!-- SW arrow (bottom-left) — darker, less prominent -->
-  <path d="M32 32 L16 48 L20 36 Z" fill="#475569"/>
-  <path d="M32 32 L16 48 L28 44 Z" fill="#475569" opacity="0.6"/>
-
-  <!-- NW arrow (top-left) — darker -->
-  <path d="M32 32 L16 16 L20 28 Z" fill="#475569"/>
-  <path d="M32 32 L16 16 L28 20 Z" fill="#475569" opacity="0.6"/>
-
-  <!-- Center pivot — small bright dot with halo -->
-  <circle cx="32" cy="32" r="4" fill="#0A1929"/>
-  <circle cx="32" cy="32" r="2.5" fill="#2DD4BF"/>
-  <circle cx="32" cy="32" r="0.8" fill="#F8FAFC"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#0F2540" stroke="#2DD4BF" stroke-width="3" stroke-opacity="0.6"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="30" letter-spacing="-1" fill="#FBBF24">X3</text>
 </svg>
