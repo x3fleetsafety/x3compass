@@ -1,0 +1,8 @@
+name = "x3compass"
+pages_build_output_dir = "site"
+compatibility_date = "2026-05-13"
+
+# Custom domain config (set in Cloudflare dashboard, mirrored here for reference)
+# - x3compass.com (production)
+# - www.x3compass.com (redirect to apex)
+# - compass.x3fleetsafety.com (alias)

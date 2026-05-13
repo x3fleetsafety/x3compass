@@ -1,0 +1,108 @@
+/* X3 Compass — Brand Palette */
+:root {
+  /* Primary — Deep midnight navy (trust, regulation) */
+  --compass-ink:        #0A1929;
+  --compass-deep:       #0F2540;
+  --compass-navy:       #1B3A6B;
+
+  /* Accent — Bright compass-rose teal/cyan (direction, AI) */
+  --compass-teal:       #2DD4BF;
+  --compass-cyan:       #22D3EE;
+  --compass-glow:       #67E8F9;
+
+  /* Secondary — Soft violet (intelligence, premium tier) */
+  --compass-violet:     #8B5CF6;
+  --compass-lilac:      #C4B5FD;
+
+  /* Warm — Amber for warnings/highlights */
+  --compass-amber:      #FBBF24;
+  --compass-rust:       #F97316;
+
+  /* Neutrals */
+  --compass-paper:      #F8FAFC;
+  --compass-fog:        #E2E8F0;
+  --compass-mist:       #94A3B8;
+  --compass-slate:      #475569;
+  --compass-graphite:   #1E293B;
+  --compass-black:      #020617;
+
+  /* Type */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Type scale */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  48px;
+  --text-4xl:  64px;
+  --text-5xl:  80px;
+
+  /* Spacing */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Shadows */
+  --shadow-glow: 0 0 80px rgba(45, 212, 191, 0.35);
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient text — signature */
+.compass-gradient-text {
+  background: linear-gradient(90deg, var(--compass-teal) 0%, var(--compass-cyan) 50%, var(--compass-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glow button — CTA standard */
+.compass-cta {
+  background: linear-gradient(90deg, var(--compass-teal), var(--compass-cyan));
+  color: var(--compass-ink);
+  border: none;
+  padding: 14px 32px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.compass-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Section backgrounds */
+.compass-bg-dark {
+  background:
+    radial-gradient(ellipse at top, rgba(45, 212, 191, 0.10), transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.08), transparent 50%),
+    var(--compass-ink);
+  color: var(--compass-paper);
+}
+
+.compass-bg-paper {
+  background: var(--compass-paper);
+  color: var(--compass-graphite);
+}

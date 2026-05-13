@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X3 Compass — Sign up</title>
+<link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="compass-bg-dark">
+<header class="nav">
+  <a href="/" class="brand"><img src="/assets/logo.svg" alt="X3 Compass" height="36"></a>
+  <a href="/pricing.html" class="ghost-cta">See pricing</a>
+</header>
+<section style="max-width:520px;margin:0 auto;padding:80px 24px;">
+  <h1 class="hero-h1" style="font-size:36px;text-align:center;margin-bottom:16px;">Start your free Compass.</h1>
+  <p style="text-align:center;color:var(--compass-fog);margin-bottom:40px;">Self-serve. No card. 1 truck free forever.</p>
+  <form class="apply-form" method="post" action="/api/signup">
+    <input type="hidden" name="tier" value="" id="tier-input">
+    <input type="hidden" name="ref" value="" id="ref-input">
+    <label>Carrier name<input name="carrier_name" required placeholder="Apex Transport LLC"></label>
+    <label>Your name<input name="name" required></label>
+    <label>Email<input name="email" type="email" required></label>
+    <label>Phone<input name="phone" type="tel"></label>
+    <div class="form-row">
+      <label>DOT #<input name="dot_number" placeholder="optional"></label>
+      <label>State<input name="state" maxlength="2" placeholder="MI"></label>
+    </div>
+    <label>Number of trucks<input name="truck_count" type="number" min="1" value="1" required></label>
+    <button class="compass-cta-large" type="submit">Create my Compass →</button>
+    <p class="form-fine">By signing up you agree to our <a href="/legal.html">Terms</a> + <a href="/privacy.html">Privacy</a>. Compass is operational advice, not legal advice.</p>
+  </form>
+</section>
+<script>
+  // Pull ?tier= and ?ref= from URL into hidden fields
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('tier-input').value = params.get('tier') || 'free';
+  document.getElementById('ref-input').value = params.get('ref') || '';
+  // Persist affiliate ref in localStorage (30-day cookie window simulation)
+  if (params.get('ref')) {
+    localStorage.setItem('x3c_ref', params.get('ref'));
+    localStorage.setItem('x3c_ref_ts', Date.now().toString());
+  }
+</script>
+</body></html>

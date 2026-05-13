@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8,8)">
+    <circle cx="22" cy="22" r="20" stroke="url(#cg)" stroke-width="2" fill="none"/>
+    <circle cx="22" cy="22" r="2.5" fill="url(#cg)"/>
+    <path d="M22 4 L26 22 L22 40 L18 22 Z" fill="url(#cg)" opacity="0.95"/>
+    <path d="M4 22 L22 18 L40 22 L22 26 Z" fill="#67E8F9" opacity="0.6"/>
+    <line x1="22" y1="0" x2="22" y2="6" stroke="url(#cg)" stroke-width="1.5"/>
+    <line x1="22" y1="38" x2="22" y2="44" stroke="url(#cg)" stroke-width="1.5"/>
+  </g>
+  <text x="58" y="38" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#F8FAFC">X3 <tspan fill="url(#cg)">Compass</tspan></text>
+</svg>

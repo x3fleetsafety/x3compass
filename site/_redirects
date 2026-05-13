@@ -1,0 +1,16 @@
+# Clean URL routes
+/partners        /partners.html       200
+/affiliate       /affiliate.html      200
+/pricing         /pricing.html        200
+/mike            /mike.html           200
+/about           /about.html          200
+/faq             /faq.html            200
+
+# API proxy to Supabase Edge Functions (if needed)
+/api/compass-agent            https://YOUR-PROJECT.supabase.co/functions/v1/compass-agent  200
+/api/compass-onboarding       https://YOUR-PROJECT.supabase.co/functions/v1/compass-onboarding  200
+/api/partner-application      https://YOUR-PROJECT.supabase.co/functions/v1/partner-application  200
+/api/affiliate-application    https://YOUR-PROJECT.supabase.co/functions/v1/affiliate-application  200
+
+# Legacy / SEO
+/skills          https://github.com/x3fleetsafety/skills  302

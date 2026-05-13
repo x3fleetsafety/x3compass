@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ask Compass</title>
+<link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/app.css">
+</head>
+<body class="compass-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" height="32"></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html" class="active"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Compliance calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ disputes</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+</aside>
+
+<main class="app-main chat-main">
+  <header class="app-header">
+    <h1>Ask Compass</h1>
+    <p>Reviewed by Mike Perry. Every regulatory answer cites 49 CFR.</p>
+  </header>
+  <div class="chat-window" id="chat-window">
+    <div class="msg msg-asst">
+      <div class="msg-avatar">⚓︎</div>
+      <div class="msg-content">
+        <strong>Compass</strong>
+        <p>Hi, I'm Compass — your AI Safety Director. Ask me anything about DOT compliance, your fleet, or your customers.</p>
+        <p>Some popular questions to try:</p>
+        <ul style="margin-top:8px;">
+          <li>"When is the pre-employment Clearinghouse query required?"</li>
+          <li>"Draft a coaching message for a harsh-braking event."</li>
+          <li>"Help me prep for a new-entrant audit."</li>
+          <li>"This week's safety meeting topic?"</li>
+          <li>"My driver got a 392.2 speed violation — is it contestable?"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <form class="chat-input" id="chat-form">
+    <input type="text" id="chat-message" placeholder="Ask Compass anything..." autocomplete="off">
+    <button type="submit" class="compass-cta">Send</button>
+  </form>
+  <div class="chat-meta">
+    <span>⚓︎ Workflow: <select id="workflow-select" style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-fog);padding:4px 8px;border-radius:6px;font-size:12px;">
+      <option value="qa">Q&A</option>
+      <option value="audit_prep">Audit prep</option>
+      <option value="coaching_draft">Coaching draft</option>
+      <option value="safety_meeting">Safety meeting</option>
+      <option value="dataq_dispute">DataQ dispute</option>
+      <option value="doc_gen">Document generation</option>
+    </select></span>
+    <span>💸 Model auto-selected for cost (Haiku → Sonnet → Opus)</span>
+  </div>
+</main>
+
+<script>
+const win = document.getElementById('chat-window');
+const form = document.getElementById('chat-form');
+const input = document.getElementById('chat-message');
+const workflowSel = document.getElementById('workflow-select');
+let conversationId = null;
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const message = input.value.trim();
+  if (!message) return;
+  appendMsg('user', message);
+  input.value = '';
+  const thinking = appendMsg('asst', 'Thinking…');
+  try {
+    const r = await fetch('/api/compass-agent', {
+      method: 'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({
+        workflow: workflowSel.value,
+        message,
+        conversation_id: conversationId,
+      }),
+    });
+    const data = await r.json();
+    conversationId = data.conversation_id;
+    thinking.querySelector('.msg-content p').innerHTML = data.reply.replace(/\n/g, '<br>');
+    if (data.citations && data.citations.length) {
+      const cits = thinking.querySelector('.msg-content');
+      const div = document.createElement('div');
+      div.style.cssText = 'margin-top:12px;padding:8px 12px;background:rgba(45,212,191,0.08);border-radius:6px;font-size:12px;color:var(--compass-teal);';
+      div.innerHTML = '📖 ' + data.citations.map(c => c.cfr).join(' · ');
+      cits.appendChild(div);
+    }
+  } catch (e) {
+    thinking.querySelector('.msg-content p').textContent = 'Error: ' + e.message;
+  }
+});
+
+function appendMsg(role, text) {
+  const div = document.createElement('div');
+  div.className = `msg msg-${role}`;
+  div.innerHTML = `<div class="msg-avatar">${role === 'user' ? '🧑‍✈️' : '⚓︎'}</div><div class="msg-content"><strong>${role === 'user' ? 'You' : 'Compass'}</strong><p>${text}</p></div>`;
+  win.appendChild(div);
+  win.scrollTop = win.scrollHeight;
+  return div;
+}
+</script>
+</body></html>
