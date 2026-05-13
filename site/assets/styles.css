@@ -61,7 +61,7 @@ a:hover { color: var(--compass-cyan); }
   background: rgba(10, 25, 41, 0.6);
 }
 .nav .brand { display: flex; align-items: center; }
-.nav-links { display: flex; gap: 32px; }
+.nav-links { display: flex; gap: 28px; }
 .nav-links a {
   color: var(--compass-fog);
   font-weight: 500;
@@ -540,6 +540,7 @@ footer {
   text-decoration: none;
   line-height: 1;
 }
+.brand { margin-right: 40px; }
 .brand:hover { text-decoration: none; }
 
 /* The yellow X3 box (matches X3 Fleet Safety parent brand) */
@@ -551,13 +552,13 @@ footer {
   color: #0A1929;
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 900;
-  font-size: 34px;
+  font-size: 30px;
   letter-spacing: -0.04em;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 6px;
   border: 1.5px solid rgba(45, 212, 191, 0.5);
-  min-width: 58px;
-  min-height: 56px;
+  min-width: 52px;
+  min-height: 48px;
   flex-shrink: 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 16px rgba(45, 212, 191, 0.25);
   text-shadow: none;
@@ -575,7 +576,7 @@ footer {
 .brand-compass {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 0.04em;
   background: linear-gradient(90deg, #2DD4BF 0%, #22D3EE 50%, #8B5CF6 100%);
   -webkit-background-clip: text;
@@ -588,7 +589,7 @@ footer {
 .brand-tag {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   color: #E2E8F0;
   line-height: 1;
