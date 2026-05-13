@@ -5,4 +5,3 @@
 /api/affiliate-application    https://YOUR-PROJECT.supabase.co/functions/v1/affiliate-application  200
 
 # External redirects
-/skills          https://github.com/x3fleetsafety/skills  302

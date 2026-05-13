@@ -1,25 +1,796 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>X3 Compass — 100 open-source compliance skills</title>
-<link rel="icon" href="/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>The 100 Compliance Skills That Power X3 Compass</title>
+<meta name="description" content="Every skill Compass reasons over, organized by tier. 100 open-source DOT compliance skills, Apache 2.0, audited by senior FMCSA compliance veterans. Click any skill to read the source on GitHub.">
+<link rel="icon" href="/assets/logo-v2.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
-</head><body class="compass-bg-dark">
-<header class="nav"><a href="/" class="brand"><img src="/assets/logo.svg" alt="" width="44" height="44" class="brand-icon"><span class="brand-word">X3 <span class="brand-word-accent">Compass</span></span></a>
-<nav class="nav-links"><a href="/pricing.html">Pricing</a>
-<a href="/use-cases.html">Use cases</a>
-<a href="/how-it-works.html">How it works</a><a href="/partners.html">Partner</a><a href="/skills.html" style="color:var(--compass-teal);">Skills</a><a href="/affiliate.html">Affiliate</a></nav>
-<a href="/app/signup.html?tier=free" class="compass-cta">Start free →</a></header>
-<section style="max-width:1000px;margin:0 auto;padding:80px 48px;text-align:center;">
-<h1 class="hero-h1">100 open-source <span class="compass-gradient-text">compliance skills.</span></h1>
-<p class="hero-lede">Apache 2.0. Reviewed by our compliance review team. Powering every Compass answer.</p>
-<a href="https://github.com/x3fleetsafety/skills" class="compass-cta-large" style="margin-top:24px;">View on GitHub →</a>
-<div style="margin-top:64px;padding:32px;background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.25);border-radius:16px;">
-<p style="color:var(--compass-fog);margin:0;">The 100-skill corpus is the brain of Compass. Every skill is a markdown file with YAML frontmatter that any AI agent can read. Apache 2.0 means you can fork it, modify it, and use it commercially.</p>
-<p style="color:var(--compass-fog);margin:16px 0 0;">Why we made it open-source: every AI tool that gets DOT compliance right makes our customers' lives easier. We make money on the platform; we give away the knowledge.</p>
+<link rel="stylesheet" href="/assets/index-v2.css">
+<link rel="stylesheet" href="/assets/skills-catalog.css">
+</head>
+<body class="compass-bg-dark">
+
+<header class="nav">
+  <a href="/" class="brand"><img src="/assets/logo-v2.svg" alt="" width="44" height="44" class="brand-icon"><span class="brand-word">X3 <span class="brand-word-accent">Compass</span></span></a>
+  <nav class="nav-links">
+    <a href="/pricing.html">Pricing</a>
+    <a href="/partners.html">Partners</a>
+    <a href="/use-cases.html">Use cases</a>
+    <a href="/how-it-works.html">How it works</a>
+    <a href="/skills.html" style="color:var(--compass-teal);">100 skills</a>
+    <a href="/affiliate.html">Affiliate</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+  <a href="/app/signup.html?tier=free" class="compass-cta">Start free →</a>
+</header>
+
+<section class="hero hero-v2" style="padding:60px 24px 24px;">
+<div class="hero-inner">
+<div class="hero-badge"><span class="dot"></span> Apache 2.0 · 100 skills · public on GitHub</div>
+<h1 class="hero-h1" style="font-size:clamp(36px,5vw,64px);">Every compliance skill <span class="compass-gradient-text">that powers Compass.</span></h1>
+<p class="hero-lede">100 production compliance skills — audited by senior FMCSA compliance veterans, organized by tier, fully open-source. Every Compass answer is grounded on at least one of these. Click any skill to read the source.</p>
+<div class="catalog-stats">
+  <div><strong>100</strong> skills</div>
+  <div><strong>~12,000</strong> lines of regulatory content</div>
+  <div><strong>49 CFR</strong> Parts 40, 365, 382–399 covered</div>
+  <div><strong>Apache 2.0</strong> · fork freely</div>
 </div>
-<p style="margin-top:32px;color:var(--compass-mist);">Browse all 100 skills, tier by tier: <a href="https://github.com/x3fleetsafety/skills#available-skills">github.com/x3fleetsafety/skills</a></p>
+<div style="margin-top:32px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+  <input type="text" id="skill-search" placeholder="Filter all 100 skills…" class="skill-search-input"/>
+</div>
+</div>
 </section>
-<footer><div class="footer-inner"><div class="footer-col"><img src="/assets/logo.svg" alt="" width="44" height="44" class="brand-icon"><span class="brand-word">X3 <span class="brand-word-accent">Compass</span></span></div><div class="footer-col"><h4>Product</h4><a href="/pricing.html">Pricing</a></div><div class="footer-col"><h4>Company</h4></div><div class="footer-col"><h4>Legal</h4><a href="/legal.html">Terms</a></div></div><div class="footer-bottom">© 2026 X3 Fleet Safety LLC.</div></footer>
-</body></html>
+
+<section class="catalog">
+<div class="section-inner" style="padding-top:20px;">
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 1 — Foundational</h2>
+<p>Every motor carrier needs these eight. The bedrock of DOT compliance.</p>
+<div class="tier-count">8 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dot-compliance-fundamentals/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#001</div>
+    <h3>Dot Compliance Fundamentals</h3>
+    <p>Use this skill when the user asks anything that touches US Department of Transportation (DOT) or Federal Motor Carrier Safety Administration (FMCSA) regulation for commercial motor vehicles (CMVs) — including who's...</p>
+    <div class="skill-tile-link">dot-compliance-fundamentals →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-qualification-file/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#002</div>
+    <h3>Driver Qualification File</h3>
+    <p>Use this skill when the user asks about Driver Qualification Files (DQF) — what must be in a DQ file under 49 CFR 391, retention periods, what's required pre-hire vs ongoing, document expiration tracking,...</p>
+    <div class="skill-tile-link">driver-qualification-file →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/hours-of-service/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#003</div>
+    <h3>Hours Of Service</h3>
+    <p>Use this skill when the user asks about Hours of Service (HOS) rules under 49 CFR 395 — the 11-hour driving limit, 14-hour on-duty window, 60/70 hour rule, 30-minute break, 10-hour off-duty reset, 34-hour restart,...</p>
+    <div class="skill-tile-link">hours-of-service →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/eld-mandate-compliance/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#004</div>
+    <h3>Eld Mandate Compliance</h3>
+    <p>Use this skill when the user asks about Electronic Logging Device (ELD) compliance under 49 CFR 395.20-38 — ELD mandate, AOBRD vs ELD transition, ELD exemptions, ELD malfunctions, 8-day paper backup, ELD certification...</p>
+    <div class="skill-tile-link">eld-mandate-compliance →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/drug-and-alcohol-testing/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#005</div>
+    <h3>Drug And Alcohol Testing</h3>
+    <p>Use this skill when the user asks about commercial driver drug & alcohol testing under 49 CFR 382 + 40 — the six testing reasons (pre-employment, random, post-accident, reasonable suspicion, return-to-duty, follow-up),...</p>
+    <div class="skill-tile-link">drug-and-alcohol-testing →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fmcsa-clearinghouse-workflow/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#006</div>
+    <h3>Fmcsa Clearinghouse Workflow</h3>
+    <p>Use this skill when the user asks about the FMCSA Drug & Alcohol Clearinghouse — full vs limited query, pre-employment vs annual query, query credit purchasing, who has access (employers, drivers, MROs, SAPs, state...</p>
+    <div class="skill-tile-link">fmcsa-clearinghouse-workflow →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/medical-certification/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#007</div>
+    <h3>Medical Certification</h3>
+    <p>Use this skill when the user asks about CDL driver medical certification — 49 CFR 391.41-49 medical qualifications, medical examiner's certificate (Long Form 5876 + Short Form 5875), National Registry of Certified...</p>
+    <div class="skill-tile-link">medical-certification →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/mvr-and-monitoring/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#008</div>
+    <h3>Mvr And Monitoring</h3>
+    <p>Use this skill when the user asks about Motor Vehicle Records (MVRs), 49 CFR 391.25 annual MVR review, continuous MVR monitoring services (SambaSafety, Foley, etc.), state MVR fees, what to look for on an MVR, CDLIS...</p>
+    <div class="skill-tile-link">mvr-and-monitoring →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 2 — Specialty</h2>
+<p>Vehicle records, scoring, audit readiness, inspection levels.</p>
+<div class="tier-count">7 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/vehicle-inspection-dvir/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#009</div>
+    <h3>Vehicle Inspection Dvir</h3>
+    <p>Use this skill when the user asks about CMV vehicle inspections under 49 CFR 396 — DVIRs (Driver Vehicle Inspection Reports), pre-trip inspections, post-trip inspections, periodic inspections, annual inspections, who...</p>
+    <div class="skill-tile-link">vehicle-inspection-dvir →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/vehicle-maintenance-records/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#010</div>
+    <h3>Vehicle Maintenance Records</h3>
+    <p>Use this skill when the user asks about CMV maintenance program requirements under 49 CFR 396.3 — what records must be kept, retention periods (12-18 months on vehicle file + 1 year after disposal), what counts as...</p>
+    <div class="skill-tile-link">vehicle-maintenance-records →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/csa-bsi-scoring/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#011</div>
+    <h3>Csa Bsi Scoring</h3>
+    <p>Use this skill when the user asks about FMCSA Compliance Safety Accountability (CSA) program scoring — the seven BASIC categories, BASIC Severity Indicator (BSI), peer percentiles, intervention thresholds, how...</p>
+    <div class="skill-tile-link">csa-bsi-scoring →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dataq-disputes/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#012</div>
+    <h3>Dataq Disputes</h3>
+    <p>Use this skill when the user asks about DataQ — FMCSA's data review system at dataqs.fmcsa.dot.gov — for disputing inspection violations, crash records, or other entries that appear in a carrier's CSA / SMS score....</p>
+    <div class="skill-tile-link">dataq-disputes →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dot-audit-readiness/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#013</div>
+    <h3>Dot Audit Readiness</h3>
+    <p>Use this skill when the user asks about DOT audits, FMCSA compliance reviews, new entrant safety audits (NESA), focused investigations, what auditors actually ask for, audit document checklists, common audit failures,...</p>
+    <div class="skill-tile-link">dot-audit-readiness →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/new-entrant-safety-audit-prep/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#014</div>
+    <h3>New Entrant Safety Audit Prep</h3>
+    <p>Use this skill when the user asks specifically about preparing for the New Entrant Safety Audit (NESA) under 49 CFR 385 Subpart D — different from a Compliance Review. Covers what auditors look at, the 18-month window,...</p>
+    <div class="skill-tile-link">new-entrant-safety-audit-prep →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/roadside-inspection-levels/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#015</div>
+    <h3>Roadside Inspection Levels</h3>
+    <p>Use this skill when the user asks about CMV roadside inspection levels (Level I through Level VIII), what each level inspects, average inspection times, CVSA decal eligibility, what triggers a level upgrade, and how to...</p>
+    <div class="skill-tile-link">roadside-inspection-levels →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 3 — Advanced & Utility</h2>
+<p>Accident handling, hazmat, cargo securement, onboarding & scorecards.</p>
+<div class="tier-count">9 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/accident-investigation-playbook/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#016</div>
+    <h3>Accident Investigation Playbook</h3>
+    <p>Use this skill when the user asks how to investigate a CMV accident — what to do at the scene, the first 24 hours, evidence preservation, who to call, preventability determination, ELD data preservation, dash cam...</p>
+    <div class="skill-tile-link">accident-investigation-playbook →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/accident-register-and-reporting/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#017</div>
+    <h3>Accident Register And Reporting</h3>
+    <p>Use this skill when the user asks about accident registers, DOT-recordable accident definitions, what counts as a "reportable accident" under 49 CFR 390.5 + 390.15, accident register retention, post-accident testing...</p>
+    <div class="skill-tile-link">accident-register-and-reporting →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/crash-preventability-determination/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#018</div>
+    <h3>Crash Preventability Determination</h3>
+    <p>Use this skill when the user asks about FMCSA's Crash Preventability Determination Program (CPDP) — how to dispute that a crash was non-preventable, eligible crash types, evidence requirements, how preventability...</p>
+    <div class="skill-tile-link">crash-preventability-determination →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/hazmat-basics/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#019</div>
+    <h3>Hazmat Basics</h3>
+    <p>Use this skill when the user asks about hazardous materials (hazmat) transportation under 49 CFR 171-180 — placarding requirements, segregation tables, hazmat employee training (49 CFR 172 Subpart H), Hazmat Safety...</p>
+    <div class="skill-tile-link">hazmat-basics →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/cargo-securement/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#020</div>
+    <h3>Cargo Securement</h3>
+    <p>Use this skill when the user asks about cargo securement requirements under 49 CFR 393 Subpart I — Working Load Limit (WLL), tiedown counts, tiedown types, commodity-specific securement rules (lumber, metal coils, paper</p>
+    <div class="skill-tile-link">cargo-securement →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-onboarding-process/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#021</div>
+    <h3>Driver Onboarding Process</h3>
+    <p>Use this skill when the user asks about onboarding a new CDL driver — pre-hire process, day-zero requirements, application + DQF setup, road test, drug & alcohol pre-employment, Clearinghouse Full query, MVR initial...</p>
+    <div class="skill-tile-link">driver-onboarding-process →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/adverse-action-prep/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#022</div>
+    <h3>Adverse Action Prep</h3>
+    <p>Use this skill when the user asks about FCRA adverse action procedures — what to do when a background check (MVR, criminal, drug test) returns information that may lead to denying employment or terminating a CDL driver.</p>
+    <div class="skill-tile-link">adverse-action-prep →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fleet-safety-scorecard-design/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#023</div>
+    <h3>Fleet Safety Scorecard Design</h3>
+    <p>Use this skill when the user asks how to design or improve a fleet safety scorecard — what KPIs to track, how to weight them, telematics signals vs document compliance vs roadside outcomes, monthly cadence,...</p>
+    <div class="skill-tile-link">fleet-safety-scorecard-design →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/state-mvr-fee-lookup/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#024</div>
+    <h3>State Mvr Fee Lookup</h3>
+    <p>Use this skill when the user asks the cost of pulling a Motor Vehicle Record (MVR) in a specific state, or wants to compare MVR fees across multiple states, or is budgeting annual compliance costs for a multi-state...</p>
+    <div class="skill-tile-link">state-mvr-fee-lookup →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 4 — Advanced Specialty</h2>
+<p>Permits, exemptions, jurisdiction decoders, niche carrier types.</p>
+<div class="tier-count">5 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/oversize-overweight-permits/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#025</div>
+    <h3>Oversize Overweight Permits</h3>
+    <p>Use this skill when the user asks about oversize / overweight load permits — state-by-state permitting process, escort vehicle (pilot car) requirements, route surveys, federal axle weight limits (Federal Bridge...</p>
+    <div class="skill-tile-link">oversize-overweight-permits →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/agricultural-exemption/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#026</div>
+    <h3>Agricultural Exemption</h3>
+    <p>Use this skill when the user asks about the agricultural exemption from Hours of Service (HOS) rules under 49 CFR 395.1(k) — what qualifies as agricultural commodity, the 150-air-mile radius rule, state-declared...</p>
+    <div class="skill-tile-link">agricultural-exemption →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/intrastate-vs-interstate-decoder/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#027</div>
+    <h3>Intrastate Vs Interstate Decoder</h3>
+    <p>Use this skill when the user asks how to determine whether a CMV operation is interstate vs intrastate, why it matters (federal vs state rules apply), the "continuation of journey" rule, state-specific intrastate...</p>
+    <div class="skill-tile-link">intrastate-vs-interstate-decoder →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/household-goods-mover-rules/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#028</div>
+    <h3>Household Goods Mover Rules</h3>
+    <p>Use this skill when the user asks about Household Goods (HHG) movers — 49 CFR 375 + 376 consumer protection rules, FMCSA HHG-specific authority, mover certification, binding vs non-binding estimates, dispute resolution,</p>
+    <div class="skill-tile-link">household-goods-mover-rules →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/passenger-carrier-specifics/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#029</div>
+    <h3>Passenger Carrier Specifics</h3>
+    <p>Use this skill when the user asks about passenger-carrying CMVs — buses, motorcoaches, charter operations, school buses, limousines, shuttle services. Covers different HOS rules (10-hour driving / 15-hour on-duty / no...</p>
+    <div class="skill-tile-link">passenger-carrier-specifics →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 5 — Operations & Business</h2>
+<p>Authority, IFTA, FMCSA portal, maintenance design, dispatch tools, bypass.</p>
+<div class="tier-count">6 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/operating-authority-and-registration/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#030</div>
+    <h3>Operating Authority And Registration</h3>
+    <p>Use this skill when the user asks about getting/maintaining motor carrier operating authority — USDOT number, MC number, BOC-3 process agent, insurance filing (MCS-90, BMC-91/91X), Unified Carrier Registration (UCR),...</p>
+    <div class="skill-tile-link">operating-authority-and-registration →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/ifta-quarterly-prep/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#031</div>
+    <h3>Ifta Quarterly Prep</h3>
+    <p>Use this skill when the user asks about International Fuel Tax Agreement (IFTA) compliance — quarterly returns, jurisdiction reporting, fuel + miles reconciliation, IFTA-100/101 forms, base jurisdiction selection, IFTA...</p>
+    <div class="skill-tile-link">ifta-quarterly-prep →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fmcsa-portal-navigation/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#032</div>
+    <h3>Fmcsa Portal Navigation</h3>
+    <p>Use this skill when the user asks where to find specific information at fmcsa.dot.gov — the SAFER (Safety and Fitness Electronic Records System), Carrier Snapshot, Compliance Safety Accountability (CSA) data, PSP...</p>
+    <div class="skill-tile-link">fmcsa-portal-navigation →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/preventive-maintenance-program-design/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#033</div>
+    <h3>Preventive Maintenance Program Design</h3>
+    <p>Use this skill when the user asks how to design or improve a Preventive Maintenance (PM) program for a fleet — mileage vs time intervals, A/B/C/D inspection levels, ATA standards, common PM tasks, scheduling software,...</p>
+    <div class="skill-tile-link">preventive-maintenance-program-design →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dispatch-software-and-load-boards/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#034</div>
+    <h3>Dispatch Software And Load Boards</h3>
+    <p>Use this skill when the user asks about trucking dispatch software — McLeod, TMW (Trimble), Tailwind, Truckbase, AscendTMS — vs load boards — DAT, Truckstop, 123Loadboard, Convoy, Uber Freight. Covers the workflow (find</p>
+    <div class="skill-tile-link">dispatch-software-and-load-boards →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/weigh-station-bypass-services/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#035</div>
+    <h3>Weigh Station Bypass Services</h3>
+    <p>Use this skill when the user asks about weigh-station bypass services — Drivewyze, PrePass, BestPass, NORPASS, OOIDA toll savings — how they work, eligibility criteria, costs, and how they tie into CSA scores. Reference</p>
+    <div class="skill-tile-link">weigh-station-bypass-services →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 6 — Cross-border, People & Finance</h2>
+<p>CA / MX operations, pay & lease models, insurance, financing, taxes.</p>
+<div class="tier-count">7 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/canada-cross-border-operations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#036</div>
+    <h3>Canada Cross Border Operations</h3>
+    <p>Use this skill when the user asks about US-Canada cross-border CMV operations — CVOR (Commercial Vehicle Operator's Registration), NSC (National Safety Code), Ontario / Quebec / BC specific rules, US carrier obtaining...</p>
+    <div class="skill-tile-link">canada-cross-border-operations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/mexico-cross-border-operations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#037</div>
+    <h3>Mexico Cross Border Operations</h3>
+    <p>Use this skill when the user asks about US-Mexico cross-border CMV operations — long-haul cross-border program, B-1 visas for Mexican drivers, FMCSA OP-1(MX) authority, US-Mexico border commercial zones, USMCA / NAFTA...</p>
+    <div class="skill-tile-link">mexico-cross-border-operations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-pay-models/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#038</div>
+    <h3>Driver Pay Models</h3>
+    <p>Use this skill when the user asks how to pay CDL drivers — cents per mile (CPM), percentage of revenue, hourly, salary, sleeper-team rate, detention pay, driver-pay laws under FLSA (Fair Labor Standards Act), and how...</p>
+    <div class="skill-tile-link">driver-pay-models →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-leasing-arrangements/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#039</div>
+    <h3>Driver Leasing Arrangements</h3>
+    <p>Use this skill when the user asks about carrier-driver relationships — Independent Contractor (IC / 1099) vs Employee (W-2), Owner-Operator lease agreements, the AB5 California law, the DOL 2024 IC test, lease-purchase...</p>
+    <div class="skill-tile-link">driver-leasing-arrangements →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/trucking-insurance-101/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#040</div>
+    <h3>Trucking Insurance 101</h3>
+    <p>Use this skill when the user asks about trucking insurance — types of coverage (commercial auto, cargo, occupational accident, workers comp, bobtail/non-trucking, MCS-90 endorsement), federal minimums (49 CFR 387), what</p>
+    <div class="skill-tile-link">trucking-insurance-101 →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/truck-financing-and-leasing/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#041</div>
+    <h3>Truck Financing And Leasing</h3>
+    <p>Use this skill when the user asks about truck purchase financing, leasing options, factoring, fuel surcharge math, lease-purchase agreements, the total-cost-of-ownership (TCO) comparison between buying + leasing, and...</p>
+    <div class="skill-tile-link">truck-financing-and-leasing →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/state-trucking-taxes/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#042</div>
+    <h3>State Trucking Taxes</h3>
+    <p>Use this skill when the user asks about state-specific trucking taxes BEYOND IFTA — NY Highway Use Tax (HUT), KY Kentucky Intrastate Tax (KIT), Oregon Weight-Mile Tax, New Mexico Weight-Distance Tax, Connecticut Highway</p>
+    <div class="skill-tile-link">state-trucking-taxes →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 7 — Specialty Ops & FMCSA Navigation</h2>
+<p>Endorsements, emergency equipment, fatigue, ergonomics, vertical-specific operations.</p>
+<div class="tier-count">8 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/cdl-classes-and-endorsements/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#043</div>
+    <h3>Cdl Classes And Endorsements</h3>
+    <p>Use this skill when the user asks about CDL classes (A, B, C), endorsements (H, N, P, S, T, X), required for hazmat / passenger / school bus / tank / triple-trailer operations, what each class is permitted to operate,...</p>
+    <div class="skill-tile-link">cdl-classes-and-endorsements →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/emergency-equipment-on-cmv/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#044</div>
+    <h3>Emergency Equipment On Cmv</h3>
+    <p>Use this skill when the user asks what emergency equipment a CMV must carry under 49 CFR 393.95 — reflectorized triangles, flares, fire extinguishers, spare fuses, exceptions for buses/passenger CMVs, where to...</p>
+    <div class="skill-tile-link">emergency-equipment-on-cmv →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fatigue-management-and-night-driving/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#045</div>
+    <h3>Fatigue Management And Night Driving</h3>
+    <p>Use this skill when the user asks about driver fatigue management — circadian rhythm impact on driving, recognizing fatigue, fatigue risk management programs (FRMS), night driving safety, microsleep recognition,...</p>
+    <div class="skill-tile-link">fatigue-management-and-night-driving →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/ergonomics-of-cmv-operation/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#046</div>
+    <h3>Ergonomics Of Cmv Operation</h3>
+    <p>Use this skill when the user asks about driver ergonomics — back/neck/shoulder injury prevention, seat adjustment + lumbar support, entering and exiting cab safely, load handling techniques, vibration reduction,...</p>
+    <div class="skill-tile-link">ergonomics-of-cmv-operation →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/log-hauling-operations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#047</div>
+    <h3>Log Hauling Operations</h3>
+    <p>Use this skill when the user asks about logging / log hauling operations — short-haul exemption specifics for logging, log truck securement, axle weights, state-by-state logging permits (especially OR, WA, ID, BC), bunk</p>
+    <div class="skill-tile-link">log-hauling-operations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/oilfield-operations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#048</div>
+    <h3>Oilfield Operations</h3>
+    <p>Use this skill when the user asks about CMV oilfield operations — the 24-hour restart exemption (49 CFR 395.1(d)), oilfield-specific HOS rules, hot oil hauling, specialty equipment (winch trucks, kill trucks, frac sand...</p>
+    <div class="skill-tile-link">oilfield-operations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/refrigerated-cargo-specifics/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#049</div>
+    <h3>Refrigerated Cargo Specifics</h3>
+    <p>Use this skill when the user asks about refrigerated (reefer) trucking — cold chain compliance, FDA temperature recording requirements, Sanitary Transportation Rule (STR / 21 CFR 1.900-1.934), commodity-specific...</p>
+    <div class="skill-tile-link">refrigerated-cargo-specifics →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/towing-and-recovery/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#050</div>
+    <h3>Towing And Recovery</h3>
+    <p>Use this skill when the user asks about towing + recovery operations — separate FMCSA authority class, light-duty vs medium-duty vs heavy-duty wrecker rules, AAA + AAA-Plus contracts, Roadside-Assistance (RA)...</p>
+    <div class="skill-tile-link">towing-and-recovery →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 8 — Business Operations & People</h2>
+<p>Recruiting, retention, discipline, fitness, ADA, comp, claims.</p>
+<div class="tier-count">7 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/recruiting-and-driver-acquisition/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#051</div>
+    <h3>Recruiting And Driver Acquisition</h3>
+    <p>Use this skill when the user asks how to recruit CDL drivers — sourcing channels (CDL schools, job boards, military, returning citizens, owner-operator pools), application + screening process, signing bonus structures,...</p>
+    <div class="skill-tile-link">recruiting-and-driver-acquisition →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-wellness-and-retention/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#052</div>
+    <h3>Driver Wellness And Retention</h3>
+    <p>Use this skill when the user asks about CDL driver wellness, retention strategies, what causes driver turnover, common health issues (obesity, hypertension, sleep apnea, mental health), benefits packages, home-time...</p>
+    <div class="skill-tile-link">driver-wellness-and-retention →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-discipline-and-progressive-correction/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#053</div>
+    <h3>Driver Discipline And Progressive Correction</h3>
+    <p>Use this skill when the user asks about driver discipline — when to coach vs warn vs suspend vs terminate, progressive discipline frameworks, at-will employment in trucking, documenting violations, separating "willful...</p>
+    <div class="skill-tile-link">driver-discipline-and-progressive-correction →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-fitness-for-duty/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#054</div>
+    <h3>Driver Fitness For Duty</h3>
+    <p>Use this skill when the user asks about driver fitness-for-duty programs — pre-trip readiness assessment, recognizing impairment from drugs/alcohol/medication/fatigue/mental health, refusing assignments when unfit,...</p>
+    <div class="skill-tile-link">driver-fitness-for-duty →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/ada-employment-for-drivers/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#055</div>
+    <h3>Ada Employment For Drivers</h3>
+    <p>Use this skill when the user asks about Americans with Disabilities Act (ADA) accommodation for CDL drivers — interaction between ADA + FMCSA medical certification, when DOT-disqualifying conditions trigger ADA...</p>
+    <div class="skill-tile-link">ada-employment-for-drivers →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/workers-comp-for-trucking/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#056</div>
+    <h3>Workers Comp For Trucking</h3>
+    <p>Use this skill when the user asks about workers compensation for trucking — required by state law, classification of drivers, premium calculation (rate × experience modifier × payroll), Common Claim types in trucking,...</p>
+    <div class="skill-tile-link">workers-comp-for-trucking →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/accident-claims-handling/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#057</div>
+    <h3>Accident Claims Handling</h3>
+    <p>Use this skill when the user asks about accident claims management — first-notice-of-loss procedures, working with insurance adjusters, claim severity classification, subrogation, claim closure timelines, and how to...</p>
+    <div class="skill-tile-link">accident-claims-handling →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 9 — Safety Culture & People Management</h2>
+<p>Culture, EHS emergency, DOT investigations, physical exam, grants, fuel cards, marketing.</p>
+<div class="tier-count">7 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/safety-culture-and-management/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#058</div>
+    <h3>Safety Culture And Management</h3>
+    <p>Use this skill when the user asks how to build, measure, or improve safety culture in a motor carrier — leading vs lagging safety indicators, blame-free reporting, near-miss programs, safety committee structure, monthly</p>
+    <div class="skill-tile-link">safety-culture-and-management →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/ehs-emergency-environmental/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#059</div>
+    <h3>Ehs Emergency Environmental</h3>
+    <p>Use this skill when the user asks about Environmental Health & Safety (EHS) for trucking — fuel spill response, hazmat release reporting, EPA + state environmental reporting, emergency contact information (CHEMTREC),...</p>
+    <div class="skill-tile-link">ehs-emergency-environmental →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dot-investigation-types/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#060</div>
+    <h3>Dot Investigation Types</h3>
+    <p>Use this skill when the user asks about FMCSA investigation types — Focused Investigation vs Comprehensive Review vs Compliance Review (CR) vs Investigation, when each is triggered, scope differences, on-site vs...</p>
+    <div class="skill-tile-link">dot-investigation-types →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dot-physical-exam-decoder/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#061</div>
+    <h3>Dot Physical Exam Decoder</h3>
+    <p>Use this skill when the user asks how to interpret a DOT medical examiner's findings — what restrictions mean (corrective lenses, hearing aid, no insulin, etc.), what conditions trigger short-term vs 24-month...</p>
+    <div class="skill-tile-link">dot-physical-exam-decoder →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fmcsa-grants-and-funding/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#062</div>
+    <h3>Fmcsa Grants And Funding</h3>
+    <p>Use this skill when the user asks about FMCSA financial assistance + grants — Motor Carrier Safety Assistance Program (MCSAP), High Priority Grants, CMV Operator Apprenticeship Program (CMV-DAP), workforce development...</p>
+    <div class="skill-tile-link">fmcsa-grants-and-funding →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fleet-fuel-card-programs/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#063</div>
+    <h3>Fleet Fuel Card Programs</h3>
+    <p>Use when a carrier asks about fuel-card vendor selection (Comdata, EFS, WEX, RTS, Pilot Flying J, Love's Connect), discount levels, fraud control, driver authorization PINs, IFTA reporting features, cash advance, money...</p>
+    <div class="skill-tile-link">fleet-fuel-card-programs →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-marketing-and-customer-acquisition/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#064</div>
+    <h3>Carrier Marketing And Customer Acquisition</h3>
+    <p>Use this skill when the user asks how to market a trucking company — sales channels, prospecting, website + brand, industry directories (D&B Hoovers, ZoomInfo), referral programs, content marketing, and ROI of different</p>
+    <div class="skill-tile-link">carrier-marketing-and-customer-acquisition →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 10 — Commercial & Cyber</h2>
+<p>Shippers, pricing, brokers, cyber, PR/reputation.</p>
+<div class="tier-count">6 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/shipper-relationship-management/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#065</div>
+    <h3>Shipper Relationship Management</h3>
+    <p>Use this skill when the user asks how to build + manage direct shipper relationships — moving from spot market to dedicated lanes, customer scoring + credit assessment, contract terms, dedicated capacity agreements, KPI</p>
+    <div class="skill-tile-link">shipper-relationship-management →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/pricing-and-rate-negotiation/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#066</div>
+    <h3>Pricing And Rate Negotiation</h3>
+    <p>Use this skill when the user asks about trucking rate negotiation — cost-plus pricing, market rate benchmarking via DAT/Truckstop, fuel surcharge math, how to negotiate with brokers/shippers, when to walk away, contract</p>
+    <div class="skill-tile-link">pricing-and-rate-negotiation →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/broker-and-freight-forwarder-distinctions/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#067</div>
+    <h3>Broker And Freight Forwarder Distinctions</h3>
+    <p>Use this skill when the user asks the difference between a freight broker, freight forwarder, and motor carrier (49 CFR 371 + 373) — required authority for each, bond requirements (BMC-84 broker bond, BMC-85 freight...</p>
+    <div class="skill-tile-link">broker-and-freight-forwarder-distinctions →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/broker-vs-direct-shipper-economics/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#068</div>
+    <h3>Broker Vs Direct Shipper Economics</h3>
+    <p>Use this skill when the user asks the economic + operational tradeoffs of broker-mediated freight vs direct shipper relationships — margin difference, capital + operational cost, sales effort, payment terms,...</p>
+    <div class="skill-tile-link">broker-vs-direct-shipper-economics →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-cybersecurity/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#069</div>
+    <h3>Carrier Cybersecurity</h3>
+    <p>Use this skill when the user asks about cybersecurity for a trucking carrier — protecting ELD data, customer information, financial systems, EDI integrations, fleet telematics, ransomware risk, vendor / shipper data...</p>
+    <div class="skill-tile-link">carrier-cybersecurity →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-pr-and-reputation-management/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#070</div>
+    <h3>Carrier Pr And Reputation Management</h3>
+    <p>Use this skill when the user asks how to manage a trucking carrier's public reputation — handling a major accident in the news, social media + Glassdoor + Indeed reviews, customer disputes that escalate, employee...</p>
+    <div class="skill-tile-link">carrier-pr-and-reputation-management →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 11 — Driver Lifecycle & Operations (v0.10.0)</h2>
+<p>O/O vs company, team driving, fuel/tire/MPG, telematics, seasonal, mental health, RFP, M&A.</p>
+<div class="tier-count">15 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/owner-operator-vs-company-driver-economics/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#071</div>
+    <h3>Owner Operator Vs Company Driver Economics</h3>
+    <p>Use this skill when the user asks about the financial differences between being an owner-operator vs company driver — gross pay, expenses, net pay, capital requirements, risk tolerance, lifestyle, and how to evaluate...</p>
+    <div class="skill-tile-link">owner-operator-vs-company-driver-economics →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/team-driving-operations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#072</div>
+    <h3>Team Driving Operations</h3>
+    <p>Use this skill when the user asks about team driving — two-driver OTR operations, how teams maximize miles, HOS rules with sleeper berth swap, pay structures, equipment requirements (sleeper berth specs), team...</p>
+    <div class="skill-tile-link">team-driving-operations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dedicated-vs-otr-vs-regional-comparisons/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#073</div>
+    <h3>Dedicated Vs Otr Vs Regional Comparisons</h3>
+    <p>Use this skill when the user asks about CMV operation types — Dedicated, OTR (Over-the-Road), Regional, Local, and the differences in driver lifestyle, pay, equipment, home time, hours, and customer mix. Reference...</p>
+    <div class="skill-tile-link">dedicated-vs-otr-vs-regional-comparisons →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/owner-operator-tax-and-deductions/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#074</div>
+    <h3>Owner Operator Tax And Deductions</h3>
+    <p>Use when an owner-operator (1099 or LLC/S-corp) asks how to lower their tax bill, what they can deduct, per diem treatment, depreciation choices (Section 179, bonus, MACRS), quarterly estimated payments, S-corp salary...</p>
+    <div class="skill-tile-link">owner-operator-tax-and-deductions →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fmcsa-driver-disqualification-and-reinstatement/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#075</div>
+    <h3>Fmcsa Driver Disqualification And Reinstatement</h3>
+    <p>Use when a driver has been disqualified or is at risk of disqualification — major offense convictions (DUI, leaving the scene, drug trafficking with CMV), serious traffic violations, RR-grade-crossing violations,...</p>
+    <div class="skill-tile-link">fmcsa-driver-disqualification-and-reinstatement →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fuel-management-and-mpg-optimization/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#076</div>
+    <h3>Fuel Management And Mpg Optimization</h3>
+    <p>Use when a carrier asks how to improve MPG, lower fuel cost per mile, manage fuel surcharge, set up a fuel-purchase strategy (in-network vs out-of-network), train drivers on fuel-efficient driving, spec new tractors for</p>
+    <div class="skill-tile-link">fuel-management-and-mpg-optimization →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/tire-management-program/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#077</div>
+    <h3>Tire Management Program</h3>
+    <p>Use when a carrier asks about tire program design, when to retread vs replace, position management (steer vs drive vs trailer), inflation pressure standards, casing management, scrub rates, road-call prevention, or...</p>
+    <div class="skill-tile-link">tire-management-program →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/seasonal-operations-winter-summer/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#078</div>
+    <h3>Seasonal Operations Winter Summer</h3>
+    <p>Use when a carrier or driver asks about winter trucking, snow chain requirements, hot-weather precautions, summer tire failures, fuel additive use (anti-gel), idle management in extreme temperatures, weight restrictions</p>
+    <div class="skill-tile-link">seasonal-operations-winter-summer →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/tractor-spec-options/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#079</div>
+    <h3>Tractor Spec Options</h3>
+    <p>Use when a carrier asks how to spec a new tractor — engine choice (X15 vs DD16 vs PACCAR MX), transmission (manual vs automated manual vs automatic), axle ratio, sleeper size, fuel tanks, aerodynamic options, electronic</p>
+    <div class="skill-tile-link">tractor-spec-options →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/trailer-types-and-specifications/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#080</div>
+    <h3>Trailer Types And Specifications</h3>
+    <p>Use when a carrier asks about trailer types — dry van, reefer, flatbed, step-deck, conestoga, tanker, dump, lowboy, intermodal chassis, auto-hauler. Covers length / weight rules, common specs, reefer unit options...</p>
+    <div class="skill-tile-link">trailer-types-and-specifications →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/samsara-vs-motive-vs-geotab-comparison/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#081</div>
+    <h3>Samsara Vs Motive Vs Geotab Comparison</h3>
+    <p>Use when a carrier is evaluating ELD / telematics / dashcam platforms and needs an objective comparison of Samsara, Motive (formerly KeepTruckin), and Geotab. Covers ELD compliance, AI dashcams, driver scoring,...</p>
+    <div class="skill-tile-link">samsara-vs-motive-vs-geotab-comparison →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-mobile-apps-comparison/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#082</div>
+    <h3>Driver Mobile Apps Comparison</h3>
+    <p>Use when discussing the mobile apps drivers use day-to-day — load boards (DAT, Truckstop), route planners (Trucker Path, CoPilot Truck), expense and per diem apps (Per Diem Plus), parking apps (Park My Truck),...</p>
+    <div class="skill-tile-link">driver-mobile-apps-comparison →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/trucker-mental-health-resources/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#083</div>
+    <h3>Trucker Mental Health Resources</h3>
+    <p>Use when a driver or carrier asks about trucker mental health — depression, isolation, stress, fatigue, suicide risk, addiction, EAP programs, or wellness benefits. Covers evidence-based programs, hotlines, carrier-side</p>
+    <div class="skill-tile-link">trucker-mental-health-resources →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/customer-rfp-response-process/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#084</div>
+    <h3>Customer Rfp Response Process</h3>
+    <p>Use when a carrier (asset-based, brokerage, or 3PL) asks how to respond to a shipper RFP / RFQ — bid packaging, lane analysis, rate strategy, SOPs/SOWs, qualifications response, insurance compliance, EDI requirements,...</p>
+    <div class="skill-tile-link">customer-rfp-response-process →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-mergers-and-acquisitions/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#085</div>
+    <h3>Carrier Mergers And Acquisitions</h3>
+    <p>Use this skill when the user asks about buying or selling a trucking company — valuation drivers (revenue, fleet age, CSA scores, customer concentration), asset purchase vs stock purchase, FMCSA authority transfer, due...</p>
+    <div class="skill-tile-link">carrier-mergers-and-acquisitions →</div>
+  </a>
+</div>
+</section>
+<section class="tier-block">
+<div class="tier-head">
+<h2>Tier 12 — Master Operations (v1.0.0 milestone)</h2>
+<p>Financial modeling, CPM, lease vs buy, KPIs, coaching, post-crash care, EV/AV future.</p>
+<div class="tier-count">15 skills</div>
+</div>
+<div class="tier-grid">
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fleet-financial-modeling-and-budgeting/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#086</div>
+    <h3>Fleet Financial Modeling And Budgeting</h3>
+    <p>Use when a carrier owner, CFO, or controller asks how to build an annual budget, monthly P&L model, cash flow forecast, scenario plan, or break-even analysis for a trucking operation. Covers revenue modeling, cost...</p>
+    <div class="skill-tile-link">fleet-financial-modeling-and-budgeting →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-cost-per-mile-modeling/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#087</div>
+    <h3>Carrier Cost Per Mile Modeling</h3>
+    <p>Use when a carrier asks how to calculate cost-per-mile (CPM) at the fleet, truck, lane, or driver level — separating fixed vs variable costs, allocating overhead, accounting for empty miles, and using CPM to negotiate...</p>
+    <div class="skill-tile-link">carrier-cost-per-mile-modeling →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/lease-vs-buy-tractor-decision/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#088</div>
+    <h3>Lease Vs Buy Tractor Decision</h3>
+    <p>Use when a carrier asks whether to buy or lease their next tractor (or trailer), comparing full-service lease (Ryder, Penske, NationaLease), capital lease, finance lease, walk-away open-end lease, or cash purchase....</p>
+    <div class="skill-tile-link">lease-vs-buy-tractor-decision →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/operational-kpis-and-dashboards/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#089</div>
+    <h3>Operational Kpis And Dashboards</h3>
+    <p>Use when a carrier asks which KPIs to track, how to build a fleet dashboard, what targets to set, cadence for reviewing metrics (daily / weekly / monthly / quarterly), and how to operationalize data into actions. Covers</p>
+    <div class="skill-tile-link">operational-kpis-and-dashboards →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/driver-coaching-conversations/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#090</div>
+    <h3>Driver Coaching Conversations</h3>
+    <p>Use when a manager, dispatcher, or safety director needs to have a coaching conversation with a driver — about a safety event (harsh brake, hard turn, distraction), an HOS violation, a customer complaint, a missed...</p>
+    <div class="skill-tile-link">driver-coaching-conversations →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/post-crash-driver-care-and-return-to-work/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#091</div>
+    <h3>Post Crash Driver Care And Return To Work</h3>
+    <p>Use when a driver has been involved in a crash — regardless of preventability or injury — and the carrier needs to handle the immediate, post-investigation, and return-to-work phases. Covers trauma response,...</p>
+    <div class="skill-tile-link">post-crash-driver-care-and-return-to-work →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/load-planning-and-deadhead-minimization/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#092</div>
+    <h3>Load Planning And Deadhead Minimization</h3>
+    <p>Use when a dispatcher, operations manager, or owner asks how to plan loads to minimize empty (deadhead) miles, sequence freight efficiently, balance regional capacity, design dedicated loops, or build a load-pairing...</p>
+    <div class="skill-tile-link">load-planning-and-deadhead-minimization →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fleet-vehicle-replacement-cycle-planning/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#093</div>
+    <h3>Fleet Vehicle Replacement Cycle Planning</h3>
+    <p>Use when a fleet manager or owner asks when to replace tractors and trailers, optimal trade cycle age, total cost of ownership analysis, residual value timing, dealer-vs-auction sale strategy, and how trade cycle...</p>
+    <div class="skill-tile-link">fleet-vehicle-replacement-cycle-planning →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/fmcsa-pre-employment-investigation-deep-dive/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#094</div>
+    <h3>Fmcsa Pre Employment Investigation Deep Dive</h3>
+    <p>Use when a carrier asks about the full pre-employment investigation process for new CDL drivers under 49 CFR 391.23, 391.25, 391.27, 382.413, and 391.21 — the complete file build required before a driver operates a CMV.</p>
+    <div class="skill-tile-link">fmcsa-pre-employment-investigation-deep-dive →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/dispatcher-training-and-certification/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#095</div>
+    <h3>Dispatcher Training And Certification</h3>
+    <p>Use when a carrier needs to build an internal dispatcher training program, onboard new dispatchers, or certify dispatcher competency. Covers job description, required skills, training modules, certification frameworks...</p>
+    <div class="skill-tile-link">dispatcher-training-and-certification →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/safety-meeting-agenda-templates/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#096</div>
+    <h3>Safety Meeting Agenda Templates</h3>
+    <p>Use when a safety director, operations manager, or fleet owner asks for templates, topics, or structure for recurring safety meetings — weekly driver meetings, monthly safety committee meetings, quarterly all-hands...</p>
+    <div class="skill-tile-link">safety-meeting-agenda-templates →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/electric-truck-readiness/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#097</div>
+    <h3>Electric Truck Readiness</h3>
+    <p>Use when a carrier asks about electric trucks — Tesla Semi, Freightliner eCascadia, Volvo VNR Electric, Peterbilt 579EV, range, charging, total cost of ownership, regulatory pushes (CARB ACT, ACF), incentives,...</p>
+    <div class="skill-tile-link">electric-truck-readiness →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/autonomous-truck-implications/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#098</div>
+    <h3>Autonomous Truck Implications</h3>
+    <p>Use when a carrier asks about autonomous trucks — current state of Level 4 development, major programs (Aurora, Kodiak, Plus, Waymo Via, Embark history), regulatory status, operational implications, hub-to-hub model,...</p>
+    <div class="skill-tile-link">autonomous-truck-implications →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/carrier-disaster-recovery-and-bcp/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#099</div>
+    <h3>Carrier Disaster Recovery And Bcp</h3>
+    <p>Use when a carrier asks about disaster recovery (DR) and business continuity planning (BCP) — cyber incident, natural disaster, terminal loss, key-person departure, financial liquidity event, major customer loss,...</p>
+    <div class="skill-tile-link">carrier-disaster-recovery-and-bcp →</div>
+  </a>
+  <a class="skill-tile" href="https://github.com/x3fleetsafety/skills/blob/main/skills/bobtail-deadhead-loaded-distinctions/SKILL.md" target="_blank">
+    <div class="skill-tile-num">#100</div>
+    <h3>Bobtail Deadhead Loaded Distinctions</h3>
+    <p>Use this skill when the user asks about trucking terminology — bobtail vs deadhead vs loaded vs empty trailer — and the insurance, weight, and fuel-tax implications of each. Covers bobtail insurance (also called...</p>
+    <div class="skill-tile-link">bobtail-deadhead-loaded-distinctions →</div>
+  </a>
+</div>
+</section>
+
+</div>
+</section>
+
+<section class="catalog-cta">
+<div class="section-inner">
+<h2>Want to read the raw source?</h2>
+<p>The full corpus lives on GitHub under Apache 2.0. Fork it. File issues. Contribute corrections.</p>
+<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+<a href="https://github.com/x3fleetsafety/skills" target="_blank" class="compass-cta-large">View on GitHub →</a>
+<a href="https://github.com/x3fleetsafety/skills/issues" target="_blank" class="ghost-cta-large">Report an issue</a>
+<a href="/app/signup.html?tier=free" class="ghost-cta-large">Use them in Compass</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><a href="/" class="brand"><img src="/assets/logo-v2.svg" alt="" width="44" height="44" class="brand-icon"><span class="brand-word">X3 <span class="brand-word-accent">Compass</span></span></a><p style="margin-top:16px;">The AI Safety Director for small motor carriers.</p></div>
+<div class="footer-col"><h4>Product</h4><a href="/pricing.html">Pricing</a><a href="/use-cases.html">Use cases</a><a href="/how-it-works.html">How it works</a><a href="/compare.html">vs alternatives</a></div>
+<div class="footer-col"><h4>Programs</h4><a href="/partners.html">Partner</a><a href="/affiliate.html">Affiliate</a><a href="/skills.html">100 skills</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/about.html">About</a><a href="https://x3fleetsafety.com" target="_blank">X3 Fleet Safety</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="/legal.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+</div><div class="footer-bottom">© 2026 X3 Fleet Safety LLC.</div></footer>
+
+<script>
+const input = document.getElementById('skill-search');
+input.addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.skill-tile').forEach(t => {
+    const text = t.textContent.toLowerCase();
+    t.style.display = q && !text.includes(q) ? 'none' : '';
+  });
+  document.querySelectorAll('.tier-block').forEach(s => {
+    const visible = [...s.querySelectorAll('.skill-tile')].some(t => t.style.display !== 'none');
+    s.style.display = visible ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>

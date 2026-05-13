@@ -1,0 +1,402 @@
+[
+  {
+    "name": "accident-claims-handling",
+    "description": "Use this skill when the user asks about accident claims management \u2014 first-notice-of-loss procedures, working with insurance adjusters, claim severity classification, subrogation, claim closure timelines, and how to..."
+  },
+  {
+    "name": "accident-investigation-playbook",
+    "description": "Use this skill when the user asks how to investigate a CMV accident \u2014 what to do at the scene, the first 24 hours, evidence preservation, who to call, preventability determination, ELD data preservation, dash cam..."
+  },
+  {
+    "name": "accident-register-and-reporting",
+    "description": "Use this skill when the user asks about accident registers, DOT-recordable accident definitions, what counts as a \"reportable accident\" under 49 CFR 390.5 + 390.15, accident register retention, post-accident testing..."
+  },
+  {
+    "name": "ada-employment-for-drivers",
+    "description": "Use this skill when the user asks about Americans with Disabilities Act (ADA) accommodation for CDL drivers \u2014 interaction between ADA + FMCSA medical certification, when DOT-disqualifying conditions trigger ADA..."
+  },
+  {
+    "name": "adverse-action-prep",
+    "description": "Use this skill when the user asks about FCRA adverse action procedures \u2014 what to do when a background check (MVR, criminal, drug test) returns information that may lead to denying employment or terminating a CDL driver."
+  },
+  {
+    "name": "agricultural-exemption",
+    "description": "Use this skill when the user asks about the agricultural exemption from Hours of Service (HOS) rules under 49 CFR 395.1(k) \u2014 what qualifies as agricultural commodity, the 150-air-mile radius rule, state-declared..."
+  },
+  {
+    "name": "autonomous-truck-implications",
+    "description": "Use when a carrier asks about autonomous trucks \u2014 current state of Level 4 development, major programs (Aurora, Kodiak, Plus, Waymo Via, Embark history), regulatory status, operational implications, hub-to-hub model,..."
+  },
+  {
+    "name": "bobtail-deadhead-loaded-distinctions",
+    "description": "Use this skill when the user asks about trucking terminology \u2014 bobtail vs deadhead vs loaded vs empty trailer \u2014 and the insurance, weight, and fuel-tax implications of each. Covers bobtail insurance (also called..."
+  },
+  {
+    "name": "broker-and-freight-forwarder-distinctions",
+    "description": "Use this skill when the user asks the difference between a freight broker, freight forwarder, and motor carrier (49 CFR 371 + 373) \u2014 required authority for each, bond requirements (BMC-84 broker bond, BMC-85 freight..."
+  },
+  {
+    "name": "broker-vs-direct-shipper-economics",
+    "description": "Use this skill when the user asks the economic + operational tradeoffs of broker-mediated freight vs direct shipper relationships \u2014 margin difference, capital + operational cost, sales effort, payment terms,..."
+  },
+  {
+    "name": "canada-cross-border-operations",
+    "description": "Use this skill when the user asks about US-Canada cross-border CMV operations \u2014 CVOR (Commercial Vehicle Operator's Registration), NSC (National Safety Code), Ontario / Quebec / BC specific rules, US carrier obtaining..."
+  },
+  {
+    "name": "cargo-securement",
+    "description": "Use this skill when the user asks about cargo securement requirements under 49 CFR 393 Subpart I \u2014 Working Load Limit (WLL), tiedown counts, tiedown types, commodity-specific securement rules (lumber, metal coils, paper"
+  },
+  {
+    "name": "carrier-cost-per-mile-modeling",
+    "description": "Use when a carrier asks how to calculate cost-per-mile (CPM) at the fleet, truck, lane, or driver level \u2014 separating fixed vs variable costs, allocating overhead, accounting for empty miles, and using CPM to negotiate..."
+  },
+  {
+    "name": "carrier-cybersecurity",
+    "description": "Use this skill when the user asks about cybersecurity for a trucking carrier \u2014 protecting ELD data, customer information, financial systems, EDI integrations, fleet telematics, ransomware risk, vendor / shipper data..."
+  },
+  {
+    "name": "carrier-disaster-recovery-and-bcp",
+    "description": "Use when a carrier asks about disaster recovery (DR) and business continuity planning (BCP) \u2014 cyber incident, natural disaster, terminal loss, key-person departure, financial liquidity event, major customer loss,..."
+  },
+  {
+    "name": "carrier-marketing-and-customer-acquisition",
+    "description": "Use this skill when the user asks how to market a trucking company \u2014 sales channels, prospecting, website + brand, industry directories (D&B Hoovers, ZoomInfo), referral programs, content marketing, and ROI of different"
+  },
+  {
+    "name": "carrier-mergers-and-acquisitions",
+    "description": "Use this skill when the user asks about buying or selling a trucking company \u2014 valuation drivers (revenue, fleet age, CSA scores, customer concentration), asset purchase vs stock purchase, FMCSA authority transfer, due..."
+  },
+  {
+    "name": "carrier-pr-and-reputation-management",
+    "description": "Use this skill when the user asks how to manage a trucking carrier's public reputation \u2014 handling a major accident in the news, social media + Glassdoor + Indeed reviews, customer disputes that escalate, employee..."
+  },
+  {
+    "name": "cdl-classes-and-endorsements",
+    "description": "Use this skill when the user asks about CDL classes (A, B, C), endorsements (H, N, P, S, T, X), required for hazmat / passenger / school bus / tank / triple-trailer operations, what each class is permitted to operate,..."
+  },
+  {
+    "name": "crash-preventability-determination",
+    "description": "Use this skill when the user asks about FMCSA's Crash Preventability Determination Program (CPDP) \u2014 how to dispute that a crash was non-preventable, eligible crash types, evidence requirements, how preventability..."
+  },
+  {
+    "name": "csa-bsi-scoring",
+    "description": "Use this skill when the user asks about FMCSA Compliance Safety Accountability (CSA) program scoring \u2014 the seven BASIC categories, BASIC Severity Indicator (BSI), peer percentiles, intervention thresholds, how..."
+  },
+  {
+    "name": "customer-rfp-response-process",
+    "description": "Use when a carrier (asset-based, brokerage, or 3PL) asks how to respond to a shipper RFP / RFQ \u2014 bid packaging, lane analysis, rate strategy, SOPs/SOWs, qualifications response, insurance compliance, EDI requirements,..."
+  },
+  {
+    "name": "dataq-disputes",
+    "description": "Use this skill when the user asks about DataQ \u2014 FMCSA's data review system at dataqs.fmcsa.dot.gov \u2014 for disputing inspection violations, crash records, or other entries that appear in a carrier's CSA / SMS score...."
+  },
+  {
+    "name": "dedicated-vs-otr-vs-regional-comparisons",
+    "description": "Use this skill when the user asks about CMV operation types \u2014 Dedicated, OTR (Over-the-Road), Regional, Local, and the differences in driver lifestyle, pay, equipment, home time, hours, and customer mix. Reference..."
+  },
+  {
+    "name": "dispatch-software-and-load-boards",
+    "description": "Use this skill when the user asks about trucking dispatch software \u2014 McLeod, TMW (Trimble), Tailwind, Truckbase, AscendTMS \u2014 vs load boards \u2014 DAT, Truckstop, 123Loadboard, Convoy, Uber Freight. Covers the workflow (find"
+  },
+  {
+    "name": "dispatcher-training-and-certification",
+    "description": "Use when a carrier needs to build an internal dispatcher training program, onboard new dispatchers, or certify dispatcher competency. Covers job description, required skills, training modules, certification frameworks..."
+  },
+  {
+    "name": "dot-audit-readiness",
+    "description": "Use this skill when the user asks about DOT audits, FMCSA compliance reviews, new entrant safety audits (NESA), focused investigations, what auditors actually ask for, audit document checklists, common audit failures,..."
+  },
+  {
+    "name": "dot-compliance-fundamentals",
+    "description": "Use this skill when the user asks anything that touches US Department of Transportation (DOT) or Federal Motor Carrier Safety Administration (FMCSA) regulation for commercial motor vehicles (CMVs) \u2014 including who's..."
+  },
+  {
+    "name": "dot-investigation-types",
+    "description": "Use this skill when the user asks about FMCSA investigation types \u2014 Focused Investigation vs Comprehensive Review vs Compliance Review (CR) vs Investigation, when each is triggered, scope differences, on-site vs..."
+  },
+  {
+    "name": "dot-physical-exam-decoder",
+    "description": "Use this skill when the user asks how to interpret a DOT medical examiner's findings \u2014 what restrictions mean (corrective lenses, hearing aid, no insulin, etc.), what conditions trigger short-term vs 24-month..."
+  },
+  {
+    "name": "driver-coaching-conversations",
+    "description": "Use when a manager, dispatcher, or safety director needs to have a coaching conversation with a driver \u2014 about a safety event (harsh brake, hard turn, distraction), an HOS violation, a customer complaint, a missed..."
+  },
+  {
+    "name": "driver-discipline-and-progressive-correction",
+    "description": "Use this skill when the user asks about driver discipline \u2014 when to coach vs warn vs suspend vs terminate, progressive discipline frameworks, at-will employment in trucking, documenting violations, separating \"willful..."
+  },
+  {
+    "name": "driver-fitness-for-duty",
+    "description": "Use this skill when the user asks about driver fitness-for-duty programs \u2014 pre-trip readiness assessment, recognizing impairment from drugs/alcohol/medication/fatigue/mental health, refusing assignments when unfit,..."
+  },
+  {
+    "name": "driver-leasing-arrangements",
+    "description": "Use this skill when the user asks about carrier-driver relationships \u2014 Independent Contractor (IC / 1099) vs Employee (W-2), Owner-Operator lease agreements, the AB5 California law, the DOL 2024 IC test, lease-purchase..."
+  },
+  {
+    "name": "driver-mobile-apps-comparison",
+    "description": "Use when discussing the mobile apps drivers use day-to-day \u2014 load boards (DAT, Truckstop), route planners (Trucker Path, CoPilot Truck), expense and per diem apps (Per Diem Plus), parking apps (Park My Truck),..."
+  },
+  {
+    "name": "driver-onboarding-process",
+    "description": "Use this skill when the user asks about onboarding a new CDL driver \u2014 pre-hire process, day-zero requirements, application + DQF setup, road test, drug & alcohol pre-employment, Clearinghouse Full query, MVR initial..."
+  },
+  {
+    "name": "driver-pay-models",
+    "description": "Use this skill when the user asks how to pay CDL drivers \u2014 cents per mile (CPM), percentage of revenue, hourly, salary, sleeper-team rate, detention pay, driver-pay laws under FLSA (Fair Labor Standards Act), and how..."
+  },
+  {
+    "name": "driver-qualification-file",
+    "description": "Use this skill when the user asks about Driver Qualification Files (DQF) \u2014 what must be in a DQ file under 49 CFR 391, retention periods, what's required pre-hire vs ongoing, document expiration tracking,..."
+  },
+  {
+    "name": "driver-wellness-and-retention",
+    "description": "Use this skill when the user asks about CDL driver wellness, retention strategies, what causes driver turnover, common health issues (obesity, hypertension, sleep apnea, mental health), benefits packages, home-time..."
+  },
+  {
+    "name": "drug-and-alcohol-testing",
+    "description": "Use this skill when the user asks about commercial driver drug & alcohol testing under 49 CFR 382 + 40 \u2014 the six testing reasons (pre-employment, random, post-accident, reasonable suspicion, return-to-duty, follow-up),..."
+  },
+  {
+    "name": "ehs-emergency-environmental",
+    "description": "Use this skill when the user asks about Environmental Health & Safety (EHS) for trucking \u2014 fuel spill response, hazmat release reporting, EPA + state environmental reporting, emergency contact information (CHEMTREC),..."
+  },
+  {
+    "name": "eld-mandate-compliance",
+    "description": "Use this skill when the user asks about Electronic Logging Device (ELD) compliance under 49 CFR 395.20-38 \u2014 ELD mandate, AOBRD vs ELD transition, ELD exemptions, ELD malfunctions, 8-day paper backup, ELD certification..."
+  },
+  {
+    "name": "electric-truck-readiness",
+    "description": "Use when a carrier asks about electric trucks \u2014 Tesla Semi, Freightliner eCascadia, Volvo VNR Electric, Peterbilt 579EV, range, charging, total cost of ownership, regulatory pushes (CARB ACT, ACF), incentives,..."
+  },
+  {
+    "name": "emergency-equipment-on-cmv",
+    "description": "Use this skill when the user asks what emergency equipment a CMV must carry under 49 CFR 393.95 \u2014 reflectorized triangles, flares, fire extinguishers, spare fuses, exceptions for buses/passenger CMVs, where to..."
+  },
+  {
+    "name": "ergonomics-of-cmv-operation",
+    "description": "Use this skill when the user asks about driver ergonomics \u2014 back/neck/shoulder injury prevention, seat adjustment + lumbar support, entering and exiting cab safely, load handling techniques, vibration reduction,..."
+  },
+  {
+    "name": "fatigue-management-and-night-driving",
+    "description": "Use this skill when the user asks about driver fatigue management \u2014 circadian rhythm impact on driving, recognizing fatigue, fatigue risk management programs (FRMS), night driving safety, microsleep recognition,..."
+  },
+  {
+    "name": "fleet-financial-modeling-and-budgeting",
+    "description": "Use when a carrier owner, CFO, or controller asks how to build an annual budget, monthly P&L model, cash flow forecast, scenario plan, or break-even analysis for a trucking operation. Covers revenue modeling, cost..."
+  },
+  {
+    "name": "fleet-fuel-card-programs",
+    "description": "Use when a carrier asks about fuel-card vendor selection (Comdata, EFS, WEX, RTS, Pilot Flying J, Love's Connect), discount levels, fraud control, driver authorization PINs, IFTA reporting features, cash advance, money..."
+  },
+  {
+    "name": "fleet-safety-scorecard-design",
+    "description": "Use this skill when the user asks how to design or improve a fleet safety scorecard \u2014 what KPIs to track, how to weight them, telematics signals vs document compliance vs roadside outcomes, monthly cadence,..."
+  },
+  {
+    "name": "fleet-vehicle-replacement-cycle-planning",
+    "description": "Use when a fleet manager or owner asks when to replace tractors and trailers, optimal trade cycle age, total cost of ownership analysis, residual value timing, dealer-vs-auction sale strategy, and how trade cycle..."
+  },
+  {
+    "name": "fmcsa-clearinghouse-workflow",
+    "description": "Use this skill when the user asks about the FMCSA Drug & Alcohol Clearinghouse \u2014 full vs limited query, pre-employment vs annual query, query credit purchasing, who has access (employers, drivers, MROs, SAPs, state..."
+  },
+  {
+    "name": "fmcsa-driver-disqualification-and-reinstatement",
+    "description": "Use when a driver has been disqualified or is at risk of disqualification \u2014 major offense convictions (DUI, leaving the scene, drug trafficking with CMV), serious traffic violations, RR-grade-crossing violations,..."
+  },
+  {
+    "name": "fmcsa-grants-and-funding",
+    "description": "Use this skill when the user asks about FMCSA financial assistance + grants \u2014 Motor Carrier Safety Assistance Program (MCSAP), High Priority Grants, CMV Operator Apprenticeship Program (CMV-DAP), workforce development..."
+  },
+  {
+    "name": "fmcsa-portal-navigation",
+    "description": "Use this skill when the user asks where to find specific information at fmcsa.dot.gov \u2014 the SAFER (Safety and Fitness Electronic Records System), Carrier Snapshot, Compliance Safety Accountability (CSA) data, PSP..."
+  },
+  {
+    "name": "fmcsa-pre-employment-investigation-deep-dive",
+    "description": "Use when a carrier asks about the full pre-employment investigation process for new CDL drivers under 49 CFR 391.23, 391.25, 391.27, 382.413, and 391.21 \u2014 the complete file build required before a driver operates a CMV."
+  },
+  {
+    "name": "fuel-management-and-mpg-optimization",
+    "description": "Use when a carrier asks how to improve MPG, lower fuel cost per mile, manage fuel surcharge, set up a fuel-purchase strategy (in-network vs out-of-network), train drivers on fuel-efficient driving, spec new tractors for"
+  },
+  {
+    "name": "hazmat-basics",
+    "description": "Use this skill when the user asks about hazardous materials (hazmat) transportation under 49 CFR 171-180 \u2014 placarding requirements, segregation tables, hazmat employee training (49 CFR 172 Subpart H), Hazmat Safety..."
+  },
+  {
+    "name": "hours-of-service",
+    "description": "Use this skill when the user asks about Hours of Service (HOS) rules under 49 CFR 395 \u2014 the 11-hour driving limit, 14-hour on-duty window, 60/70 hour rule, 30-minute break, 10-hour off-duty reset, 34-hour restart,..."
+  },
+  {
+    "name": "household-goods-mover-rules",
+    "description": "Use this skill when the user asks about Household Goods (HHG) movers \u2014 49 CFR 375 + 376 consumer protection rules, FMCSA HHG-specific authority, mover certification, binding vs non-binding estimates, dispute resolution,"
+  },
+  {
+    "name": "ifta-quarterly-prep",
+    "description": "Use this skill when the user asks about International Fuel Tax Agreement (IFTA) compliance \u2014 quarterly returns, jurisdiction reporting, fuel + miles reconciliation, IFTA-100/101 forms, base jurisdiction selection, IFTA..."
+  },
+  {
+    "name": "intrastate-vs-interstate-decoder",
+    "description": "Use this skill when the user asks how to determine whether a CMV operation is interstate vs intrastate, why it matters (federal vs state rules apply), the \"continuation of journey\" rule, state-specific intrastate..."
+  },
+  {
+    "name": "lease-vs-buy-tractor-decision",
+    "description": "Use when a carrier asks whether to buy or lease their next tractor (or trailer), comparing full-service lease (Ryder, Penske, NationaLease), capital lease, finance lease, walk-away open-end lease, or cash purchase...."
+  },
+  {
+    "name": "load-planning-and-deadhead-minimization",
+    "description": "Use when a dispatcher, operations manager, or owner asks how to plan loads to minimize empty (deadhead) miles, sequence freight efficiently, balance regional capacity, design dedicated loops, or build a load-pairing..."
+  },
+  {
+    "name": "log-hauling-operations",
+    "description": "Use this skill when the user asks about logging / log hauling operations \u2014 short-haul exemption specifics for logging, log truck securement, axle weights, state-by-state logging permits (especially OR, WA, ID, BC), bunk"
+  },
+  {
+    "name": "medical-certification",
+    "description": "Use this skill when the user asks about CDL driver medical certification \u2014 49 CFR 391.41-49 medical qualifications, medical examiner's certificate (Long Form 5876 + Short Form 5875), National Registry of Certified..."
+  },
+  {
+    "name": "mexico-cross-border-operations",
+    "description": "Use this skill when the user asks about US-Mexico cross-border CMV operations \u2014 long-haul cross-border program, B-1 visas for Mexican drivers, FMCSA OP-1(MX) authority, US-Mexico border commercial zones, USMCA / NAFTA..."
+  },
+  {
+    "name": "mvr-and-monitoring",
+    "description": "Use this skill when the user asks about Motor Vehicle Records (MVRs), 49 CFR 391.25 annual MVR review, continuous MVR monitoring services (SambaSafety, Foley, etc.), state MVR fees, what to look for on an MVR, CDLIS..."
+  },
+  {
+    "name": "new-entrant-safety-audit-prep",
+    "description": "Use this skill when the user asks specifically about preparing for the New Entrant Safety Audit (NESA) under 49 CFR 385 Subpart D \u2014 different from a Compliance Review. Covers what auditors look at, the 18-month window,..."
+  },
+  {
+    "name": "oilfield-operations",
+    "description": "Use this skill when the user asks about CMV oilfield operations \u2014 the 24-hour restart exemption (49 CFR 395.1(d)), oilfield-specific HOS rules, hot oil hauling, specialty equipment (winch trucks, kill trucks, frac sand..."
+  },
+  {
+    "name": "operating-authority-and-registration",
+    "description": "Use this skill when the user asks about getting/maintaining motor carrier operating authority \u2014 USDOT number, MC number, BOC-3 process agent, insurance filing (MCS-90, BMC-91/91X), Unified Carrier Registration (UCR),..."
+  },
+  {
+    "name": "operational-kpis-and-dashboards",
+    "description": "Use when a carrier asks which KPIs to track, how to build a fleet dashboard, what targets to set, cadence for reviewing metrics (daily / weekly / monthly / quarterly), and how to operationalize data into actions. Covers"
+  },
+  {
+    "name": "oversize-overweight-permits",
+    "description": "Use this skill when the user asks about oversize / overweight load permits \u2014 state-by-state permitting process, escort vehicle (pilot car) requirements, route surveys, federal axle weight limits (Federal Bridge..."
+  },
+  {
+    "name": "owner-operator-tax-and-deductions",
+    "description": "Use when an owner-operator (1099 or LLC/S-corp) asks how to lower their tax bill, what they can deduct, per diem treatment, depreciation choices (Section 179, bonus, MACRS), quarterly estimated payments, S-corp salary..."
+  },
+  {
+    "name": "owner-operator-vs-company-driver-economics",
+    "description": "Use this skill when the user asks about the financial differences between being an owner-operator vs company driver \u2014 gross pay, expenses, net pay, capital requirements, risk tolerance, lifestyle, and how to evaluate..."
+  },
+  {
+    "name": "passenger-carrier-specifics",
+    "description": "Use this skill when the user asks about passenger-carrying CMVs \u2014 buses, motorcoaches, charter operations, school buses, limousines, shuttle services. Covers different HOS rules (10-hour driving / 15-hour on-duty / no..."
+  },
+  {
+    "name": "post-crash-driver-care-and-return-to-work",
+    "description": "Use when a driver has been involved in a crash \u2014 regardless of preventability or injury \u2014 and the carrier needs to handle the immediate, post-investigation, and return-to-work phases. Covers trauma response,..."
+  },
+  {
+    "name": "preventive-maintenance-program-design",
+    "description": "Use this skill when the user asks how to design or improve a Preventive Maintenance (PM) program for a fleet \u2014 mileage vs time intervals, A/B/C/D inspection levels, ATA standards, common PM tasks, scheduling software,..."
+  },
+  {
+    "name": "pricing-and-rate-negotiation",
+    "description": "Use this skill when the user asks about trucking rate negotiation \u2014 cost-plus pricing, market rate benchmarking via DAT/Truckstop, fuel surcharge math, how to negotiate with brokers/shippers, when to walk away, contract"
+  },
+  {
+    "name": "recruiting-and-driver-acquisition",
+    "description": "Use this skill when the user asks how to recruit CDL drivers \u2014 sourcing channels (CDL schools, job boards, military, returning citizens, owner-operator pools), application + screening process, signing bonus structures,..."
+  },
+  {
+    "name": "refrigerated-cargo-specifics",
+    "description": "Use this skill when the user asks about refrigerated (reefer) trucking \u2014 cold chain compliance, FDA temperature recording requirements, Sanitary Transportation Rule (STR / 21 CFR 1.900-1.934), commodity-specific..."
+  },
+  {
+    "name": "roadside-inspection-levels",
+    "description": "Use this skill when the user asks about CMV roadside inspection levels (Level I through Level VIII), what each level inspects, average inspection times, CVSA decal eligibility, what triggers a level upgrade, and how to..."
+  },
+  {
+    "name": "safety-culture-and-management",
+    "description": "Use this skill when the user asks how to build, measure, or improve safety culture in a motor carrier \u2014 leading vs lagging safety indicators, blame-free reporting, near-miss programs, safety committee structure, monthly"
+  },
+  {
+    "name": "safety-meeting-agenda-templates",
+    "description": "Use when a safety director, operations manager, or fleet owner asks for templates, topics, or structure for recurring safety meetings \u2014 weekly driver meetings, monthly safety committee meetings, quarterly all-hands..."
+  },
+  {
+    "name": "samsara-vs-motive-vs-geotab-comparison",
+    "description": "Use when a carrier is evaluating ELD / telematics / dashcam platforms and needs an objective comparison of Samsara, Motive (formerly KeepTruckin), and Geotab. Covers ELD compliance, AI dashcams, driver scoring,..."
+  },
+  {
+    "name": "seasonal-operations-winter-summer",
+    "description": "Use when a carrier or driver asks about winter trucking, snow chain requirements, hot-weather precautions, summer tire failures, fuel additive use (anti-gel), idle management in extreme temperatures, weight restrictions"
+  },
+  {
+    "name": "shipper-relationship-management",
+    "description": "Use this skill when the user asks how to build + manage direct shipper relationships \u2014 moving from spot market to dedicated lanes, customer scoring + credit assessment, contract terms, dedicated capacity agreements, KPI"
+  },
+  {
+    "name": "state-mvr-fee-lookup",
+    "description": "Use this skill when the user asks the cost of pulling a Motor Vehicle Record (MVR) in a specific state, or wants to compare MVR fees across multiple states, or is budgeting annual compliance costs for a multi-state..."
+  },
+  {
+    "name": "state-trucking-taxes",
+    "description": "Use this skill when the user asks about state-specific trucking taxes BEYOND IFTA \u2014 NY Highway Use Tax (HUT), KY Kentucky Intrastate Tax (KIT), Oregon Weight-Mile Tax, New Mexico Weight-Distance Tax, Connecticut Highway"
+  },
+  {
+    "name": "team-driving-operations",
+    "description": "Use this skill when the user asks about team driving \u2014 two-driver OTR operations, how teams maximize miles, HOS rules with sleeper berth swap, pay structures, equipment requirements (sleeper berth specs), team..."
+  },
+  {
+    "name": "tire-management-program",
+    "description": "Use when a carrier asks about tire program design, when to retread vs replace, position management (steer vs drive vs trailer), inflation pressure standards, casing management, scrub rates, road-call prevention, or..."
+  },
+  {
+    "name": "towing-and-recovery",
+    "description": "Use this skill when the user asks about towing + recovery operations \u2014 separate FMCSA authority class, light-duty vs medium-duty vs heavy-duty wrecker rules, AAA + AAA-Plus contracts, Roadside-Assistance (RA)..."
+  },
+  {
+    "name": "tractor-spec-options",
+    "description": "Use when a carrier asks how to spec a new tractor \u2014 engine choice (X15 vs DD16 vs PACCAR MX), transmission (manual vs automated manual vs automatic), axle ratio, sleeper size, fuel tanks, aerodynamic options, electronic"
+  },
+  {
+    "name": "trailer-types-and-specifications",
+    "description": "Use when a carrier asks about trailer types \u2014 dry van, reefer, flatbed, step-deck, conestoga, tanker, dump, lowboy, intermodal chassis, auto-hauler. Covers length / weight rules, common specs, reefer unit options..."
+  },
+  {
+    "name": "truck-financing-and-leasing",
+    "description": "Use this skill when the user asks about truck purchase financing, leasing options, factoring, fuel surcharge math, lease-purchase agreements, the total-cost-of-ownership (TCO) comparison between buying + leasing, and..."
+  },
+  {
+    "name": "trucker-mental-health-resources",
+    "description": "Use when a driver or carrier asks about trucker mental health \u2014 depression, isolation, stress, fatigue, suicide risk, addiction, EAP programs, or wellness benefits. Covers evidence-based programs, hotlines, carrier-side"
+  },
+  {
+    "name": "trucking-insurance-101",
+    "description": "Use this skill when the user asks about trucking insurance \u2014 types of coverage (commercial auto, cargo, occupational accident, workers comp, bobtail/non-trucking, MCS-90 endorsement), federal minimums (49 CFR 387), what"
+  },
+  {
+    "name": "vehicle-inspection-dvir",
+    "description": "Use this skill when the user asks about CMV vehicle inspections under 49 CFR 396 \u2014 DVIRs (Driver Vehicle Inspection Reports), pre-trip inspections, post-trip inspections, periodic inspections, annual inspections, who..."
+  },
+  {
+    "name": "vehicle-maintenance-records",
+    "description": "Use this skill when the user asks about CMV maintenance program requirements under 49 CFR 396.3 \u2014 what records must be kept, retention periods (12-18 months on vehicle file + 1 year after disposal), what counts as..."
+  },
+  {
+    "name": "weigh-station-bypass-services",
+    "description": "Use this skill when the user asks about weigh-station bypass services \u2014 Drivewyze, PrePass, BestPass, NORPASS, OOIDA toll savings \u2014 how they work, eligibility criteria, costs, and how they tie into CSA scores. Reference"
+  },
+  {
+    "name": "workers-comp-for-trucking",
+    "description": "Use this skill when the user asks about workers compensation for trucking \u2014 required by state law, classification of drivers, premium calculation (rate \u00d7 experience modifier \u00d7 payroll), Common Claim types in trucking,..."
+  }
+]
