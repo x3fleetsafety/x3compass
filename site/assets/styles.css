@@ -551,7 +551,7 @@ footer {
   color: #0A1929;
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 900;
-  font-size: 28px;
+  font-size: 34px;
   letter-spacing: -0.04em;
   padding: 12px 16px;
   border-radius: 6px;
@@ -600,7 +600,7 @@ footer {
   display: flex;
 }
 .app-sidebar .brand-x3 {
-  font-size: 22px;
+  font-size: 26px;
   padding: 8px 10px;
   min-width: 40px;
   min-height: 36px;
@@ -618,7 +618,7 @@ footer {
   gap: 0;
 }
 .brand-footer .brand-x3 {
-  font-size: 22px;
+  font-size: 26px;
   padding: 8px 12px;
   min-width: 36px;
   min-height: 32px;
