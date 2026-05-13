@@ -622,7 +622,12 @@ function updateROI() {
   let tier, monthly;
   if (trucks <= 10) { tier = 'Starter $79/mo'; monthly = 79; }
   else if (trucks <= 50) { tier = 'Pro $299/mo'; monthly = 299; }
-  else { tier = 'Enterprise $999/mo'; monthly = 999; }
+  else if (trucks <= 150) {
+    const overage = (trucks - 50) * 7;
+    monthly = 299 + overage;
+    tier = `Pro $299 + $${overage}/mo overage = $${monthly}/mo`;
+  }
+  else { tier = 'Enterprise $999/mo (unlimited)'; monthly = 999; }
   const annual = monthly * 12;
   const sd = 130000;
   const savings = sd - annual;
