@@ -77,6 +77,6 @@ Fill templates: safety policy, DQF, drug-test policy.
 
 1. **CFR validation:** parse citations, regex check against valid format, optionally verify against ecfr.gov
 2. **Confidence scoring:** if response includes hedging language ("might be" / "I think"), surface to user with verify-with-counsel prompt
-3. **Thumbs-down feedback:** every message has thumbs up/down; downs queued for Mike Perry weekly review
-4. **Adversarial test set:** weekly batch of 100 prompts run by Mike Perry to spot regressions
+3. **Thumbs-down feedback:** every message has thumbs up/down; downs queued for our compliance review team weekly review
+4. **Adversarial test set:** weekly batch of 100 prompts run by our compliance review team to spot regressions
 5. **Hallucination flagging:** customer can flag a response; auto-creates ticket in ai_quality_log

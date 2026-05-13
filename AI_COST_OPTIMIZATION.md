@@ -148,7 +148,7 @@ This protects against runaway costs from a single customer and creates clear upg
 
 - **Customer pastes a 50-page driver handbook** asking for review → cap input at 20K tokens; chunked review
 - **Customer asks 200 follow-up questions in one conversation** → enforce per-conversation token budget
-- **Mike Perry's office hours session** — recorded and transcribed; not real-time Claude
+- **our compliance review team's office hours session** — recorded and transcribed; not real-time Claude
 - **Audit-prep for 500-driver fleet** — batched + offered as add-on service (charged $499 separately)
 
 ---

@@ -333,42 +333,6 @@ a:hover { color: var(--compass-cyan); }
 .vs-table td:nth-child(2) { color: var(--compass-teal); font-weight: 700; background: rgba(45, 212, 191, 0.05); }
 .vs-cta { text-align: center; color: var(--compass-teal); }
 
-/* Mike strip */
-.mike-strip { background: linear-gradient(180deg, rgba(15, 37, 64, 0.6), rgba(10, 25, 41, 0.3)); }
-.mike-card {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-}
-.mike-photo-frame {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--compass-teal), var(--compass-violet));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 80px;
-  font-weight: 900;
-  color: var(--compass-ink);
-}
-.mike-content .mike-eyebrow {
-  color: var(--compass-teal);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.mike-content h3 { font-size: 28px; font-weight: 800; margin: 0 0 14px; }
-.mike-content p { color: var(--compass-fog); margin: 0 0 14px; }
-
 /* Pricing */
 .pricing-strip { background: rgba(15, 37, 64, 0.3); }
 .price-grid {
@@ -502,7 +466,61 @@ footer {
   .hero { padding: 60px 24px 80px; }
   .section-inner { padding: 60px 24px; }
   .who-grid { grid-template-columns: 1fr; }
-  .mike-card { grid-template-columns: 1fr; text-align: center; }
-  .mike-photo-frame { margin: 0 auto; width: 140px; height: 140px; font-size: 56px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+/* Corpus strip (replaced the figurehead strip) */
+.corpus-strip { background: linear-gradient(180deg, rgba(15, 37, 64, 0.6), rgba(10, 25, 41, 0.3)); }
+.corpus-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(139, 92, 246, 0.04));
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 24px;
+  padding: 48px;
+}
+.corpus-badge {
+  width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--compass-teal) 0%, var(--compass-cyan) 50%, var(--compass-violet) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--compass-ink);
+  text-align: center;
+}
+.corpus-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.corpus-label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+.corpus-content .corpus-eyebrow {
+  color: var(--compass-teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.corpus-content h3 { font-size: 28px; font-weight: 800; margin: 0 0 14px; line-height: 1.2; color: var(--compass-paper); }
+.corpus-content p { color: var(--compass-fog); margin: 0 0 18px; line-height: 1.6; }
+.corpus-content p strong { color: var(--compass-paper); }
+.corpus-bullets { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--compass-mist); }
+@media (max-width: 800px) {
+  .corpus-card { grid-template-columns: 1fr; padding: 32px 24px; text-align: center; gap: 24px; }
+  .corpus-badge { margin: 0 auto; width: 160px; height: 160px; }
+  .corpus-num { font-size: 64px; }
 }

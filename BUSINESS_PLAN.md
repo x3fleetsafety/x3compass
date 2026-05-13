@@ -12,7 +12,7 @@ X3 Compass is the AI Virtual Safety Director for US motor carriers, served via t
 1. **AI quality crossed the line.** Claude Sonnet 4.5+ answers 49 CFR questions accurately when grounded on the X3 100-skill corpus.
 2. **Cost crossed the line.** Per-interaction inference cost is $0.02–$0.05 — vastly under the human-SD cost equivalent.
 3. **Brand authority is built.** github.com/x3fleetsafety/skills (100 skills, Apache 2.0) is the distribution + credibility moat.
-4. **Mike Perry is the unfair advantage.** 20-year NY State Police CMV inspector. No competitor has this kind of regulatory anchor.
+4. **our compliance review team is the unfair advantage.** 20-year NY State Police CMV inspector. No competitor has this kind of regulatory anchor.
 5. **Compliance services market is large + under-tooled.** Foley, JJ Keller, Compliance Navigator serve the top of the pyramid expensively. 125K+ small carriers and 13K+ safety consultants are underserved.
 
 ## Ideal customer profiles (ICP)
@@ -62,7 +62,7 @@ At $25M ARR (Year 4):
 - 1 finance / admin
 - 1 customer escalation specialist
 - 1 partner program manager
-- Mike Perry (consulting advisor)
+- our compliance review team (consulting advisor)
 - Joshua (founder/CEO)
 - **= ~10 people**
 
@@ -88,9 +88,9 @@ At $72M ARR with 90%+ margin and AI-native vertical SaaS positioning:
 
 | Risk | Mitigation |
 |---|---|
-| AI hallucination → regulatory liability | CFR citation enforced, ecfr.gov validation, E&O insurance, Mike Perry QA |
-| Competitor copies | 12-month head start, 100-skill corpus moat, Mike Perry anchor |
+| AI hallucination → regulatory liability | CFR citation enforced, ecfr.gov validation, E&O insurance, our compliance review team QA |
+| Competitor copies | 12-month head start, 100-skill corpus moat, our compliance review team anchor |
 | AI cost spike | Multi-model routing (Haiku/Sonnet/Opus), prompt caching, daily usage caps per tenant |
-| Customer trust (older demo) | Mike Perry brand front-and-center, free 30-day trial, "Ask Mike" framing |
+| Customer trust (older demo) | our compliance review team brand front-and-center, free 30-day trial, transparent open-source corpus |
 | Bad Partners give bad advice | Vetting + interview, 50-question knowledge test, recertification, MSA liability allocation |
-| Regulatory rule changes | Mike-triggered skill updates pushed within 14 days |
+| Regulatory rule changes | expert-triggered skill updates pushed within 14 days |

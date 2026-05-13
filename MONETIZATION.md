@@ -9,13 +9,13 @@ Seven revenue streams. Each compounds on the others.
 
 ## 2. Partner subscriptions (primary)
 - Compass Partner: $499/mo flat, unlimited carrier seats, white-label
-- Premium Partner: $999/mo, includes geographic territory exclusivity + Mike Perry 1:1 quarterly
+- Premium Partner: $999/mo, includes geographic territory exclusivity + our compliance review team 1:1 quarterly
 - Master Partner: $1,999/mo, includes co-marketing budget + speaking opportunities
 
 ## 3. Add-on services (transactional)
 - DataQ dispute filing: $99 per filing (we draft, customer reviews + submits)
 - Audit defense package: $1,499 one-time (when carrier is selected for a compliance review)
-- Annual compliance audit (Mike Perry signed): $499 one-time
+- Annual compliance audit (our compliance review team signed): $499 one-time
 - Custom safety policy generation: $299
 - New-entrant safety audit prep: $499 one-time
 - DOT registration / authority renewal service: $99
@@ -50,7 +50,7 @@ The 100-skill open-source corpus is the free funnel. Premium content goes deeper
 ## 7. Sponsorships + ads (low-volume, high-margin)
 - **Skills repo sponsorship banner:** integration partners (Samsara, Motive, Quest, LabCorp) pay $5K–$15K/year to be the featured integration in relevant skills
 - **Newsletter sponsorships:** $2K–$5K/issue when X3 newsletter reaches 10K+ subscribers
-- **Mike Perry-fronted webinars sponsored by insurance brokers/OEMs:** $5K–$10K each
+- **Expert-fronted webinars sponsored by insurance brokers/OEMs:** $5K–$10K each
 - **Conference speaking + sponsorships:** Mid-America Trucking Show, ATA Management Conference, NPTC — pay-for-presence model
 - Total at scale: ~$300K/year
 

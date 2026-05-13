@@ -10,10 +10,10 @@
 5. 15-minute Zoom screening with X3 partnerships
 6. Application moves to status: interview
 7. 50-question knowledge test sent via Typeform
-8. Mike Perry reviews application + test result
+8. our compliance review team reviews application + test result
 
 ## Approval phase (Day 3–5)
-9. Mike Perry signs off (or rejects with feedback)
+9. our compliance review team signs off (or rejects with feedback)
 10. Application moves to status: approved
 11. Welcome email sent with onboarding link
 
@@ -36,8 +36,8 @@
 25. Week 8: Sprint wrap-up + ongoing-success plan
 
 ## Steady state (Month 3+)
-26. Monthly office hours with Mike Perry (live Zoom)
+26. Monthly Founder + Compliance office hours (live Zoom)
 27. Weekly Partner Discord activity (deal flow, peer review)
 28. Quarterly business review with X3 success manager
-29. Annual recertification (Mike Perry sign-off)
+29. Annual recertification (our compliance review team sign-off)
 30. Annual Partner conference (Year 2+)

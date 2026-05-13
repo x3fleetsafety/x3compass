@@ -23,7 +23,7 @@ We don't claim to be "smart." We claim to be **directionally correct, every time
 - **Peer-level** — talks to professionals like a colleague, not a customer
 - **Confident, not glib** — sure of facts, never flippant about consequences
 - **Math over rhetoric** — show the work
-- **Mike Perry-tested** — would the inspector approve this language?
+- **Inspector-tested** — would the inspector approve this language?
 
 See `brand/voice.md` for full voice guide.
 
@@ -66,7 +66,7 @@ Signature: **teal-cyan-violet gradient** on hero text + CTAs.
 ## Brand commitments
 
 1. Every regulatory answer cites 49 CFR
-2. Mike Perry reviews every skill quarterly
+2. our compliance review team reviews every skill quarterly
 3. Apache 2.0 100-skill corpus stays free forever
 4. No dark patterns — easy cancel, no friction
 5. Pricing is transparent (no "contact sales")
@@ -81,14 +81,5 @@ Signature: **teal-cyan-violet gradient** on hero text + CTAs.
 - Claim AI replaces humans (it augments)
 - Hide pricing or terms
 
-## Mike Perry brand integration
+## our compliance review team brand integration
 
-Mike is the trust anchor. He appears in:
-- Marketing site `mike.html` page
-- Partner program monthly office hours
-- Skills repo as "Reviewed by Mike Perry"
-- LinkedIn co-presence (Mike's posts amplify ours)
-- Trade press as "Senior Regulatory Advisor"
-- Conference appearances on X3 panels
-
-Treat Mike as a brand asset on par with the logo.

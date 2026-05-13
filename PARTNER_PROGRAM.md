@@ -7,7 +7,7 @@ For complete strategic context, see `/Users/joshuakovarik/Documents/Claude/Proje
 **Price:** $499/month flat
 **Target:** Safety consultants, fractional safety directors, ex-FMCSA inspectors, ex-fleet safety directors
 **Cohort 1 launch:** Month 6–9 of MVP rollout
-**Cohort 1 size:** 50 spots, Mike Perry approves every Partner
+**Cohort 1 size:** 50 spots, our compliance review team approves every Partner
 
 ## What's included (12 components)
 1. White-label dashboard (Partner's brand)
@@ -19,7 +19,7 @@ For complete strategic context, see `/Users/joshuakovarik/Documents/Claude/Proje
 7. Priority compute + 10× quota
 8. Reseller commercial license (Partner keeps 100%)
 9. Operator-only Discord
-10. Monthly Mike Perry office hours
+10. Monthly our compliance review team office hours
 11. Carrier outreach toolkit
 12. Everything in Compass Pro tier
 
@@ -42,7 +42,7 @@ For complete strategic context, see `/Users/joshuakovarik/Documents/Claude/Proje
 1. Apply at x3compass.com/partners
 2. 15-minute screening call with X3 partnerships team
 3. 50-question regulatory knowledge test
-4. Mike Perry final review + sign-off
+4. our compliance review team final review + sign-off
 5. Stripe Connect onboarding (if opting into payment hub)
 6. White-label configuration (brand, domain, colors)
 7. Sprint Week 1: niche selection + outreach playbook

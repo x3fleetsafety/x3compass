@@ -64,7 +64,7 @@
 - 10 email templates (cold + warm)
 - 5 video scripts (60 / 90 / 180 second)
 - Landing page templates
-- Mike Perry-fronted YouTube clips (free to embed)
+- Expert-fronted YouTube clips (free to embed)
 - Real-time dashboard with attribution
 - Monthly affiliate-only webinar with X3 leadership
 

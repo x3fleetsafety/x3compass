@@ -28,7 +28,7 @@ We're sure of ourselves on the facts. We're never flippant about consequences.
 - Direct, precise, plain, regulated, peer, professional
 - Audit-ready, cited, verifiable, evidence
 - Compass, direction, north, signal
-- Mike Perry's name (when relevant)
+- our compliance review team's name (when relevant)
 
 ## Words we avoid
 - "Disrupt," "revolutionary," "game-changing"

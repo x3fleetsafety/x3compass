@@ -8,7 +8,7 @@
 
 X3 Compass replaces a $130K/year Safety Director with an AI agent that knows 49 CFR cold, watches every driver file, flags every audit risk, drafts every safety meeting, and answers every regulatory question — for $79–$999/month, self-serve, 100% automated.
 
-Built on the **[X3 100-skill open-source corpus](https://github.com/x3fleetsafety/skills)** + Claude. Reviewed by Mike Perry, 20-year NY State Police CMV inspector.
+Built on the **[X3 100-skill open-source corpus](https://github.com/x3fleetsafety/skills)** + Claude. Reviewed by senior FMCSA compliance veterans.
 
 ---
 
@@ -21,7 +21,7 @@ Built on the **[X3 100-skill open-source corpus](https://github.com/x3fleetsafet
 - **Enterprise $999/mo** — 51–250 trucks
 
 ### 🤝 Partner (safety consultants license Compass)
-- **$499/mo flat** — unlimited carrier seats, white-label, reseller license, monthly Mike Perry office hours
+- **$499/mo flat** — unlimited carrier seats, white-label, reseller license, monthly our compliance review team office hours
 
 **5-year combined target: $72M ARR** with ~15 person team.
 
@@ -75,7 +75,7 @@ x3compass/
 │   ├── index.html               — hero, value props, social proof
 │   ├── pricing.html             — Direct tier pricing
 │   ├── partners.html            — Partner program landing
-│   ├── mike.html                — Mike Perry credibility page
+
 │   ├── affiliate.html           — affiliate program signup
 │   ├── about.html               — story + team
 │   ├── skills.html              — 100-skill catalog (uses x3fleetsafety/skills)
@@ -161,5 +161,5 @@ Apache 2.0. The X3 100-skill corpus this is built on is also Apache 2.0. Fork fr
 ## Maintained by
 
 **X3 Fleet Safety** — DOT compliance for small US motor carriers.
-Senior regulatory advisor: **Mike Perry**, 20-year NY State Police CMV inspector, 10,000+ inspections.
+Senior regulatory advisor: **our compliance review team**, 20-year NY State Police CMV inspector, 10,000+ inspections.
 Founder: **Joshua Kovarik** (joshua@x3fleetsafety.com).

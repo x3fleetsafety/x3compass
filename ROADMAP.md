@@ -2,7 +2,7 @@
 
 ## Phase 0 — Foundation (now → 2 weeks)
 - [x] GitHub repo (x3fleetsafety/x3compass)
-- [x] Marketing site shell (index, partners, mike, affiliate, pricing)
+- [x] Marketing site shell (index, partners, affiliate, pricing, about, faq, compare, skills)
 - [x] Multi-tenant Supabase schema
 - [x] Compass-agent Edge Function (with skill RAG + multi-model routing)
 - [ ] x3compass.com DNS → Cloudflare Pages
@@ -21,7 +21,7 @@
 
 ## Phase 2 — Closed beta (weeks 9–12)
 - [ ] 30 closed beta carriers (free during beta)
-- [ ] Mike Perry validates 50 prompted scenarios
+- [ ] our compliance review team validates 50 prompted scenarios
 - [ ] Iterate on top 10 friction points
 - [ ] First customer testimonials captured
 
@@ -39,7 +39,7 @@
 - [ ] Attorney-drafted MSA/SOW/NDA library
 - [ ] "First Carrier in 60 Days" sprint curriculum
 - [ ] Partner-only Discord launched
-- [ ] First Mike Perry monthly office hours
+- [ ] First our compliance review team monthly office hours
 - [ ] Partner program public launch (Month 9)
 - [ ] Target: 50 Partners by end of Month 9
 
