@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hazmat Routes — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;"><a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a></nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Hazmat Route Planner</h1><p>Avoids tunnels (Holland, Lincoln, Big Dig). Follows state-designated hazmat routes. Class 7 highway-route-controlled routes baked in.</p></div>
+<div class="dash-header-actions"><a href="#" class="hm-cta">+ Plan route</a></div>
+</header>
+
+<div class="dash-card hm-card" style="background:linear-gradient(135deg,rgba(251,191,36,0.08),rgba(239,68,68,0.04));border-color:rgba(251,191,36,0.3);">
+<h2 style="font-size:20px;margin:0 0 16px;">Plan a hazmat route</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
+<input placeholder="Origin (city or address)" style="background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:14px;border-radius:8px;font-size:14px;">
+<input placeholder="Destination" style="background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:14px;border-radius:8px;font-size:14px;">
+<select style="background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:14px;border-radius:8px;font-size:14px;">
+<option>Class 3 — Flammable liquid</option><option>Class 8 — Corrosive</option><option>Class 9 — Lithium battery</option><option>Class 2.1 — Flammable gas</option><option>Class 1.4 — Explosives (minor)</option>
+</select>
+</div>
+<button class="hm-cta" style="width:100%;">Generate hazmat-compliant route →</button>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Saved routes</h3></div>
+<table class="dash-table">
+<thead><tr><th>Route</th><th>Hazmat class</th><th>Restrictions checked</th><th>Length</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Detroit → Memphis</strong><br><span class="td-sub">via I-94 / I-69 / I-65 / I-55</span></td><td>Class 3 (UN1203)</td><td>✓ Tunnels · ✓ State routes (MI/IN/KY/TN)</td><td>768 mi</td><td><a class="row-cta">Re-verify</a></td></tr>
+<tr><td><strong>Detroit → Pittsburgh</strong><br><span class="td-sub">via I-75 / I-80 / I-79</span></td><td>Class 3 (UN1090)</td><td>✓ Tunnels · ✓ State routes (MI/OH/PA)</td><td>286 mi</td><td><a class="row-cta">Re-verify</a></td></tr>
+<tr><td><strong>Detroit → NYC</strong><br><span class="td-sub">via I-80 → I-78 (AVOIDS Holland Tunnel)</span></td><td>Class 3 (UN1203)</td><td>✓ Holland Tunnel blocked · ✓ Lincoln blocked · alt route via Goethals</td><td>614 mi</td><td><a class="row-cta">Re-verify</a></td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Known hazmat restrictions</h3></div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+<div style="padding:18px;background:rgba(239,68,68,0.06);border-left:4px solid var(--hm-red);border-radius:8px;font-size:13px;color:var(--compass-fog);"><strong style="color:var(--compass-paper);">NYC Metro</strong><br>Holland Tunnel: ALL hazmat prohibited. Lincoln Tunnel: limited classes with permit. Queens-Midtown: hazmat prohibited. Use Goethals/Outerbridge.</div>
+<div style="padding:18px;background:rgba(239,68,68,0.06);border-left:4px solid var(--hm-red);border-radius:8px;font-size:13px;color:var(--compass-fog);"><strong style="color:var(--compass-paper);">Boston</strong><br>I-90/I-93 Big Dig tunnels: hazmat prohibited. Sumner, Callahan, Ted Williams: prohibited. Required routing via I-95 around Boston.</div>
+<div style="padding:18px;background:rgba(239,68,68,0.06);border-left:4px solid var(--hm-red);border-radius:8px;font-size:13px;color:var(--compass-fog);"><strong style="color:var(--compass-paper);">SF Bay Area</strong><br>Caldecott Tunnel: hazmat prohibited. Bay Bridge Yerba Buena tunnel: prohibited. Routing via San Mateo Bridge / Dumbarton.</div>
+<div style="padding:18px;background:rgba(239,68,68,0.06);border-left:4px solid var(--hm-red);border-radius:8px;font-size:13px;color:var(--compass-fog);"><strong style="color:var(--compass-paper);">Class 7 Radioactive</strong><br>Highway-route-controlled routes (49 CFR 397.101). Pre-designated by FMCSA. NRC coordination required for high-level shipments.</div>
+</div>
+</div>
+</main></body></html>

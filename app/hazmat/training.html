@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Training — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;"><a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a></nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>HM-126 Training Tracker</h1><p>49 CFR 172.700 requires training every 3 years. Per driver, recurring, recordkeeping. Compass tracks all of it.</p></div>
+<div class="dash-header-actions"><a href="#" class="hm-cta">+ Schedule training</a></div>
+</header>
+
+<section style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+<div class="kpi-tile"><div class="kpi-tile-label">H-endorsed drivers</div><div class="kpi-tile-num">12 / 35</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Training current</div><div class="kpi-tile-num" style="color:var(--compass-teal);">11 / 12</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Expiring &lt;30 days</div><div class="kpi-tile-num" style="color:var(--hm-amber);">1</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Avg compliance margin</div><div class="kpi-tile-num">14 mo</div><div class="kpi-tile-sub">vs 3-year mandatory cycle</div></div>
+</section>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Training records · all hazmat drivers</h3></div>
+<table class="dash-table">
+<thead><tr><th>Driver</th><th>Initial</th><th>Last recurring</th><th>Expires</th><th>Status</th><th>Certificate</th></tr></thead>
+<tbody>
+<tr class="row-warn"><td><strong>R. Quinn</strong></td><td>2020-09-16</td><td>2023-09-16</td><td>2026-09-16 (Fri)</td><td>⚠ This week</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>C. Hayes</strong></td><td>2021-04-12</td><td>2024-04-12</td><td>2027-04-12</td><td>✓ Current</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>A. Morales</strong></td><td>2022-01-20</td><td>2025-01-20</td><td>2028-01-20</td><td>✓ Current</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>L. Tran</strong></td><td>2021-08-05</td><td>2024-08-05</td><td>2027-08-05</td><td>✓ Current</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>J. Reed</strong></td><td>2022-02-28</td><td>2025-02-28</td><td>2028-02-28</td><td>✓ Current</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>M. Velez</strong></td><td>2026-09-04 (new hire)</td><td>—</td><td>2029-09-04</td><td>✓ Current (initial)</td><td><a class="row-cta">View</a></td></tr>
+<tr><td><strong>M. Brennan</strong></td><td>2020-04-11</td><td>2023-04-11</td><td>2026-04-11 (overdue)</td><td><span style="color:#FCA5A5;">✗ Lapsed</span></td><td><a class="row-cta">Schedule now</a></td></tr>
+<tr><td><strong>D. Park</strong></td><td>2022-02-08</td><td>2025-02-08</td><td>2028-02-08</td><td>✓ Current</td><td><a class="row-cta">View</a></td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Four required training elements (49 CFR 172.704)</h3></div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+<div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hm-amber);letter-spacing:0.1em;margin-bottom:6px;">ELEMENT 1</div><strong>General awareness / familiarization</strong><br><span style="font-size:13px;color:var(--compass-mist);">Hazmat regulations overview, HMT structure, hazard recognition. All employees.</span></div>
+<div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hm-amber);letter-spacing:0.1em;margin-bottom:6px;">ELEMENT 2</div><strong>Function-specific</strong><br><span style="font-size:13px;color:var(--compass-mist);">Job-specific training. Loader, dispatcher, driver — each gets their function's content.</span></div>
+<div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hm-amber);letter-spacing:0.1em;margin-bottom:6px;">ELEMENT 3</div><strong>Safety</strong><br><span style="font-size:13px;color:var(--compass-mist);">Emergency response, PPE, accident prevention.</span></div>
+<div style="padding:18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--hm-amber);letter-spacing:0.1em;margin-bottom:6px;">ELEMENT 4</div><strong>Security awareness</strong><br><span style="font-size:13px;color:var(--compass-mist);">Post-9/11 addition. Threats, suspicious activity, security plan basics.</span></div>
+</div>
+</div>
+</main></body></html>

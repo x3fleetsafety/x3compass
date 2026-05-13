@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Placards — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;">
+      <a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a>
+    </nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Placards · Pre-trip verifier</h1><p>Every hazmat load gets photo-verified before the driver leaves the dock. 4 sides. Right class. Readable ID number.</p></div>
+<div class="dash-header-actions"><a href="#" class="hm-cta">+ New verification</a></div>
+</header>
+
+<section style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+<div class="kpi-tile"><div class="kpi-tile-label">Verifications this month</div><div class="kpi-tile-num">187</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Auto-passed</div><div class="kpi-tile-num" style="color:var(--compass-teal);">181 (97%)</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Flagged + corrected</div><div class="kpi-tile-num" style="color:var(--hm-amber);">6</div><div class="kpi-tile-sub">Avg cost-of-violation avoided: $4,500</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Estimated $ saved</div><div class="kpi-tile-num" style="background:var(--hm-flame);-webkit-background-clip:text;background-clip:text;color:transparent;">$27K</div></div>
+</section>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Placard inventory</h3><a class="link-arrow">Order new placards →</a></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+<div style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;"><div class="placard placard-class-3"><div class="placard-inner">3<br>FLAM</div></div><div style="font-size:14px;font-weight:700;margin-top:8px;">Class 3 Flammable</div><div style="font-size:12px;color:var(--compass-mist);">In stock: 48 · Condition: ✓</div></div>
+<div style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;"><div class="placard placard-class-8"><div class="placard-inner">8<br>CORR</div></div><div style="font-size:14px;font-weight:700;margin-top:8px;">Class 8 Corrosive</div><div style="font-size:12px;color:var(--compass-mist);">In stock: 16 · Condition: ✓</div></div>
+<div style="text-align:center;padding:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;"><div class="placard placard-class-9"><div class="placard-inner">9<br>MISC</div></div><div style="font-size:14px;font-weight:700;margin-top:8px;">Class 9 Misc</div><div style="font-size:12px;color:var(--compass-mist);">In stock: 24 · Condition: ✓</div></div>
+<div style="text-align:center;padding:20px;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.25);border-radius:14px;"><div class="placard placard-class-2"><div class="placard-inner">DANGER</div></div><div style="font-size:14px;font-weight:700;margin-top:8px;">DANGEROUS</div><div style="font-size:12px;color:var(--compass-mist);">In stock: 4 · ⚠ low</div></div>
+</div>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Recent verifications</h3></div>
+<table class="dash-table">
+<thead><tr><th>Load</th><th>Driver</th><th>Class</th><th>Verified at</th><th>Result</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>HM-2026-0913-04</strong></td><td>R. Quinn</td><td>3 · UN1203</td><td>10:18 AM</td><td><span style="color:var(--compass-teal);">✓ Pass · all 4 sides</span></td><td><a class="row-cta">View photos</a></td></tr>
+<tr><td><strong>HM-2026-0913-07</strong></td><td>L. Tran</td><td>3 · UN1170</td><td>8:42 AM</td><td><span style="color:var(--compass-teal);">✓ Pass</span></td><td><a class="row-cta">View photos</a></td></tr>
+<tr><td><strong>HM-2026-0913-08</strong></td><td>J. Reed</td><td>3 · UN1090</td><td>7:55 AM</td><td><span style="color:var(--compass-teal);">✓ Pass</span></td><td><a class="row-cta">View photos</a></td></tr>
+<tr class="row-warn"><td><strong>HM-2026-0912-19</strong></td><td>D. Park</td><td>8 · UN1830</td><td>Yesterday 16:33</td><td><span style="color:var(--hm-amber);">⚠ Failed · driver-side placard missing</span></td><td><a class="row-cta">View + resolved</a></td></tr>
+<tr><td><strong>HM-2026-0912-18</strong></td><td>A. Morales</td><td>9 · UN3480</td><td>Yesterday 14:17</td><td><span style="color:var(--compass-teal);">✓ Pass</span></td><td><a class="row-cta">View photos</a></td></tr>
+</tbody></table>
+</div>
+</main></body></html>

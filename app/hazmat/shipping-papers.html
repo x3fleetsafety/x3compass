@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shipping Papers — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;"><a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" class="active" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a></nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Shipping Papers · Validator</h1><p>Upload the BOL. Compass checks all required elements per 49 CFR 172.200 before driver leaves dock.</p></div>
+<div class="dash-header-actions"><a href="#" class="hm-cta">+ New shipping paper</a></div>
+</header>
+
+<div class="dash-card hm-card" style="background:linear-gradient(135deg,rgba(251,191,36,0.08),rgba(239,68,68,0.04));border-color:rgba(251,191,36,0.3);">
+<h2 style="font-size:20px;margin:0 0 14px;">Upload shipping paper for validation</h2>
+<div style="background:rgba(10,25,41,0.6);border:2px dashed rgba(251,191,36,0.3);border-radius:12px;padding:48px;text-align:center;">
+<div style="font-size:48px;margin-bottom:12px;">📄</div>
+<p style="margin:0 0 12px;color:var(--compass-fog);">Drop a PDF or image here, or click to browse</p>
+<button class="hm-cta">Browse files</button>
+<p style="font-size:11px;color:var(--compass-mist);margin-top:14px;">Supports: PDF, PNG, JPG · Multi-page OK · OCR'd automatically</p>
+</div>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Recent validations</h3></div>
+<table class="dash-table">
+<thead><tr><th>Load</th><th>Materials</th><th>Validated</th><th>Result</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>BOL-2026-09-1847</strong></td><td>UN1203 Gasoline · 5,000 gal</td><td>2h ago</td><td><span style="color:var(--compass-teal);">✓ All required fields present</span></td><td><a class="row-cta">View report</a></td></tr>
+<tr class="row-warn"><td><strong>BOL-2026-09-1846</strong></td><td>UN1830 Sulfuric acid · 200L</td><td>5h ago</td><td><span style="color:var(--hm-amber);">⚠ Emergency response telephone missing</span></td><td><a class="row-cta">Resolved</a></td></tr>
+<tr><td><strong>BOL-2026-09-1845</strong></td><td>UN3480 Lithium ion · 24 packs</td><td>Yesterday</td><td><span style="color:var(--compass-teal);">✓ Valid</span></td><td><a class="row-cta">View report</a></td></tr>
+<tr><td><strong>BOL-2026-09-1844</strong></td><td>UN1090 Acetone · 3 drums</td><td>Yesterday</td><td><span style="color:var(--compass-teal);">✓ Valid</span></td><td><a class="row-cta">View report</a></td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Required elements check (49 CFR 172.200)</h3></div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ UN identification number</strong><br><span style="color:var(--compass-mist);">Required in basic description sequence</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Proper shipping name</strong><br><span style="color:var(--compass-mist);">Matches HMT column 2 exactly</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Hazard class / division</strong><br><span style="color:var(--compass-mist);">Including subsidiary if applicable</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Packing group</strong><br><span style="color:var(--compass-mist);">I, II, or III where assigned</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Total quantity</strong><br><span style="color:var(--compass-mist);">By weight or volume + units</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Number / type of packages</strong><br><span style="color:var(--compass-mist);">Drums, IBCs, cylinders, etc.</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Emergency response telephone</strong><br><span style="color:var(--compass-mist);">CHEMTREC or shipper's 24/7 line</span></div>
+<div style="padding:14px;background:rgba(45,212,191,0.05);border-left:3px solid var(--compass-teal);border-radius:6px;font-size:13px;"><strong>✓ Shipper certification + signature</strong><br><span style="color:var(--compass-mist);">Signed by hazmat employee</span></div>
+</div>
+</div>
+</main></body></html>

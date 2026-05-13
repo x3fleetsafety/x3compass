@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Segregation Checker — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;">
+      <a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a>
+    </nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Segregation Checker</h1><p>Adding multiple hazmat to one load? Compass checks 49 CFR 177.848 instantly. Incompatible classes blocked at dispatch.</p></div>
+</header>
+
+<div class="dash-card hm-card" style="background:linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(239, 68, 68, 0.04));border-color:rgba(251, 191, 36, 0.3);">
+<h2 style="font-size:22px;margin:0 0 16px;">Materials in this load</h2>
+
+<div style="background:rgba(10,25,41,0.6);padding:18px;border-radius:10px;margin-bottom:14px;">
+<div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;">
+<div class="placard placard-class-3" style="width:40px;height:40px;margin:0;"><div class="placard-inner" style="font-size:8px;">3</div></div>
+<div><strong>Gasoline · UN1203</strong><br><span style="font-size:12px;color:var(--compass-mist);">Class 3 (PG II) · Flammable liquid · 500 gal in cargo tank</span></div>
+<button style="background:rgba(239,68,68,0.1);color:#FCA5A5;border:1px solid rgba(239,68,68,0.3);padding:6px 12px;border-radius:6px;font-size:11px;">Remove</button>
+</div>
+</div>
+
+<div style="background:rgba(10,25,41,0.6);padding:18px;border-radius:10px;margin-bottom:14px;">
+<div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;">
+<div class="placard placard-class-8" style="width:40px;height:40px;margin:0;"><div class="placard-inner" style="font-size:8px;">8</div></div>
+<div><strong>Sulfuric acid · UN1830</strong><br><span style="font-size:12px;color:var(--compass-mist);">Class 8 (PG II) · Corrosive · 200L in IBC</span></div>
+<button style="background:rgba(239,68,68,0.1);color:#FCA5A5;border:1px solid rgba(239,68,68,0.3);padding:6px 12px;border-radius:6px;font-size:11px;">Remove</button>
+</div>
+</div>
+
+<button style="width:100%;background:rgba(251,191,36,0.08);border:1px dashed rgba(251,191,36,0.4);color:var(--hm-amber);padding:14px;border-radius:10px;font-weight:600;cursor:pointer;">+ Add material to this load</button>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;background:linear-gradient(135deg,rgba(45,212,191,0.08),rgba(34,211,238,0.04));border-color:rgba(45,212,191,0.3);">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+<div style="font-size:36px;">✅</div>
+<h3 style="font-size:22px;margin:0;color:var(--compass-paper);">Compatible · Load can ship</h3>
+</div>
+<p style="color:var(--compass-fog);margin:0 0 16px;">Per <code style="color:var(--hm-amber);background:rgba(45,212,191,0.1);padding:2px 6px;border-radius:4px;">49 CFR 177.848</code>, Class 3 (Flammable liquid) and Class 8 (Corrosive) have no segregation X-mark. <strong style="color:var(--compass-paper);">Both can be loaded on the same vehicle.</strong></p>
+<div style="background:rgba(10,25,41,0.6);padding:16px;border-radius:8px;font-size:13px;color:var(--compass-fog);line-height:1.6;">
+<strong style="color:var(--compass-teal);">Loading recommendation:</strong><br>
+- Separate compartments preferred (cargo tank for fuel + dry IBC for acid)<br>
+- Physical separation 6+ feet within trailer if mixed<br>
+- Sulfuric acid IBC NOT positioned above gasoline tank (drip risk)<br>
+- Driver pre-trip verifies positioning
+</div>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<h3 style="font-size:16px;margin:0 0 16px;">Segregation table reference · 49 CFR 177.848</h3>
+<p style="font-size:13px;color:var(--compass-mist);margin:0 0 14px;">Visual reference. <strong style="color:#FCA5A5;">X</strong> = segregation required (cannot load together). <strong style="color:var(--hm-amber);">O</strong> = restrictions apply. Blank = no segregation needed.</p>
+
+<table style="width:100%;font-family:'JetBrains Mono',monospace;font-size:11px;border-collapse:collapse;">
+<thead><tr style="background:rgba(255,255,255,0.04);"><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">Class</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">1.1/1.2/1.5</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">2.3 Toxic</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">3 Flam</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">4.3 DW</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">5.1 Oxid</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">5.2 OrgP</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">7 Rad</th><th style="padding:8px;border:1px solid rgba(255,255,255,0.08);">8 Corr</th></tr></thead>
+<tbody>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);font-weight:700;">3 Flam</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--hm-amber);font-weight:700;">O</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-teal);font-weight:700;">✓</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);font-weight:700;">5.1 Oxid</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--hm-amber);font-weight:700;">O</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--hm-amber);font-weight:700;">O</td></tr>
+<tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);font-weight:700;">8 Corr</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-teal);font-weight:700;">✓</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:#FCA5A5;font-weight:700;">X</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--hm-amber);font-weight:700;">O</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--compass-mist);">—</td></tr>
+</tbody>
+</table>
+<p style="font-size:11px;color:var(--compass-mist);margin-top:12px;">Showing 3 of 14 classes. <a style="color:var(--hm-amber);">View full table →</a></p>
+</div>
+</main></body></html>

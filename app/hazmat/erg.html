@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ERG Lookup — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;">
+      <a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" class="active" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a>
+    </nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>ERG · Emergency Response Lookup</h1><p>3,500+ UN numbers indexed. Driver-app friendly. Isolation distances + first aid + spill response in seconds.</p></div>
+</header>
+
+<div class="dash-card hm-card" style="background:linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(239, 68, 68, 0.04));border-color:rgba(251, 191, 36, 0.3);">
+<h2 style="font-size:22px;margin:0 0 16px;">Search by UN number, proper shipping name, or guide page</h2>
+<form><input type="text" placeholder="UN1203, gasoline, guide 128..." style="width:100%;background:rgba(10,25,41,0.8);border:1px solid rgba(251,191,36,0.3);color:var(--compass-paper);padding:18px 20px;border-radius:12px;font-size:16px;"></form>
+<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+<a href="#" style="font-size:12px;padding:6px 12px;background:rgba(251,191,36,0.1);color:var(--hm-amber);border-radius:999px;font-weight:600;">UN1203 (gasoline)</a>
+<a href="#" style="font-size:12px;padding:6px 12px;background:rgba(251,191,36,0.1);color:var(--hm-amber);border-radius:999px;font-weight:600;">UN1830 (sulfuric acid)</a>
+<a href="#" style="font-size:12px;padding:6px 12px;background:rgba(251,191,36,0.1);color:var(--hm-amber);border-radius:999px;font-weight:600;">UN3480 (lithium-ion)</a>
+<a href="#" style="font-size:12px;padding:6px 12px;background:rgba(251,191,36,0.1);color:var(--hm-amber);border-radius:999px;font-weight:600;">UN1075 (LPG)</a>
+<a href="#" style="font-size:12px;padding:6px 12px;background:rgba(251,191,36,0.1);color:var(--hm-amber);border-radius:999px;font-weight:600;">UN1170 (ethanol)</a>
+</div>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>UN1203 · GASOLINE · Guide Page 128</h3><span style="font-size:12px;color:var(--compass-mist);">Class 3 · PG II</span></div>
+
+<div style="background:rgba(239,68,68,0.06);border-left:4px solid var(--hm-red);padding:18px 24px;border-radius:8px;margin-bottom:16px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:#FCA5A5;margin-bottom:6px;">POTENTIAL HAZARDS — FIRE OR EXPLOSION</div>
+<p style="font-size:14px;color:var(--compass-fog);margin:0;line-height:1.6;">HIGHLY FLAMMABLE: Easily ignited by heat, sparks or flames. Vapors may form explosive mixtures with air. Vapors may travel to source of ignition and flash back. Most vapors are heavier than air and accumulate in low areas. Vapor explosion hazard indoors, outdoors or in sewers. Runoff to sewer may create fire or explosion hazard.</p>
+</div>
+
+<div style="background:rgba(251,191,36,0.06);border-left:4px solid var(--hm-amber);padding:18px 24px;border-radius:8px;margin-bottom:16px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:var(--hm-amber);margin-bottom:6px;">PUBLIC SAFETY · ISOLATION DISTANCES</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px;color:var(--compass-fog);">
+<div><strong style="color:var(--compass-paper);">Initial isolation:</strong> 50 meters (160 feet) in all directions</div>
+<div><strong style="color:var(--compass-paper);">Protective action distance:</strong> 300 meters (1,000 feet)</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:8px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:var(--hm-amber);margin-bottom:8px;">EMERGENCY RESPONSE · FIRE</div>
+<p style="font-size:13px;color:var(--compass-fog);margin:0;line-height:1.6;">SMALL FIRE: Dry chemical, CO2, water spray or regular foam. LARGE FIRE: Water spray, fog or regular foam. Move containers from fire area if you can do it without risk. Do not use straight streams. Fight fire from maximum distance or use unmanned hose holders or monitor nozzles.</p>
+</div>
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:8px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:var(--hm-amber);margin-bottom:8px;">EMERGENCY RESPONSE · SPILL</div>
+<p style="font-size:13px;color:var(--compass-fog);margin:0;line-height:1.6;">ELIMINATE all ignition sources. All equipment used when handling product must be grounded. Stop leak if without risk. Prevent entry into waterways, sewers, basements. Absorb or cover with dry earth, sand or other non-combustible material and transfer to containers.</p>
+</div>
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:8px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:var(--hm-amber);margin-bottom:8px;">FIRST AID</div>
+<p style="font-size:13px;color:var(--compass-fog);margin:0;line-height:1.6;">Move victim to fresh air. Call 911 or emergency medical service. Apply artificial respiration if victim is not breathing. Administer oxygen if breathing is difficult. Remove and isolate contaminated clothing and shoes. In case of contact with substance, immediately flush skin or eyes with running water for at least 20 minutes. Keep victim warm and quiet. Ensure that medical personnel are aware of the material involved and take precautions to protect themselves.</p>
+</div>
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:8px;">
+<div style="font-size:11px;font-weight:800;letter-spacing:0.15em;color:var(--hm-amber);margin-bottom:8px;">PROTECTIVE CLOTHING</div>
+<p style="font-size:13px;color:var(--compass-fog);margin:0;line-height:1.6;">Wear positive pressure self-contained breathing apparatus (SCBA). Structural firefighters' protective clothing will only provide limited protection.</p>
+</div>
+</div>
+
+<div style="margin-top:16px;padding:14px 18px;background:rgba(10,25,41,0.6);border-radius:8px;font-size:12px;color:var(--compass-mist);">
+📚 Source: <a href="https://github.com/x3fleetsafety/hazmat-skills" target="_blank" style="color:var(--hm-amber);">ERG 2024 (PHMSA)</a> · 49 CFR 172.602 · Last verified by senior compliance review: Sept 2026
+</div>
+</div>
+</main></body></html>

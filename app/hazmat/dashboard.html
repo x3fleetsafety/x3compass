@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hazmat Dashboard — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;">
+      <a href="/app/hazmat/dashboard.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a>
+    </nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Hazmat Center · Dashboard</h1><p>Your hazmat compliance pulse. 3 items need attention this week.</p></div>
+<div class="dash-header-actions">
+<button class="ghost-cta">⌘K Ask Hazmat Compass</button>
+<a href="#" class="hm-cta">+ Log hazmat load</a>
+</div>
+</header>
+
+<section class="attention-bar">
+<div class="attn attn-red"><div class="attn-pulse"></div><div class="attn-content"><div class="attn-label">Urgent · Action today</div><div class="attn-title">Cargo tank #4421 hydrostatic test expires tomorrow</div><a href="/app/hazmat/tanks.html">Schedule test →</a></div></div>
+<div class="attn attn-yellow"><div class="attn-content"><div class="attn-label">Due this week</div><div class="attn-title">R. Quinn HM-126 training expires Friday (3-year cycle)</div><a href="/app/hazmat/training.html">Schedule →</a></div></div>
+<div class="attn attn-yellow"><div class="attn-content"><div class="attn-label">Due Sep 30</div><div class="attn-title">PHMSA annual registration renewal ($275)</div><a href="#">Renew →</a></div></div>
+</section>
+
+<section style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px;">
+<div class="kpi-tile"><div class="kpi-tile-label">Hazmat compliance score</div><div class="kpi-tile-num" style="background:var(--hm-flame);-webkit-background-clip:text;background-clip:text;color:transparent;">93</div><div class="kpi-tile-sub">/100 · ↑ 4 vs last month</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Active hazmat loads</div><div class="kpi-tile-num">14</div><div class="kpi-tile-sub">7 Class 3 · 3 Class 8 · 4 Class 9</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">H-endorsed drivers</div><div class="kpi-tile-num" style="color:var(--hm-amber);">12 / 35</div><div class="kpi-tile-sub">all valid · 1 renews Oct</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Cargo tanks active</div><div class="kpi-tile-num">8</div><div class="kpi-tile-sub">7 current · 1 due Friday</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">CSA Hazmat BASIC</div><div class="kpi-tile-num" style="color:var(--compass-teal);">42</div><div class="kpi-tile-sub">percentile (under 80 = good)</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">YTD fines avoided</div><div class="kpi-tile-num" style="background:var(--hm-flame);-webkit-background-clip:text;background-clip:text;color:transparent;">$27K</div><div class="kpi-tile-sub">est. via DataQ + pre-trip catches</div></div>
+</section>
+
+<section class="dash-main">
+<div class="dash-col-left">
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Active hazmat loads</h3><a href="#" class="link-arrow">View all 14 →</a></div>
+<table class="dash-table">
+<thead><tr><th>Load</th><th>Material (UN#)</th><th>Class</th><th>Driver</th><th>Status</th><th>Pre-trip</th></tr></thead>
+<tbody>
+<tr><td><strong>HM-2026-0913-04</strong><br><span class="td-sub">Detroit → Memphis</span></td><td>Gasoline · UN1203</td><td>3 (PG II)</td><td>R. Quinn</td><td>In transit</td><td>✓ verified</td></tr>
+<tr><td><strong>HM-2026-0913-05</strong><br><span class="td-sub">Detroit → Cleveland</span></td><td>Sulfuric acid · UN1830</td><td>8 (PG II)</td><td>C. Hayes</td><td>Loading</td><td>⚠ pending</td></tr>
+<tr><td><strong>HM-2026-0913-06</strong><br><span class="td-sub">Detroit → Chicago</span></td><td>Lithium ion batteries · UN3480</td><td>9</td><td>A. Morales</td><td>Scheduled 14:00</td><td>—</td></tr>
+<tr><td><strong>HM-2026-0913-07</strong><br><span class="td-sub">Detroit → Milwaukee</span></td><td>Ethanol · UN1170</td><td>3 (PG II)</td><td>L. Tran</td><td>In transit</td><td>✓ verified</td></tr>
+<tr><td><strong>HM-2026-0913-08</strong><br><span class="td-sub">Detroit → Pittsburgh</span></td><td>Acetone · UN1090</td><td>3 (PG II)</td><td>J. Reed</td><td>Delivered</td><td>✓ verified</td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>HM-126 training status</h3><a href="/app/hazmat/training.html" class="link-arrow">Manage all →</a></div>
+<table class="dash-table">
+<thead><tr><th>Driver</th><th>Last training</th><th>Expires</th><th>Status</th><th></th></tr></thead>
+<tbody>
+<tr class="row-warn"><td><strong>R. Quinn</strong></td><td>2023-09-16</td><td>2026-09-16 (Fri)</td><td>⚠ Expires this week</td><td><a class="row-cta">Schedule</a></td></tr>
+<tr><td><strong>C. Hayes</strong></td><td>2024-04-12</td><td>2027-04-12</td><td>✓ Current</td><td><a class="row-cta">View cert</a></td></tr>
+<tr><td><strong>A. Morales</strong></td><td>2025-01-20</td><td>2028-01-20</td><td>✓ Current</td><td><a class="row-cta">View cert</a></td></tr>
+<tr><td><strong>L. Tran</strong></td><td>2024-08-05</td><td>2027-08-05</td><td>✓ Current</td><td><a class="row-cta">View cert</a></td></tr>
+<tr><td><strong>J. Reed</strong></td><td>2025-02-28</td><td>2028-02-28</td><td>✓ Current</td><td><a class="row-cta">View cert</a></td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Cargo tanks</h3><a href="/app/hazmat/tanks.html" class="link-arrow">Manage all →</a></div>
+<table class="dash-table">
+<thead><tr><th>Tank ID</th><th>Spec</th><th>Last hydro</th><th>Next due</th><th>Status</th></tr></thead>
+<tbody>
+<tr class="row-urgent"><td><strong>#4421</strong></td><td>DOT-406 (petroleum)</td><td>2021-09-14</td><td>2026-09-14 (Tomorrow)</td><td>⚠ Expires tomorrow</td></tr>
+<tr><td><strong>#4422</strong></td><td>DOT-406</td><td>2022-03-21</td><td>2027-03-21</td><td>✓ Current</td></tr>
+<tr><td><strong>#4423</strong></td><td>DOT-407 (chemical)</td><td>2024-06-10</td><td>2029-06-10</td><td>✓ Current</td></tr>
+<tr><td><strong>#4424</strong></td><td>DOT-412 (corrosive)</td><td>2023-11-04</td><td>2028-11-04</td><td>✓ Current</td></tr>
+</tbody></table>
+</div>
+
+</div>
+
+<div class="dash-col-right">
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Ask Hazmat Compass</h3><span class="card-pill">⌘K</span></div>
+<p style="font-size:12px;color:var(--compass-mist);margin:0 0 12px;">Hazmat-specific Q&A. Every answer cites 49 CFR.</p>
+<form class="chat-shortcut-form"><input type="text" placeholder="When is UN3480 lithium battery required to ship at ≤30% SoC?"><button class="hm-cta" type="submit">→</button></form>
+<div class="chat-shortcuts" style="margin-top:12px;">
+<a href="#">Placard rules</a>
+<a href="#">Segregation</a>
+<a href="#">ERG lookup</a>
+<a href="#">PHMSA reg</a>
+<a href="#">Cargo tanks</a>
+</div>
+</div>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>This week's hazmat meeting</h3><a class="link-arrow">Open →</a></div>
+<div class="meeting-preview">
+<div class="meeting-topic" style="color:var(--hm-amber);">WEEK 38 · CARGO SECUREMENT</div>
+<h3 style="font-size:20px;margin:8px 0 12px;">Tiedown math for Class 3 drums: 49 CFR 393.110 walkthrough</h3>
+<p>This week's hazmat-specific meeting is driven by a Class 3 cargo securement violation we flagged last week. 5-minute talk track + driver Q&A + email-to-drivers template.</p>
+<a href="#" class="hm-cta" style="width:100%;text-align:center;padding:10px 16px;display:inline-block;">Send to hazmat drivers</a>
+</div>
+</div>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>PHMSA + TSA + Permits</h3></div>
+<ul style="list-style:none;padding:0;margin:0;font-size:13px;">
+<li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><strong>PHMSA Registration</strong><br><span style="color:var(--compass-mist);">Renews Sept 30 · $275 · Tier 1</span></li>
+<li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><strong>TSA H Endorsement</strong><br><span style="color:var(--compass-mist);">All 12 drivers current · 1 renews Oct</span></li>
+<li style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><strong>Special permits (DOT-SP)</strong><br><span style="color:var(--compass-mist);">2 active · next renewal 2027</span></li>
+<li style="padding:10px 0;"><strong>Security plan</strong><br><span style="color:var(--compass-mist);">Last review March 2026 · annual due March 2027</span></li>
+</ul>
+</div>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Hazmat activity feed</h3></div>
+<div class="feed-mini">
+<div class="feed-row"><div class="feed-dot" style="background:var(--hm-amber);"></div><div><strong>1h ago</strong> — Placard verified on HM-2026-0913-04 (R. Quinn)<br><span class="feed-meta">All 4 sides · Class 3 · ID UN1203</span></div></div>
+<div class="feed-row"><div class="feed-dot" style="background:var(--hm-amber);"></div><div><strong>4h ago</strong> — Shipping paper validated for HM-2026-0913-04<br><span class="feed-meta">All 49 CFR 172.200 elements present</span></div></div>
+<div class="feed-row"><div class="feed-dot" style="background:var(--hm-amber);"></div><div><strong>Yesterday</strong> — DataQ candidate flagged: inspection 2026-09-12-MI<br><span class="feed-meta">Placard alleged faded; photo evidence contradicts</span></div></div>
+<div class="feed-row"><div class="feed-dot" style="background:var(--hm-amber);"></div><div><strong>2 days ago</strong> — Hazmat security plan annual review notification<br><span class="feed-meta">Due March 2027 · Compass-drafted template ready</span></div></div>
+</div>
+</div>
+
+</div>
+</section>
+</main></body></html>

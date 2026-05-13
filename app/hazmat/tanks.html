@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cargo Tanks — X3 Compass Hazmat Center</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css"><link rel="stylesheet" href="/assets/hazmat.css">
+</head><body class="hm-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div style="padding:16px;border-top:1px solid rgba(251,191,36,0.15);margin-top:16px;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--hm-amber);letter-spacing:0.15em;font-weight:700;margin-bottom:8px;">HAZMAT CENTER</div>
+    <nav class="app-nav" style="padding:0;"><a href="/app/hazmat/dashboard.html" style="font-size:12px;padding:7px 14px;"><span>🎯</span> HM Dashboard</a>
+      <a href="/app/hazmat/placards.html" style="font-size:12px;padding:7px 14px;"><span>🪧</span> Placards</a>
+      <a href="/app/hazmat/shipping-papers.html" style="font-size:12px;padding:7px 14px;"><span>📄</span> Shipping papers</a>
+      <a href="/app/hazmat/erg.html" style="font-size:12px;padding:7px 14px;"><span>📖</span> ERG lookup</a>
+      <a href="/app/hazmat/segregation.html" style="font-size:12px;padding:7px 14px;"><span>🔬</span> Segregation</a>
+      <a href="/app/hazmat/training.html" style="font-size:12px;padding:7px 14px;"><span>🎓</span> HM-126 training</a>
+      <a href="/app/hazmat/tanks.html" class="active" style="font-size:12px;padding:7px 14px;"><span>🛢️</span> Cargo tanks</a>
+      <a href="/app/hazmat/routes.html" style="font-size:12px;padding:7px 14px;"><span>🗺️</span> Routes</a></nav>
+  </div>
+  <div class="sidebar-footer">
+    <div class="plan-badge" style="background:linear-gradient(135deg,rgba(251,191,36,0.10),rgba(239,68,68,0.04));border:1px solid rgba(251,191,36,0.3);">
+      <div class="plan-name" style="color:var(--hm-amber);">Hazmat Center · Active</div>
+      <div class="plan-stats">12 hazmat drivers · 8 cargo tanks</div>
+      <a href="/centers/hazmat" class="plan-upgrade" style="color:var(--hm-amber);">Manage →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar" style="background:var(--hm-flame);">JK</div>
+      <div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div>
+    </div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Cargo Tank Scheduler</h1><p>Annual visual + 1-5 year hydrostatic test per tank spec. Compass holds vehicles from dispatch when tests lapse.</p></div>
+<div class="dash-header-actions"><a href="#" class="hm-cta">+ Add cargo tank</a></div>
+</header>
+
+<section style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+<div class="kpi-tile"><div class="kpi-tile-label">Active cargo tanks</div><div class="kpi-tile-num">8</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Tests current</div><div class="kpi-tile-num" style="color:var(--compass-teal);">7</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Due &lt;30 days</div><div class="kpi-tile-num" style="color:var(--hm-amber);">1</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Held from dispatch</div><div class="kpi-tile-num">0</div></div>
+</section>
+
+<div class="dash-card hm-card">
+<div class="dash-card-head"><h3>Cargo tank fleet</h3></div>
+<table class="dash-table">
+<thead><tr><th>Tank ID</th><th>Spec</th><th>Last visual</th><th>Last hydro</th><th>Hydro cycle</th><th>Next due</th><th>Status</th></tr></thead>
+<tbody>
+<tr class="row-urgent"><td><strong>#4421</strong><br><span class="td-sub">Mfg 2018 · Aluminum</span></td><td>DOT-406 (petroleum)</td><td>2026-08-22</td><td>2021-09-14</td><td>5-yr (P)</td><td>2026-09-14 (Tomorrow)</td><td><span style="color:#FCA5A5;">⚠ Schedule now</span></td></tr>
+<tr><td><strong>#4422</strong><br><span class="td-sub">Mfg 2019 · Aluminum</span></td><td>DOT-406</td><td>2026-08-22</td><td>2022-03-21</td><td>5-yr (P)</td><td>2027-03-21</td><td>✓ Current</td></tr>
+<tr><td><strong>#4423</strong><br><span class="td-sub">Mfg 2020 · Stainless</span></td><td>DOT-407 (chemical)</td><td>2026-08-22</td><td>2024-06-10</td><td>5-yr (H)</td><td>2029-06-10</td><td>✓ Current</td></tr>
+<tr><td><strong>#4424</strong><br><span class="td-sub">Mfg 2021 · Stainless</span></td><td>DOT-412 (corrosive)</td><td>2026-08-22</td><td>2023-11-04</td><td>5-yr (H)</td><td>2028-11-04</td><td>✓ Current</td></tr>
+<tr><td><strong>#5511</strong><br><span class="td-sub">Mfg 2022 · MC</span></td><td>MC-331 (LPG)</td><td>2026-08-22</td><td>2025-04-02</td><td>5-yr (V)</td><td>2030-04-02</td><td>✓ Current</td></tr>
+</tbody></table>
+</div>
+
+<div class="dash-card hm-card" style="margin-top:16px;">
+<div class="dash-card-head"><h3>Spec reference</h3></div>
+<table class="dash-table">
+<thead><tr><th>Spec</th><th>Use</th><th>Visual</th><th>Hydrostatic test</th></tr></thead>
+<tbody>
+<tr><td><strong>DOT-406</strong></td><td>Petroleum, flammable liquids</td><td>Annual external</td><td>5-yr (P-stamp), 2-yr if 'H' option</td></tr>
+<tr><td><strong>DOT-407</strong></td><td>Chemical, food-grade</td><td>Annual external</td><td>5-yr (H-stamp), 1-yr if 'I' option</td></tr>
+<tr><td><strong>DOT-412</strong></td><td>Corrosive materials</td><td>Annual external</td><td>5-yr (H-stamp), 1-yr if 'I' option</td></tr>
+<tr><td><strong>MC-330/331</strong></td><td>Liquefied compressed gas (LPG)</td><td>Annual external</td><td>5-yr (V-stamp)</td></tr>
+<tr><td><strong>MC-338</strong></td><td>Cryogenic liquid</td><td>Annual external</td><td>5-yr (K-stamp)</td></tr>
+</tbody></table>
+</div>
+</main></body></html>
