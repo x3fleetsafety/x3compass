@@ -524,3 +524,28 @@ footer {
   .corpus-badge { margin: 0 auto; width: 160px; height: 160px; }
   .corpus-num { font-size: 64px; }
 }
+
+/* Brand wordmark — HTML text alongside icon-only SVG (bulletproof font rendering) */
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-icon { flex-shrink: 0; display: block; }
+.brand-word {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  color: var(--compass-paper);
+  white-space: nowrap;
+  line-height: 1;
+}
+.brand-word:after {
+  content: '';
+}
+/* Use gradient on "Compass" portion via a sibling span when desired (handled inline) */
+
+/* Gradient styling on "Compass" portion of brand */
+.brand-word-accent {
+  background: linear-gradient(90deg, #2DD4BF 0%, #22D3EE 50%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
