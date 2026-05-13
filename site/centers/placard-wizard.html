@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Placard Wizard — Hazmat Placarding Tool · X3 Compass</title>
+<meta name="description" content="Free hazmat placard wizard. Enter your material (UN# or shipping name), weight, and packaging. Get the exact placards required per 49 CFR 172.500-560, with placement diagram and CFR citation.">
+<link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/index-v2.css">
+<link rel="stylesheet" href="/assets/hazmat.css">
+<style>
+/* Wizard-specific styles */
+.wiz-container { max-width: 920px; margin: 0 auto; padding: 60px 24px; }
+.wiz-progress { display: flex; gap: 8px; margin-bottom: 32px; }
+.wiz-step-pip { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 999px; transition: background 0.25s; }
+.wiz-step-pip.active { background: var(--hm-flame); }
+.wiz-step-pip.complete { background: var(--hm-amber); opacity: 0.7; }
+.wiz-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(251,191,36,0.2); border-radius: 20px; padding: 40px; }
+.wiz-step-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; color: var(--hm-amber); margin-bottom: 8px; }
+.wiz-q { font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; line-height: 1.15; margin: 0 0 12px; }
+.wiz-sub { color: var(--compass-fog); margin: 0 0 28px; font-size: 15px; }
+.wiz-input { width: 100%; background: rgba(10,25,41,0.8); border: 1px solid rgba(255,255,255,0.1); color: var(--compass-paper); padding: 16px 20px; border-radius: 12px; font-size: 16px; font-family: inherit; box-sizing: border-box; }
+.wiz-input:focus { outline: none; border-color: var(--hm-amber); box-shadow: 0 0 0 3px rgba(251,191,36,0.15); }
+.wiz-quickpick { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin-top: 14px; }
+.wiz-pick { padding: 10px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; cursor: pointer; font-size: 13px; color: var(--compass-fog); text-align: left; transition: all 0.15s; }
+.wiz-pick:hover { border-color: var(--hm-amber); background: rgba(251,191,36,0.05); }
+.wiz-pick strong { display: block; color: var(--compass-paper); margin-bottom: 2px; }
+.wiz-pick small { color: var(--compass-mist); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+.wiz-radio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+.wiz-radio { padding: 18px; background: rgba(255,255,255,0.04); border: 2px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; transition: all 0.15s; }
+.wiz-radio.selected { border-color: var(--hm-amber); background: rgba(251,191,36,0.06); }
+.wiz-radio strong { display: block; color: var(--compass-paper); margin-bottom: 6px; font-size: 16px; }
+.wiz-radio span { color: var(--compass-mist); font-size: 13px; }
+.wiz-nav { display: flex; justify-content: space-between; margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); }
+.wiz-back { background: transparent; border: none; color: var(--compass-mist); font-size: 14px; cursor: pointer; padding: 8px 0; }
+.wiz-back:hover { color: var(--compass-paper); }
+.wiz-mat-info { background: rgba(10,25,41,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 16px; margin-top: 16px; font-size: 13px; color: var(--compass-fog); }
+.wiz-mat-info strong { color: var(--compass-paper); }
+.wiz-mat-info .kv { display: grid; grid-template-columns: 130px 1fr; gap: 8px; margin: 4px 0; }
+.wiz-mat-info .kv-key { color: var(--compass-mist); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.05em; }
+
+/* Result display */
+.wiz-result-hero { text-align: center; padding: 24px 0 32px; }
+.wiz-result-pcards { display: flex; justify-content: center; gap: 24px; margin: 32px 0; flex-wrap: wrap; }
+.wiz-pcard-display { text-align: center; }
+.wiz-pcard-display .placard-large {
+  width: 180px; height: 180px;
+  transform: rotate(45deg);
+  border: 6px solid #0A1929;
+  border-radius: 8px;
+  position: relative;
+  margin: 30px auto;
+  box-shadow: 0 0 60px rgba(251, 191, 36, 0.25);
+}
+.wiz-pcard-display .placard-large-inner {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-45deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 900;
+}
+.wiz-pcard-label { font-size: 13px; color: var(--compass-fog); margin-top: 16px; }
+.wiz-pcard-label strong { color: var(--compass-paper); display: block; }
+
+.wiz-id-panel {
+  background: #F97316;
+  color: #0A1929;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 3px solid #0A1929;
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+
+.wiz-result-explain {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 4px solid var(--hm-amber);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 16px 0;
+}
+.wiz-result-explain h4 { font-size: 14px; color: var(--hm-amber); margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.wiz-result-explain p { color: var(--compass-fog); font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
+.wiz-result-explain code { background: rgba(251, 191, 36, 0.1); color: var(--hm-amber); padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+
+.wiz-checklist { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.wiz-check-item { display: flex; gap: 10px; padding: 12px 16px; background: rgba(45,212,191,0.04); border: 1px solid rgba(45,212,191,0.15); border-radius: 8px; font-size: 13px; color: var(--compass-fog); }
+.wiz-check-mark { color: var(--compass-teal); font-weight: 900; flex-shrink: 0; }
+
+.wiz-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+.wiz-warning-box {
+  background: rgba(239,68,68,0.06);
+  border-left: 4px solid #EF4444;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--compass-fog);
+  margin: 16px 0;
+}
+.wiz-warning-box strong { color: #FCA5A5; }
+</style>
+</head>
+<body class="hm-bg-dark">
+
+<header class="nav">
+<a href="/" class="brand"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span><span class="brand-tag">AUTOMATED · ACCURATE · AUDITED</span></span></a>
+<nav class="nav-links">
+  <a href="/pricing.html">Pricing</a>
+  <a href="/centers/hazmat" style="color:var(--hm-amber);">Hazmat Center 🚨</a>
+  <a href="/use-cases.html">Use cases</a>
+  <a href="/skills.html">100 skills</a>
+  <a href="/faq.html">FAQ</a>
+</nav>
+<a href="/centers/hazmat#apply" class="hm-cta">Add Hazmat Center →</a>
+</header>
+
+<section style="padding:60px 24px 0;text-align:center;">
+<div class="hm-pill"><span style="font-size:18px;">🪧</span> Free tool · No signup · 49 CFR 172.500-560</div>
+<h1 class="hero-h1" style="font-size:clamp(36px,5vw,64px);margin:24px 0 16px;">Which placard <span class="hm-gradient-text">do you need?</span></h1>
+<p style="font-size:18px;color:var(--compass-fog);max-width:680px;margin:0 auto;">Enter your hazmat material, quantity, and packaging. Get the exact placards required, where to put them, and why — with CFR citations.</p>
+</section>
+
+<div class="wiz-container">
+
+<div class="wiz-progress">
+<div class="wiz-step-pip active" id="pip-1"></div>
+<div class="wiz-step-pip" id="pip-2"></div>
+<div class="wiz-step-pip" id="pip-3"></div>
+<div class="wiz-step-pip" id="pip-4"></div>
+</div>
+
+<!-- STEP 1: MATERIAL -->
+<div class="wiz-card" id="step-1">
+<div class="wiz-step-label">STEP 1 OF 4 · MATERIAL</div>
+<h2 class="wiz-q">What are you shipping?</h2>
+<p class="wiz-sub">Enter the UN number or proper shipping name. Pick from common materials below to auto-fill.</p>
+
+<input type="text" class="wiz-input" id="material-input" placeholder="UN1203, Gasoline, Sulfuric acid, Lithium ion batteries…" autocomplete="off">
+
+<div id="material-info"></div>
+
+<div style="margin-top:24px;">
+<p style="font-size:12px;color:var(--compass-mist);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;">Common materials</p>
+<div class="wiz-quickpick" id="quickpick"></div>
+</div>
+
+<div class="wiz-nav">
+<span></span>
+<button class="hm-cta" id="next-1" disabled style="opacity:0.4;">Next →</button>
+</div>
+</div>
+
+<!-- STEP 2: QUANTITY -->
+<div class="wiz-card" id="step-2" style="display:none;">
+<div class="wiz-step-label">STEP 2 OF 4 · QUANTITY</div>
+<h2 class="wiz-q">How much, and in what packaging?</h2>
+<p class="wiz-sub">Bulk shipments always require placards. Non-bulk depends on aggregate weight + material class.</p>
+
+<div style="margin-bottom:24px;">
+<label style="font-size:13px;color:var(--compass-fog);font-weight:600;margin-bottom:10px;display:block;">Packaging type</label>
+<div class="wiz-radio-grid">
+<div class="wiz-radio" data-pkg="bulk" onclick="selectPkg('bulk')">
+<strong>Bulk</strong>
+<span>Single packaging &gt;119 gal liquid, 882 lb solid, or cargo tank trailer</span>
+</div>
+<div class="wiz-radio" data-pkg="non-bulk" onclick="selectPkg('non-bulk')">
+<strong>Non-bulk</strong>
+<span>Drums, IBCs, cylinders, multiple smaller packages</span>
+</div>
+</div>
+</div>
+
+<div id="non-bulk-details" style="display:none;">
+<label style="font-size:13px;color:var(--compass-fog);font-weight:600;margin-bottom:10px;display:block;">Total aggregate weight on the vehicle (lbs)</label>
+<input type="number" class="wiz-input" id="agg-weight" placeholder="e.g., 1200" min="0">
+<p style="font-size:12px;color:var(--compass-mist);margin-top:8px;">The 1,001 lb rule: non-bulk hazmat under 1,001 lbs (aggregate) generally doesn't require placards. Exceptions apply for high-hazard classes.</p>
+</div>
+
+<div class="wiz-nav">
+<button class="wiz-back" onclick="goStep(1)">← Back</button>
+<button class="hm-cta" id="next-2" disabled style="opacity:0.4;" onclick="goStep(3)">Next →</button>
+</div>
+</div>
+
+<!-- STEP 3: SPECIAL -->
+<div class="wiz-card" id="step-3" style="display:none;">
+<div class="wiz-step-label">STEP 3 OF 4 · SPECIAL CONSIDERATIONS</div>
+<h2 class="wiz-q">Any of these apply?</h2>
+<p class="wiz-sub">These factors change placarding rules. Most loads don't need any of these.</p>
+
+<div style="display:flex;flex-direction:column;gap:10px;">
+<label style="padding:14px 18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;">
+<input type="checkbox" id="subsidiary" style="margin-top:3px;accent-color:var(--hm-amber);">
+<div><strong style="color:var(--compass-paper);font-size:14px;">This material has a subsidiary hazard class</strong><br><span style="font-size:12px;color:var(--compass-mist);">Some materials have a primary class + a secondary (e.g., anhydrous ammonia: 2.3 + 8). Both placards required.</span></div>
+</label>
+
+<label style="padding:14px 18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;">
+<input type="checkbox" id="multi-class" style="margin-top:3px;accent-color:var(--hm-amber);">
+<div><strong style="color:var(--compass-paper);font-size:14px;">Mixed load — other hazmat classes also on this vehicle</strong><br><span style="font-size:12px;color:var(--compass-mist);">Triggers DANGEROUS placard evaluation if no single placard-required class exceeds 2,205 lb.</span></div>
+</label>
+
+<label style="padding:14px 18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;">
+<input type="checkbox" id="limited-qty" style="margin-top:3px;accent-color:var(--hm-amber);">
+<div><strong style="color:var(--compass-paper);font-size:14px;">Limited Quantity (LTD QTY) packaging</strong><br><span style="font-size:12px;color:var(--compass-mist);">Materials marked as Limited Quantity in HMT column 8a. Placarding usually exempt; LTD QTY mark required instead.</span></div>
+</label>
+
+<label style="padding:14px 18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;">
+<input type="checkbox" id="inhalation" style="margin-top:3px;accent-color:var(--hm-amber);">
+<div><strong style="color:var(--compass-paper);font-size:14px;">Inhalation hazard (PIH/TIH)</strong><br><span style="font-size:12px;color:var(--compass-mist);">Class 2.3 toxic gas or Class 6.1 PG I inhalation. Always placard regardless of quantity. INHALATION HAZARD marking required.</span></div>
+</label>
+</div>
+
+<div class="wiz-nav">
+<button class="wiz-back" onclick="goStep(2)">← Back</button>
+<button class="hm-cta" onclick="evaluate()">See my placard →</button>
+</div>
+</div>
+
+<!-- STEP 4: RESULT -->
+<div class="wiz-card" id="step-4" style="display:none;">
+<div class="wiz-step-label">RESULT · YOUR PLACARDING REQUIREMENTS</div>
+<div id="result-output"></div>
+<div class="wiz-nav">
+<button class="wiz-back" onclick="restart()">← Start over</button>
+<a href="/centers/hazmat#apply" class="hm-cta">Get full Hazmat Center →</a>
+</div>
+</div>
+
+</div>
+
+<section style="background:rgba(15, 37, 64, 0.4);padding:60px 24px;border-top:1px solid rgba(255,255,255,0.05);margin-top:80px;">
+<div style="max-width:900px;margin:0 auto;text-align:center;">
+<div class="section-eyebrow" style="background:rgba(251,191,36,0.1);border-color:rgba(251,191,36,0.3);color:var(--hm-amber);">UPGRADE</div>
+<h2 style="font-size:36px;margin:0 0 16px;">This is one tool. <span class="hm-gradient-text">Hazmat Center is 12.</span></h2>
+<p style="color:var(--compass-fog);margin:0 auto 32px;max-width:680px;">Placard Wizard + Shipping Paper Validator + ERG Lookup + Segregation Checker + HM-126 Training Tracker + Cargo Tank Scheduler + PHMSA Registration + Hazmat Routes + 6 more. $99/month.</p>
+<a href="/centers/hazmat" class="hm-cta-large">See Hazmat Center →</a>
+</div>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-col"><a href="/" class="brand brand-footer"><span class="brand-x3">X3</span><span class="brand-stack"><span class="brand-compass">COMPASS</span></span></a><p style="margin-top:16px;">The AI Safety Director for small motor carriers.</p></div>
+<div class="footer-col"><h4>Centers</h4><a href="/centers/hazmat" style="color:var(--hm-amber);">Hazmat Center</a><a href="/centers/placard-wizard">Placard Wizard</a></div>
+<div class="footer-col"><h4>Product</h4><a href="/pricing.html">Pricing</a><a href="/partners.html">Partners</a></div>
+<div class="footer-col"><h4>Legal</h4><a href="/legal.html">Terms</a><a href="/privacy.html">Privacy</a></div>
+</div>
+<div class="footer-bottom">© 2026 X3 Fleet Safety LLC. Placard Wizard is a free educational tool. Verify final placarding decisions with your hazmat compliance officer.</div>
+</footer>
+
+<script>
+// ============================================
+// HAZMAT MATERIAL DATABASE (top 30 UN numbers)
+// ============================================
+const MATERIALS = {
+  'UN1075': { name: 'Liquefied Petroleum Gas (LPG / Propane)', class: '2.1', sub: null, pg: null, pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE GAS' },
+  'UN1090': { name: 'Acetone', class: '3', sub: null, pg: 'II', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN1170': { name: 'Ethanol', class: '3', sub: null, pg: 'II', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN1202': { name: 'Diesel Fuel', class: '3', sub: null, pg: 'III', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN1203': { name: 'Gasoline', class: '3', sub: null, pg: 'II', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN1789': { name: 'Hydrochloric Acid', class: '8', sub: null, pg: 'II', pih: false, color: '#000000', symbol: '⚗', label: 'CORROSIVE' },
+  'UN1824': { name: 'Sodium Hydroxide Solution', class: '8', sub: null, pg: 'II', pih: false, color: '#000000', symbol: '⚗', label: 'CORROSIVE' },
+  'UN1830': { name: 'Sulfuric Acid', class: '8', sub: null, pg: 'II', pih: false, color: '#000000', symbol: '⚗', label: 'CORROSIVE' },
+  'UN1942': { name: 'Ammonium Nitrate Fertilizer', class: '5.1', sub: null, pg: 'III', pih: false, color: '#FBBF24', symbol: '🅾', label: 'OXIDIZER' },
+  'UN1950': { name: 'Aerosols (Flammable)', class: '2.1', sub: null, pg: null, pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE GAS' },
+  'UN1993': { name: 'Flammable Liquid, N.O.S.', class: '3', sub: null, pg: 'II', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN2014': { name: 'Hydrogen Peroxide (Aqueous)', class: '5.1', sub: '8', pg: 'II', pih: false, color: '#FBBF24', symbol: '🅾', label: 'OXIDIZER' },
+  'UN2796': { name: 'Battery Fluid (Acid)', class: '8', sub: null, pg: 'II', pih: false, color: '#000000', symbol: '⚗', label: 'CORROSIVE' },
+  'UN3082': { name: 'Environmentally Hazardous Substance, Liquid', class: '9', sub: null, pg: 'III', pih: false, color: '#FFFFFF', symbol: '✱', label: 'CLASS 9' },
+  'UN3090': { name: 'Lithium Metal Batteries', class: '9', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '🔋', label: 'CLASS 9' },
+  'UN3091': { name: 'Lithium Metal Batteries Packed with/in Equipment', class: '9', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '🔋', label: 'CLASS 9' },
+  'UN3480': { name: 'Lithium Ion Batteries', class: '9', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '🔋', label: 'CLASS 9' },
+  'UN3481': { name: 'Lithium Ion Batteries Packed with/in Equipment', class: '9', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '🔋', label: 'CLASS 9' },
+  'UN1001': { name: 'Acetylene, Dissolved', class: '2.1', sub: null, pg: null, pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE GAS' },
+  'UN1005': { name: 'Anhydrous Ammonia', class: '2.3', sub: '8', pg: null, pih: true, color: '#FFFFFF', symbol: '☠', label: 'POISON GAS · INHALATION HAZARD' },
+  'UN1017': { name: 'Chlorine', class: '2.3', sub: '8', pg: null, pih: true, color: '#FFFFFF', symbol: '☠', label: 'POISON GAS · INHALATION HAZARD' },
+  'UN1428': { name: 'Sodium (Metal)', class: '4.3', sub: null, pg: 'I', pih: false, color: '#22C55E', symbol: '💧', label: 'DANGEROUS WHEN WET' },
+  'UN1402': { name: 'Calcium Carbide', class: '4.3', sub: null, pg: 'I', pih: false, color: '#22C55E', symbol: '💧', label: 'DANGEROUS WHEN WET' },
+  'UN1263': { name: 'Paint', class: '3', sub: null, pg: 'III', pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE LIQUID' },
+  'UN1956': { name: 'Compressed Gas, N.O.S.', class: '2.2', sub: null, pg: null, pih: false, color: '#22C55E', symbol: '🛢', label: 'NON-FLAMMABLE GAS' },
+  'UN1072': { name: 'Oxygen, Compressed', class: '2.2', sub: '5.1', pg: null, pih: false, color: '#22C55E', symbol: '🛢', label: 'NON-FLAMMABLE GAS · OXIDIZER' },
+  'UN1049': { name: 'Hydrogen, Compressed', class: '2.1', sub: null, pg: null, pih: false, color: '#EF4444', symbol: '🔥', label: 'FLAMMABLE GAS' },
+  'UN2900': { name: 'Infectious Substance, Animal', class: '6.2', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '☣', label: 'INFECTIOUS' },
+  'UN2814': { name: 'Infectious Substance, Human', class: '6.2', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '☣', label: 'INFECTIOUS' },
+  'UN1845': { name: 'Dry Ice (Carbon Dioxide, Solid)', class: '9', sub: null, pg: null, pih: false, color: '#FFFFFF', symbol: '❄', label: 'CLASS 9' },
+};
+
+const QUICKPICKS = ['UN1203', 'UN1075', 'UN1170', 'UN1830', 'UN1830', 'UN3480', 'UN1005', 'UN1942', 'UN2014', 'UN1090', 'UN1428', 'UN1845'];
+
+// State
+let state = { material: null, packaging: null, aggWeight: null, subsidiary: false, multiClass: false, limitedQty: false, inhalation: false };
+
+// Render quick-picks
+function renderQuickpicks() {
+  const container = document.getElementById('quickpick');
+  container.innerHTML = QUICKPICKS.slice(0, 8).map(un => {
+    const m = MATERIALS[un];
+    return `<div class="wiz-pick" onclick="selectMaterial('${un}')"><strong>${m.name}</strong><small>${un} · Class ${m.class}${m.pg ? ' · PG ' + m.pg : ''}</small></div>`;
+  }).join('');
+}
+renderQuickpicks();
+
+function selectMaterial(un) {
+  state.material = MATERIALS[un];
+  state.materialUN = un;
+  document.getElementById('material-input').value = `${un} · ${state.material.name}`;
+  state.inhalation = state.material.pih;
+  document.getElementById('inhalation').checked = state.material.pih;
+  showMaterialInfo();
+  enableNext(1);
+}
+
+function showMaterialInfo() {
+  if (!state.material) return;
+  const m = state.material;
+  document.getElementById('material-info').innerHTML = `
+    <div class="wiz-mat-info">
+      <strong>${state.materialUN} — ${m.name}</strong>
+      <div class="kv"><span class="kv-key">CLASS</span><span>${m.class}${m.sub ? ' (primary) + ' + m.sub + ' (subsidiary)' : ''}</span></div>
+      ${m.pg ? `<div class="kv"><span class="kv-key">PACKING GROUP</span><span>${m.pg}</span></div>` : ''}
+      <div class="kv"><span class="kv-key">HAZARD</span><span>${m.label}</span></div>
+      ${m.pih ? '<div class="kv"><span class="kv-key">⚠ INHALATION</span><span style="color:#FCA5A5;">PIH/TIH — always placard</span></div>' : ''}
+    </div>
+  `;
+}
+
+document.getElementById('material-input').addEventListener('input', (e) => {
+  const v = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (MATERIALS[v]) {
+    selectMaterial(v);
+  }
+});
+
+function enableNext(stepNum) {
+  const btn = document.getElementById(`next-${stepNum}`);
+  if (btn) {
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    btn.onclick = () => goStep(stepNum + 1);
+  }
+}
+
+function selectPkg(pkg) {
+  state.packaging = pkg;
+  document.querySelectorAll('.wiz-radio').forEach(r => r.classList.remove('selected'));
+  document.querySelector(`.wiz-radio[data-pkg="${pkg}"]`).classList.add('selected');
+  if (pkg === 'non-bulk') {
+    document.getElementById('non-bulk-details').style.display = 'block';
+  } else {
+    document.getElementById('non-bulk-details').style.display = 'none';
+    state.aggWeight = null;
+    enableNext(2);
+  }
+}
+
+document.getElementById('agg-weight').addEventListener('input', (e) => {
+  state.aggWeight = parseFloat(e.target.value);
+  if (!isNaN(state.aggWeight) && state.aggWeight >= 0) enableNext(2);
+});
+
+function goStep(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById(`step-${i}`).style.display = i === n ? 'block' : 'none';
+    const pip = document.getElementById(`pip-${i}`);
+    if (i < n) { pip.classList.add('complete'); pip.classList.remove('active'); }
+    else if (i === n) { pip.classList.add('active'); pip.classList.remove('complete'); }
+    else { pip.classList.remove('active', 'complete'); }
+  }
+  window.scrollTo({ top: 200, behavior: 'smooth' });
+}
+
+function restart() {
+  state = { material: null, packaging: null, aggWeight: null, subsidiary: false, multiClass: false, limitedQty: false, inhalation: false };
+  document.getElementById('material-input').value = '';
+  document.getElementById('material-info').innerHTML = '';
+  document.getElementById('agg-weight').value = '';
+  document.querySelectorAll('.wiz-radio').forEach(r => r.classList.remove('selected'));
+  document.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+  document.getElementById('next-1').disabled = true;
+  document.getElementById('next-1').style.opacity = '0.4';
+  document.getElementById('next-2').disabled = true;
+  document.getElementById('next-2').style.opacity = '0.4';
+  goStep(1);
+}
+
+// ============================================
+// PLACARDING LOGIC (49 CFR 172.500-560)
+// ============================================
+function evaluate() {
+  state.subsidiary = document.getElementById('subsidiary').checked;
+  state.multiClass = document.getElementById('multi-class').checked;
+  state.limitedQty = document.getElementById('limited-qty').checked;
+  state.inhalation = document.getElementById('inhalation').checked;
+
+  const m = state.material;
+  const result = { placardRequired: false, placards: [], idPanel: false, reasons: [], cfr: [], checklist: [], warnings: [] };
+
+  // RULE: Limited Quantity exemption
+  if (state.limitedQty) {
+    result.placardRequired = false;
+    result.reasons.push("Limited Quantity (LTD QTY) packaging is generally exempt from placarding (49 CFR 172.504(c)(2)).");
+    result.reasons.push("LTD QTY mark required on outer package instead.");
+    result.cfr.push("49 CFR 172.504(c)(2)");
+    result.checklist.push("Mark each package with LTD QTY symbol");
+    result.checklist.push("Shipping paper indicates Limited Quantity");
+    result.warnings.push("Verify your material is actually permitted as Limited Quantity in HMT column 8a.");
+    renderResult(result);
+    return;
+  }
+
+  // RULE: Bulk shipments ALWAYS require placards
+  if (state.packaging === 'bulk') {
+    result.placardRequired = true;
+    result.placards.push({ class: m.class, label: m.label, color: m.color, symbol: m.symbol, primary: true, un: state.materialUN });
+    result.idPanel = true;
+    result.reasons.push("Bulk shipments (capacity >119 gal liquid / 882 lb solid / 882 lb water capacity gas) always require placarding.");
+    result.cfr.push("49 CFR 172.504(a)");
+    result.cfr.push("49 CFR 171.8 (bulk definition)");
+  }
+  // RULE: Non-bulk — depends on class and aggregate weight
+  else {
+    // High-hazard classes — always placard regardless of weight (Table 1)
+    const alwaysPlacardClasses = ['1.1', '1.2', '1.3', '2.3', '4.3', '5.2', '6.1', '7'];
+    const isAlwaysPlacard = alwaysPlacardClasses.includes(m.class) ||
+                            (m.class === '6.1' && m.pg === 'I' && state.inhalation);
+
+    if (isAlwaysPlacard || state.inhalation) {
+      result.placardRequired = true;
+      result.placards.push({ class: m.class, label: m.label, color: m.color, symbol: m.symbol, primary: true, un: state.materialUN });
+      result.reasons.push(`Class ${m.class} is in Table 1 of 49 CFR 172.504 — placard required regardless of quantity.`);
+      result.cfr.push("49 CFR 172.504(e), Table 1");
+    }
+    // Standard classes — Table 2: aggregate ≥1,001 lb
+    else if (state.aggWeight >= 1001) {
+      result.placardRequired = true;
+      result.placards.push({ class: m.class, label: m.label, color: m.color, symbol: m.symbol, primary: true, un: state.materialUN });
+      result.reasons.push(`Aggregate weight of ${state.aggWeight.toLocaleString()} lb meets the 1,001 lb threshold for placard-required materials (Table 2).`);
+      result.cfr.push("49 CFR 172.504(c), Table 2");
+    } else {
+      result.placardRequired = false;
+      result.reasons.push(`Non-bulk shipment of ${state.aggWeight.toLocaleString()} lb is under the 1,001 lb threshold for Class ${m.class} (Table 2 of 49 CFR 172.504).`);
+      result.reasons.push("No placarding required, BUT marking + labeling on each package still required.");
+      result.cfr.push("49 CFR 172.504(c), Table 2");
+      result.checklist.push("Each package labeled with Class " + m.class + " hazard label");
+      result.checklist.push("Proper shipping name + UN number marked on each package");
+      renderResult(result);
+      return;
+    }
+  }
+
+  // Subsidiary hazard placard
+  if (state.subsidiary && m.sub) {
+    const subLabels = {
+      '5.1': { label: 'OXIDIZER', color: '#FBBF24', symbol: '🅾' },
+      '6.1': { label: 'POISON', color: '#FFFFFF', symbol: '☠' },
+      '8': { label: 'CORROSIVE', color: '#000000', symbol: '⚗' }
+    };
+    const sub = subLabels[m.sub] || { label: 'SUBSIDIARY', color: '#FFFFFF', symbol: '⚠' };
+    result.placards.push({ class: m.sub, label: sub.label, color: sub.color, symbol: sub.symbol, primary: false, un: null });
+    result.reasons.push(`Subsidiary hazard Class ${m.sub} requires additional placard alongside primary Class ${m.class}.`);
+    result.cfr.push("49 CFR 172.505");
+  }
+
+  // Inhalation hazard
+  if (state.inhalation) {
+    result.warnings.push("INHALATION HAZARD marking required on each package + bulk container + shipping paper.");
+  }
+
+  // Mixed-class DANGEROUS option
+  if (state.multiClass && state.packaging === 'non-bulk' && state.aggWeight < 2205) {
+    result.reasons.push("DANGEROUS placard is an OPTIONAL alternative for mixed-class non-bulk loads where no single placard-required class exceeds 2,205 lb.");
+    result.cfr.push("49 CFR 172.504(b)");
+    result.warnings.push("Cannot use DANGEROUS for Class 1.1/1.2, materials with subsidiary hazards, or materials requiring ID number panels.");
+  }
+
+  // Build checklist
+  result.checklist.push("4 placards required — front, back, both sides (49 CFR 172.514)");
+  result.checklist.push("Each placard minimum 10.75 inches square");
+  result.checklist.push("Diamond-oriented with horizontal axis parallel to vehicle longitudinal axis");
+  if (result.idPanel) {
+    result.checklist.push(`ID number panel with "${state.materialUN.replace('UN','')}" on all 4 sides (49 CFR 172.332)`);
+  }
+  result.checklist.push("Shipping paper includes full hazmat description per 49 CFR 172.200");
+  result.checklist.push("Emergency response info accompanies shipment (49 CFR 172.600)");
+
+  renderResult(result);
+}
+
+function renderPlacard(p) {
+  // Render the diamond placard SVG-style
+  const isPolar = ['2.2', '4.1', '4.2', '5.1', '5.2', '7'].includes(p.class);
+  const bgStyle = `background: ${p.color}; color: ${p.color === '#FFFFFF' || p.color === '#FBBF24' ? '#0A1929' : '#FFFFFF'};`;
+  return `
+    <div class="wiz-pcard-display">
+      <div class="placard-large" style="${bgStyle}">
+        <div class="placard-large-inner" style="color: ${p.color === '#FFFFFF' || p.color === '#FBBF24' ? '#0A1929' : '#FFFFFF'};">
+          <div style="font-size:36px;">${p.symbol}</div>
+          <div style="font-size:11px;letter-spacing:0.1em;margin:6px 0 8px;font-family:'JetBrains Mono', monospace;">${p.label}</div>
+          <div style="font-size:32px;font-weight:900;">${p.class}</div>
+        </div>
+      </div>
+      <div class="wiz-pcard-label">
+        <strong>${p.primary ? 'Primary' : 'Subsidiary'} Placard</strong>
+        Class ${p.class} · ${p.label}
+        ${p.un ? `<div class="wiz-id-panel">${p.un.replace('UN','')}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+function renderResult(r) {
+  const out = document.getElementById('result-output');
+  const m = state.material;
+
+  let html = `<div class="wiz-result-hero">
+    <div style="font-size:48px;margin-bottom:12px;">${r.placardRequired ? '🪧' : '✓'}</div>
+    <h2 style="font-size:28px;margin:0 0 8px;">${r.placardRequired ? 'You need placards' : 'No placards required'}</h2>
+    <p style="color:var(--compass-mist);font-size:14px;margin:0;">For ${state.materialUN} · ${m.name} · Class ${m.class}${m.pg ? ' (PG ' + m.pg + ')' : ''}</p>
+  </div>`;
+
+  if (r.placards.length > 0) {
+    html += `<div class="wiz-result-pcards">${r.placards.map(renderPlacard).join('')}</div>`;
+  }
+
+  html += `<div class="wiz-result-explain"><h4>WHY</h4>${r.reasons.map(reason => `<p>${reason}</p>`).join('')}<p style="font-size:12px;color:var(--compass-mist);margin-top:12px;font-family:'JetBrains Mono', monospace;">📚 ${r.cfr.join(' · ')}</p></div>`;
+
+  if (r.warnings.length > 0) {
+    r.warnings.forEach(w => { html += `<div class="wiz-warning-box"><strong>⚠ Note:</strong> ${w}</div>`; });
+  }
+
+  if (r.checklist.length > 0) {
+    html += `<h3 style="font-size:16px;margin:24px 0 12px;color:var(--compass-paper);">Compliance checklist</h3><div class="wiz-checklist">${r.checklist.map(item => `<div class="wiz-check-item"><span class="wiz-check-mark">✓</span><span>${item}</span></div>`).join('')}</div>`;
+  }
+
+  html += `<div class="wiz-cta-row">
+    <a href="/centers/hazmat#apply" class="hm-cta-large">Get Hazmat Center — $99/mo →</a>
+    <button class="hm-ghost" onclick="restart()">Run another check</button>
+  </div>`;
+
+  out.innerHTML = html;
+}
+
+</script>
+</body></html>
