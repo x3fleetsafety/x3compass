@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendar — X3 Compass</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css">
+</head><body class="compass-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" alt="X3 Compass" height="40"></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html" class="active"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div class="sidebar-footer"><div class="plan-badge"><div class="plan-name">Pro plan</div><a href="/pricing.html" class="plan-upgrade">Upgrade →</a></div></div>
+</aside>
+
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Compliance calendar</h1><p>Every expiry, every filing window, every reminder — in one timeline.</p></div>
+<div class="dash-header-actions"><button class="ghost-cta">Month</button><button class="compass-cta">Timeline</button></div>
+</header>
+
+<div class="dash-card">
+<div class="dash-card-head"><h3>September 2026</h3><div style="display:flex;gap:6px;"><button class="ghost-cta" style="font-size:12px;padding:6px 12px;">← Aug</button><button class="ghost-cta" style="font-size:12px;padding:6px 12px;">Today</button><button class="ghost-cta" style="font-size:12px;padding:6px 12px;">Oct →</button></div></div>
+
+<div class="cal-month">
+<div class="cal-weekday">Sun</div><div class="cal-weekday">Mon</div><div class="cal-weekday">Tue</div><div class="cal-weekday">Wed</div><div class="cal-weekday">Thu</div><div class="cal-weekday">Fri</div><div class="cal-weekday">Sat</div>
+<div class="cal-day muted"><span class="cal-d">31</span></div>
+<div class="cal-day"><span class="cal-d">1</span></div>
+<div class="cal-day"><span class="cal-d">2</span></div>
+<div class="cal-day"><span class="cal-d">3</span><span class="cal-evt">Drug test · M.Velez</span></div>
+<div class="cal-day"><span class="cal-d">4</span></div>
+<div class="cal-day"><span class="cal-d">5</span></div>
+<div class="cal-day"><span class="cal-d">6</span></div>
+<div class="cal-day"><span class="cal-d">7</span></div>
+<div class="cal-day"><span class="cal-d">8</span><span class="cal-evt cal-evt-info">Safety mtg sent</span></div>
+<div class="cal-day"><span class="cal-d">9</span><span class="cal-evt cal-evt-warn">Inspection logged</span></div>
+<div class="cal-day"><span class="cal-d">10</span></div>
+<div class="cal-day"><span class="cal-d">11</span></div>
+<div class="cal-day"><span class="cal-d">12</span><span class="cal-evt cal-evt-info">MVR annual sweep</span></div>
+<div class="cal-day today"><span class="cal-d">13</span><span class="cal-evt cal-evt-info">Today</span></div>
+<div class="cal-day"><span class="cal-d">14</span><span class="cal-evt cal-evt-urgent">R. Quinn CDL ⚠</span></div>
+<div class="cal-day"><span class="cal-d">15</span></div>
+<div class="cal-day"><span class="cal-d">16</span><span class="cal-evt cal-evt-warn">C. Hayes medical</span></div>
+<div class="cal-day"><span class="cal-d">17</span></div>
+<div class="cal-day"><span class="cal-d">18</span></div>
+<div class="cal-day"><span class="cal-d">19</span></div>
+<div class="cal-day"><span class="cal-d">20</span></div>
+<div class="cal-day"><span class="cal-d">21</span></div>
+<div class="cal-day"><span class="cal-d">22</span><span class="cal-evt">A. Morales MVR</span></div>
+<div class="cal-day"><span class="cal-d">23</span></div>
+<div class="cal-day"><span class="cal-d">24</span></div>
+<div class="cal-day"><span class="cal-d">25</span></div>
+<div class="cal-day"><span class="cal-d">26</span></div>
+<div class="cal-day"><span class="cal-d">27</span></div>
+<div class="cal-day"><span class="cal-d">28</span></div>
+<div class="cal-day"><span class="cal-d">29</span></div>
+<div class="cal-day"><span class="cal-d">30</span><span class="cal-evt cal-evt-info">Q3 IFTA window</span></div>
+<div class="cal-day muted"><span class="cal-d">1</span></div>
+<div class="cal-day muted"><span class="cal-d">2</span></div>
+<div class="cal-day muted"><span class="cal-d">3</span></div>
+<div class="cal-day muted"><span class="cal-d">4</span><span class="cal-evt">L. Tran medical</span></div>
+</div>
+
+<div class="cal-legend">
+<span class="legend-dot legend-urgent">●</span> Urgent — action today
+<span class="legend-dot legend-warn">●</span> Due this week
+<span class="legend-dot legend-info">●</span> Scheduled / informational
+</div>
+</div>
+</main>
+</body></html>

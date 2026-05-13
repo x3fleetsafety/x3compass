@@ -2,105 +2,316 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Compass — Dashboard</title>
+<title>Dashboard — X3 Compass</title>
 <link rel="icon" href="/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/index-v2.css">
 <link rel="stylesheet" href="/assets/app.css">
 </head>
 <body class="compass-bg-dark">
 
 <aside class="app-sidebar">
-  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" height="32"></a>
+  <a href="/" class="brand" style="padding:24px;display:block;">
+    <img src="/assets/logo.svg" alt="X3 Compass" height="40">
+  </a>
   <nav class="app-nav">
     <a href="/app/dashboard.html" class="active"><span>📊</span> Dashboard</a>
     <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
     <a href="/app/drivers.html"><span>👤</span> Drivers</a>
-    <a href="/app/calendar.html"><span>📅</span> Compliance calendar</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
     <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
     <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
-    <a href="/app/dataq.html"><span>⚖️</span> DataQ disputes</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
     <a href="/app/settings.html"><span>⚙️</span> Settings</a>
   </nav>
-  <div style="margin-top:auto;padding:24px;font-size:12px;color:var(--compass-mist);">
-    <div style="background:rgba(45,212,191,0.1);padding:12px;border-radius:8px;">
-      <strong style="color:var(--compass-teal);">Free plan</strong><br>
-      <a href="/pricing.html">Upgrade →</a>
+  <div class="sidebar-footer">
+    <div class="plan-badge">
+      <div class="plan-name">Pro plan</div>
+      <div class="plan-stats">28 / 50 trucks · 14 / 1500 messages</div>
+      <a href="/pricing.html" class="plan-upgrade">Upgrade →</a>
+    </div>
+    <div class="user-chip">
+      <div class="user-avatar">JK</div>
+      <div>
+        <div class="user-name">Joshua K.</div>
+        <div class="user-meta">Apex Demo Transport</div>
+      </div>
     </div>
   </div>
 </aside>
 
 <main class="app-main">
-  <header class="app-header">
-    <h1>Welcome to Compass</h1>
-    <p>You're a few clicks away from a compliance program that runs itself.</p>
+  <header class="dash-header">
+    <div>
+      <h1>Good morning, Joshua.</h1>
+      <p>3 items need attention today. The rest is in flight.</p>
+    </div>
+    <div class="dash-header-actions">
+      <button class="ghost-cta" id="ask-quick">⌘K  Ask Compass</button>
+      <a href="/app/audit-prep.html" class="compass-cta">Generate audit prep →</a>
+    </div>
   </header>
 
-  <section class="onboarding-grid">
-    <div class="onb-card">
-      <div class="onb-num">1</div>
-      <h3>Add your drivers</h3>
-      <p>Upload CSV or add one at a time. Compass watches every CDL expiration, medical card, and MVR for you.</p>
-      <a href="/app/drivers.html" class="compass-cta">Add drivers →</a>
+  <!-- TOP ATTENTION BAR -->
+  <section class="attention-bar">
+    <div class="attn attn-red">
+      <div class="attn-pulse"></div>
+      <div class="attn-content">
+        <div class="attn-label">Urgent · Action today</div>
+        <div class="attn-title">CDL expires tomorrow — Robert Quinn</div>
+        <a href="/app/drivers.html?id=robert-quinn">Resolve →</a>
+      </div>
     </div>
-    <div class="onb-card">
-      <div class="onb-num">2</div>
-      <h3>Connect your data sources</h3>
-      <p>Samsara · Motive · Geotab · Quest · LabCorp · Comdata · EFS · FMCSA Clearinghouse — OAuth in 60 seconds each.</p>
-      <a href="/app/integrations.html" class="ghost-cta">Connect →</a>
+    <div class="attn attn-yellow">
+      <div class="attn-content">
+        <div class="attn-label">Due this week</div>
+        <div class="attn-title">Medical card renewal — Carla Hayes (Friday)</div>
+        <a href="/app/drivers.html?id=carla-hayes">Resolve →</a>
+      </div>
     </div>
-    <div class="onb-card">
-      <div class="onb-num">3</div>
-      <h3>Ask Compass anything</h3>
-      <p>Try: "When is the pre-employment Clearinghouse query required?" or "Draft a safety meeting for distracted driving."</p>
-      <a href="/app/chat.html" class="ghost-cta">Open chat →</a>
+    <div class="attn attn-yellow">
+      <div class="attn-content">
+        <div class="attn-label">Due this week</div>
+        <div class="attn-title">2 DataQ candidates worth disputing ($X recovered)</div>
+        <a href="/app/dataq.html">Review →</a>
+      </div>
     </div>
   </section>
 
-  <section class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">CSA Driver OOS rate</div>
-      <div class="kpi-num" style="color:var(--compass-teal);">2.1%</div>
-      <div class="kpi-trend">↓ 0.4 vs last quarter</div>
+  <!-- KPI ROW -->
+  <section class="kpi-row">
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">Compliance score</div>
+      <div class="kpi-tile-main">
+        <div class="kpi-gauge" data-value="87">
+          <svg viewBox="0 0 100 60" width="100%">
+            <path d="M 10 50 A 40 40 0 0 1 90 50" stroke="rgba(255,255,255,0.08)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M 10 50 A 40 40 0 0 1 90 50" stroke="url(#kpi-grad)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="125.6" stroke-dashoffset="16.3"/>
+            <defs><linearGradient id="kpi-grad" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#2DD4BF"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs>
+          </svg>
+          <div class="kpi-gauge-num">87<span>/100</span></div>
+        </div>
+      </div>
+      <div class="kpi-tile-trend">↑ 4 vs last month</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Expiring in 30 days</div>
-      <div class="kpi-num">3</div>
-      <div class="kpi-trend">1 CDL · 2 medical</div>
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">CSA Driver OOS rate</div>
+      <div class="kpi-tile-num" style="color:var(--compass-teal);">2.1%</div>
+      <div class="kpi-tile-sub">Target: &lt;3% · ✓ pass</div>
+      <div class="kpi-tile-trend">↓ 0.4 pts vs Q2</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">Open coaching events</div>
-      <div class="kpi-num">5</div>
-      <div class="kpi-trend">Compass drafts ready</div>
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">Vehicle OOS rate</div>
+      <div class="kpi-tile-num" style="color:var(--compass-teal);">11.8%</div>
+      <div class="kpi-tile-sub">Target: &lt;15% · ✓ pass</div>
+      <div class="kpi-tile-trend">↓ 1.7 pts vs Q2</div>
     </div>
-    <div class="kpi-card">
-      <div class="kpi-label">DataQ candidates</div>
-      <div class="kpi-num" style="color:var(--compass-amber);">2</div>
-      <div class="kpi-trend">Worth disputing</div>
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">Drivers active</div>
+      <div class="kpi-tile-num">35</div>
+      <div class="kpi-tile-sub">28 trucks · 12 trailers</div>
+      <div class="kpi-tile-trend">+2 hires this month</div>
+    </div>
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">Open coaching events</div>
+      <div class="kpi-tile-num" style="color:var(--compass-amber);">7</div>
+      <div class="kpi-tile-sub">Compass drafts ready</div>
+      <div class="kpi-tile-trend"><a href="/app/chat.html">Review →</a></div>
+    </div>
+    <div class="kpi-tile">
+      <div class="kpi-tile-label">Saved this month</div>
+      <div class="kpi-tile-num"><span class="compass-gradient-text">$10,539</span></div>
+      <div class="kpi-tile-sub">vs hiring a SD ($10,833/mo)</div>
+      <div class="kpi-tile-trend">99.3% ROI realized</div>
     </div>
   </section>
 
-  <section class="feed">
-    <h2>This week's compliance feed</h2>
-    <div class="feed-item">
-      <div class="feed-time">2 hours ago</div>
-      <div class="feed-content">
-        <strong>Driver J. Smith</strong> — medical certificate expires in 12 days. SMS reminder sent.
-        <a href="#">View driver →</a>
+  <!-- TWO-COLUMN MAIN -->
+  <section class="dash-main">
+
+    <!-- LEFT COL: BSI PERCENTILES + EXPIRY TABLE -->
+    <div class="dash-col-left">
+
+      <div class="dash-card">
+        <div class="dash-card-head">
+          <h3>CSA BASIC percentiles</h3>
+          <a href="/app/chat.html?workflow=qa" class="link-arrow">Ask Compass why →</a>
+        </div>
+        <div class="basic-grid">
+          <div class="basic"><div class="basic-label">Unsafe Driving</div><div class="basic-bar"><div class="basic-fill" style="width:42%;"></div><span class="basic-marker" style="left:60%;">int</span></div><div class="basic-val">42</div></div>
+          <div class="basic"><div class="basic-label">HOS Compliance</div><div class="basic-bar"><div class="basic-fill" style="width:38%;"></div><span class="basic-marker" style="left:65%;">int</span></div><div class="basic-val">38</div></div>
+          <div class="basic"><div class="basic-label">Driver Fitness</div><div class="basic-bar"><div class="basic-fill" style="width:29%;"></div><span class="basic-marker" style="left:80%;">int</span></div><div class="basic-val">29</div></div>
+          <div class="basic"><div class="basic-label">Cont. Substances</div><div class="basic-bar"><div class="basic-fill" style="width:18%;"></div><span class="basic-marker" style="left:80%;">int</span></div><div class="basic-val">18</div></div>
+          <div class="basic warn"><div class="basic-label">Vehicle Maintenance</div><div class="basic-bar"><div class="basic-fill" style="width:56%;"></div><span class="basic-marker" style="left:80%;">int</span></div><div class="basic-val">56</div></div>
+          <div class="basic"><div class="basic-label">Hazmat Compliance</div><div class="basic-bar"><div class="basic-fill" style="width:24%;"></div><span class="basic-marker" style="left:80%;">int</span></div><div class="basic-val">24</div></div>
+          <div class="basic"><div class="basic-label">Crash Indicator</div><div class="basic-bar"><div class="basic-fill" style="width:31%;"></div><span class="basic-marker" style="left:65%;">int</span></div><div class="basic-val">31</div></div>
+        </div>
+        <div class="basic-legend">All percentiles below intervention threshold ✓ · Vehicle Maintenance trending up — Compass drafted a fix plan: <a href="/app/chat.html?workflow=qa&q=vehicle+maintenance+intervention">Review →</a></div>
       </div>
-    </div>
-    <div class="feed-item">
-      <div class="feed-time">Yesterday</div>
-      <div class="feed-content">
-        <strong>Inspection 2026-INSP-1042</strong> — Compass flagged this as a DataQ candidate (49 CFR 393.75(d)).
-        <a href="/app/dataq.html">Review dispute draft →</a>
+
+      <div class="dash-card">
+        <div class="dash-card-head">
+          <h3>Expiring soon</h3>
+          <a href="/app/drivers.html" class="link-arrow">View all 35 drivers →</a>
+        </div>
+        <table class="dash-table">
+          <thead><tr><th>Driver</th><th>What's expiring</th><th>When</th><th>Reminder sent</th><th></th></tr></thead>
+          <tbody>
+            <tr class="row-urgent">
+              <td><strong>Robert Quinn</strong><br><span class="td-sub">CDL #M42672438 · MI</span></td>
+              <td>CDL</td><td>Tomorrow</td><td>SMS · email · 30/14/7/1 ✓</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+            <tr class="row-warn">
+              <td><strong>Carla Hayes</strong><br><span class="td-sub">CDL #M89241173 · IL</span></td>
+              <td>Medical card</td><td>Friday</td><td>SMS · email · 30/14/7 ✓</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+            <tr>
+              <td><strong>Anthony Morales</strong><br><span class="td-sub">CDL #M99021847 · IN</span></td>
+              <td>Annual MVR review</td><td>Sep 22</td><td>email · 30 ✓</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+            <tr>
+              <td><strong>Lisa Tran</strong><br><span class="td-sub">CDL #M51938420 · MI</span></td>
+              <td>Medical card</td><td>Oct 04</td><td>scheduled</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+            <tr>
+              <td><strong>Jacob Reed</strong><br><span class="td-sub">CDL #M77831092 · OH</span></td>
+              <td>CDL</td><td>Oct 12</td><td>scheduled</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+            <tr>
+              <td><strong>Maria Velez</strong><br><span class="td-sub">CDL #M22910374 · MI</span></td>
+              <td>Annual MVR review</td><td>Oct 17</td><td>scheduled</td>
+              <td><a href="#" class="row-cta">Open</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head">
+          <h3>This week's coaching drafts</h3>
+          <a href="/app/chat.html?workflow=coaching_draft" class="link-arrow">View all 7 →</a>
+        </div>
+        <div class="coaching-list">
+          <div class="coaching-item">
+            <div class="ci-tag tag-medium">MEDIUM</div>
+            <div class="ci-content">
+              <strong>Robert Quinn</strong> · harsh-brake event Tuesday 14:32 on I-94 EB
+              <p>Compass drafted a 90-word coaching message tone-calibrated to a Tier-3 driver with prior clean record. Cites 49 CFR 392.14.</p>
+              <div class="ci-actions"><a href="#">Review draft</a> · <a href="#">Send</a> · <a href="#">Skip</a></div>
+            </div>
+          </div>
+          <div class="coaching-item">
+            <div class="ci-tag tag-low">LOW</div>
+            <div class="ci-content">
+              <strong>Marcus Brennan</strong> · 1 lane-change event Wednesday — looks driver-defensive
+              <p>Compass recommends NO action — the dashcam AI mis-classified what was actually defensive driving. Compass flagged for review and is downvoting future similar events.</p>
+              <div class="ci-actions"><a href="#">Confirm dismissal</a></div>
+            </div>
+          </div>
+          <div class="coaching-item">
+            <div class="ci-tag tag-high">HIGH</div>
+            <div class="ci-content">
+              <strong>Anthony Morales</strong> · HOS violation Thursday — 11h drive after 9.5h drive yesterday
+              <p>This is the 2nd HOS-adjacent event in 60 days. Compass drafted both a coaching message AND a dispatcher note recommending route redesign on the Detroit-Memphis lane.</p>
+              <div class="ci-actions"><a href="#">Review both</a> · <a href="#">Send</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="feed-item">
-      <div class="feed-time">3 days ago</div>
-      <div class="feed-content">
-        <strong>This week's safety meeting</strong> — Cargo securement basics. Ready to send to drivers.
-        <a href="/app/safety-meetings.html">Open →</a>
+
+    <!-- RIGHT COL: COMPASS CHAT + INSIGHTS + UPCOMING -->
+    <div class="dash-col-right">
+
+      <div class="dash-card chat-shortcut">
+        <div class="dash-card-head"><h3>Ask Compass</h3><span class="card-pill">⌘K</span></div>
+        <p class="chat-shortcut-sub">Type a question or pick a workflow. Every answer cites 49 CFR.</p>
+        <form class="chat-shortcut-form">
+          <input type="text" placeholder="When is the pre-employment Clearinghouse query required?">
+          <button class="compass-cta" type="submit">→</button>
+        </form>
+        <div class="chat-shortcuts">
+          <a href="/app/chat.html?workflow=qa">Q&A</a>
+          <a href="/app/chat.html?workflow=audit_prep">Audit prep</a>
+          <a href="/app/chat.html?workflow=coaching_draft">Coaching</a>
+          <a href="/app/chat.html?workflow=safety_meeting">Meetings</a>
+          <a href="/app/chat.html?workflow=dataq_dispute">DataQ</a>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>This week's safety meeting</h3><a href="/app/safety-meetings.html" class="link-arrow">Open →</a></div>
+        <div class="meeting-preview">
+          <div class="meeting-topic">Week 38 · Cargo securement basics</div>
+          <p>Compass auto-generated this week's topic based on a recent inspection flag in your fleet (cargo securement, 49 CFR 393 Subpart I). Includes the 5-minute talk track, driver Q&A prompt, and email-to-drivers template.</p>
+          <div class="meeting-meta">15-minute meeting · 1-page PDF · Email template</div>
+          <div class="meeting-actions">
+            <a href="#" class="compass-cta" style="width:100%;text-align:center;padding:10px 16px;">Send to drivers</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Calendar · next 30 days</h3><a href="/app/calendar.html" class="link-arrow">Open →</a></div>
+        <ul class="cal-mini">
+          <li><span class="cal-date">Sep 14</span><span class="cal-event">R. Quinn CDL expires</span></li>
+          <li><span class="cal-date">Sep 16</span><span class="cal-event">C. Hayes medical card</span></li>
+          <li><span class="cal-date">Sep 22</span><span class="cal-event">A. Morales annual MVR</span></li>
+          <li><span class="cal-date">Oct 01</span><span class="cal-event">Q4 random drug-test selection</span></li>
+          <li><span class="cal-date">Oct 04</span><span class="cal-event">L. Tran medical card</span></li>
+          <li><span class="cal-date">Oct 12</span><span class="cal-event">J. Reed CDL expires</span></li>
+          <li><span class="cal-date">Oct 15</span><span class="cal-event">Q3 IFTA filing window opens</span></li>
+        </ul>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-card-head"><h3>Activity feed</h3></div>
+        <div class="feed-mini">
+          <div class="feed-row">
+            <div class="feed-dot"></div>
+            <div><strong>2h ago</strong> — SMS sent to R. Quinn (CDL expires tomorrow)<br><span class="feed-meta">Twilio · TCPA opt-in verified</span></div>
+          </div>
+          <div class="feed-row">
+            <div class="feed-dot"></div>
+            <div><strong>5h ago</strong> — Compass flagged inspection 2026-09-09-A as DataQ candidate<br><span class="feed-meta">49 CFR 393.75(d) wrongly assigned</span></div>
+          </div>
+          <div class="feed-row">
+            <div class="feed-dot"></div>
+            <div><strong>Yesterday</strong> — Pre-employment Clearinghouse Full Query — Maria Velez<br><span class="feed-meta">Result: Not prohibited ✓ · DQF updated</span></div>
+          </div>
+          <div class="feed-row">
+            <div class="feed-dot"></div>
+            <div><strong>Yesterday</strong> — Drug test scheduled — A. Morales (random)<br><span class="feed-meta">Quest · 09/10 · 10am · driver notified</span></div>
+          </div>
+          <div class="feed-row">
+            <div class="feed-dot"></div>
+            <div><strong>2 days ago</strong> — Vehicle 1247 PM completed<br><span class="feed-meta">Driver-facing camera firmware updated</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS STRIP -->
+  <section class="dash-integrations">
+    <div class="dash-card">
+      <div class="dash-card-head"><h3>Connected data sources</h3><a href="/app/integrations.html" class="link-arrow">Manage →</a></div>
+      <div class="integ-grid">
+        <div class="integ"><div class="integ-name">Samsara</div><div class="integ-status status-on">● Connected</div><div class="integ-sub">28 vehicles · last sync 12 min</div></div>
+        <div class="integ"><div class="integ-name">Quest Diagnostics</div><div class="integ-status status-on">● Connected</div><div class="integ-sub">Drug-test results · 14 day</div></div>
+        <div class="integ"><div class="integ-name">Checkr</div><div class="integ-status status-on">● Connected</div><div class="integ-sub">Background checks · Partner-tier</div></div>
+        <div class="integ"><div class="integ-name">FMCSA Clearinghouse</div><div class="integ-status status-on">● Connected</div><div class="integ-sub">Auto Limited queries (annual)</div></div>
+        <div class="integ"><div class="integ-name">Comdata</div><div class="integ-status status-on">● Connected</div><div class="integ-sub">IFTA-ready · last sync 1h</div></div>
+        <div class="integ"><div class="integ-name">Motive / Geotab</div><div class="integ-status status-off">○ Not connected</div><div class="integ-sub"><a href="/app/integrations.html">Add →</a></div></div>
       </div>
     </div>
   </section>

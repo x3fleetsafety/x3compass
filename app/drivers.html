@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drivers — X3 Compass</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css">
+</head><body class="compass-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" alt="X3 Compass" height="40"></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html" class="active"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html"><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html"><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html"><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html"><span>⚙️</span> Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="plan-badge"><div class="plan-name">Pro plan</div><div class="plan-stats">28 / 50 trucks</div><a href="/pricing.html" class="plan-upgrade">Upgrade →</a></div>
+    <div class="user-chip"><div class="user-avatar">JK</div><div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div></div>
+  </div>
+</aside>
+
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Drivers</h1><p>35 active · 2 inactive · 1 in onboarding</p></div>
+<div class="dash-header-actions">
+  <button class="ghost-cta">⬆ Import CSV</button>
+  <a href="#" class="compass-cta">+ Add driver</a>
+</div>
+</header>
+
+<section style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;">
+<div class="kpi-tile"><div class="kpi-tile-label">Active drivers</div><div class="kpi-tile-num">35</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">DQF complete</div><div class="kpi-tile-num" style="color:var(--compass-teal);">33 / 35</div><div class="kpi-tile-sub">94% — 2 missing 391.23 history</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Expiring &lt;30d</div><div class="kpi-tile-num" style="color:var(--compass-amber);">6</div></div>
+<div class="kpi-tile"><div class="kpi-tile-label">Clearinghouse OK</div><div class="kpi-tile-num" style="color:var(--compass-teal);">35 / 35</div></div>
+</section>
+
+<div class="dash-card">
+<div class="dash-card-head">
+<h3>All drivers</h3>
+<div style="display:flex;gap:6px;align-items:center;">
+<input placeholder="Search by name, CDL #..." style="background:rgba(10,25,41,0.6);border:1px solid rgba(255,255,255,0.08);color:var(--compass-paper);padding:8px 12px;border-radius:8px;font-size:13px;width:240px;">
+<button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Filter</button>
+<button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Export</button>
+</div>
+</div>
+<table class="dash-table">
+<thead><tr><th>Driver</th><th>CDL state · class</th><th>Hire</th><th>CDL expiry</th><th>Medical</th><th>MVR last pull</th><th>Clearinghouse</th><th>Risk</th><th></th></tr></thead>
+<tbody>
+<tr class="row-urgent"><td><strong>Robert Quinn</strong><br><span class="td-sub">M42672438</span></td><td>MI · Class A · H, N, T</td><td>2022-03-04</td><td>2026-09-14 ⚠</td><td>2027-01-22</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Medium</td><td><a class="row-cta">Open</a></td></tr>
+<tr class="row-warn"><td><strong>Carla Hayes</strong><br><span class="td-sub">M89241173</span></td><td>IL · Class A · H</td><td>2023-07-19</td><td>2028-04-09</td><td>2026-09-16 ⚠</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Anthony Morales</strong><br><span class="td-sub">M99021847</span></td><td>IN · Class A · H, T</td><td>2021-11-02</td><td>2027-02-14</td><td>2027-03-18</td><td>2024-09-22 ⚠</td><td>✓ Not prohibited</td><td>Medium</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Lisa Tran</strong><br><span class="td-sub">M51938420</span></td><td>MI · Class A</td><td>2024-01-15</td><td>2027-09-30</td><td>2026-10-04</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Jacob Reed</strong><br><span class="td-sub">M77831092</span></td><td>OH · Class A · H, X</td><td>2020-05-22</td><td>2026-10-12</td><td>2027-04-06</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Maria Velez</strong><br><span class="td-sub">M22910374</span></td><td>MI · Class A</td><td>2026-09-01</td><td>2028-08-22</td><td>2027-07-15</td><td>2026-09-04</td><td>✓ Not prohibited</td><td>New hire</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Marcus Brennan</strong><br><span class="td-sub">M67849210</span></td><td>MI · Class A</td><td>2019-04-11</td><td>2028-01-19</td><td>2027-10-23</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Diana Park</strong><br><span class="td-sub">M11873465</span></td><td>WI · Class A · T</td><td>2023-02-08</td><td>2027-12-04</td><td>2027-05-16</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Tony Hernandez</strong><br><span class="td-sub">M38291056</span></td><td>IL · Class A · H, N</td><td>2018-09-30</td><td>2027-08-15</td><td>2027-02-10</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+<tr><td><strong>Brian Whitlock</strong><br><span class="td-sub">M50914327</span></td><td>OH · Class A</td><td>2022-08-17</td><td>2028-03-22</td><td>2027-12-08</td><td>2025-09-12</td><td>✓ Not prohibited</td><td>Low</td><td><a class="row-cta">Open</a></td></tr>
+</tbody>
+</table>
+<div style="padding:14px;text-align:center;color:var(--compass-mist);font-size:13px;border-top:1px solid rgba(255,255,255,0.06);">Showing 10 of 35 drivers · <a href="#" style="color:var(--compass-teal);">Load more</a></div>
+</div>
+</main></body></html>

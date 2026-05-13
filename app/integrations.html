@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integrations — X3 Compass</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css">
+</head><body class="compass-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" alt="X3 Compass" height="40"></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html" ><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html" ><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html" ><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html" class="active"><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html" ><span>⚙️</span> Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="plan-badge"><div class="plan-name">Pro plan</div><div class="plan-stats">28/50 trucks · 14/1500 msgs</div><a href="/pricing.html" class="plan-upgrade">Upgrade →</a></div>
+    <div class="user-chip"><div class="user-avatar">JK</div><div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div></div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Integrations</h1><p>Connect your data sources. Compass watches more, asks less.</p></div>
+</header>
+
+<section style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+<div class="dash-card"><div class="dash-card-head"><h3>Samsara</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">ELD + dashcam + telematics. HOS data flows in real-time. Harsh-event coaching auto-triggered.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">28 vehicles synced · Last sync 12 min ago</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Motive</h3><span style="color:var(--compass-mist);font-size:12px;">○ Not connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Alternative ELD if you're not on Samsara. Same data quality.</p><a href="#" class="compass-cta" style="font-size:12px;padding:8px 14px;">Connect →</a></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Geotab</h3><span style="color:var(--compass-mist);font-size:12px;">○ Not connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Deepest vehicle telemetry. Best for mixed fleets.</p><a href="#" class="compass-cta" style="font-size:12px;padding:8px 14px;">Connect →</a></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Quest Diagnostics</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">DOT drug testing. Random pool + post-accident workflows.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">35 drivers in pool · 14-day TAT</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>LabCorp</h3><span style="color:var(--compass-mist);font-size:12px;">○ Not connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Alternative drug-test provider.</p><a href="#" class="compass-cta" style="font-size:12px;padding:8px 14px;">Connect →</a></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Checkr</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Pre-employment background checks. Driver Basic Plus package.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">3 active screenings</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>FMCSA Clearinghouse</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Pre-employment Full Queries + Annual Limited Queries auto-run.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">35/35 drivers · all current</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Comdata</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Fuel-card transactions for IFTA + fuel CPM.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">$28,491 spend this month</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>EFS / WEX</h3><span style="color:var(--compass-mist);font-size:12px;">○ Not connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Alternative fuel-card providers.</p><a href="#" class="compass-cta" style="font-size:12px;padding:8px 14px;">Connect →</a></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Stripe</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Subscription billing + customer portal.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">Pro tier · $299/mo · next bill Oct 13</div><a href="#" style="font-size:12px;color:var(--compass-teal);">Manage billing →</a></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Twilio</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">SMS reminders to drivers. TCPA-compliant.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">34/35 drivers opted-in</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+<div class="dash-card"><div class="dash-card-head"><h3>Resend</h3><span style="color:var(--compass-teal);font-size:12px;">● Connected</span></div><p style="font-size:13px;color:var(--compass-fog);margin:0 0 12px;">Email delivery for all notifications.</p><div style="font-size:12px;color:var(--compass-mist);margin-bottom:12px;">99.8% deliverability</div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Settings</button></div>
+</section>
+</main></body></html>

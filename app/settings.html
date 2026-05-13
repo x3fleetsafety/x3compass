@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings — X3 Compass</title><link rel="icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/index-v2.css"><link rel="stylesheet" href="/assets/app.css">
+</head><body class="compass-bg-dark">
+<aside class="app-sidebar">
+  <a href="/" class="brand" style="padding:24px;display:block;"><img src="/assets/logo.svg" alt="X3 Compass" height="40"></a>
+  <nav class="app-nav">
+    <a href="/app/dashboard.html"><span>📊</span> Dashboard</a>
+    <a href="/app/chat.html"><span>💬</span> Ask Compass</a>
+    <a href="/app/drivers.html"><span>👤</span> Drivers</a>
+    <a href="/app/calendar.html"><span>📅</span> Calendar</a>
+    <a href="/app/audit-prep.html" ><span>📋</span> Audit prep</a>
+    <a href="/app/safety-meetings.html" ><span>📢</span> Safety meetings</a>
+    <a href="/app/dataq.html" ><span>⚖️</span> DataQ</a>
+    <a href="/app/integrations.html" ><span>🔌</span> Integrations</a>
+    <a href="/app/settings.html" class="active"><span>⚙️</span> Settings</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="plan-badge"><div class="plan-name">Pro plan</div><div class="plan-stats">28/50 trucks · 14/1500 msgs</div><a href="/pricing.html" class="plan-upgrade">Upgrade →</a></div>
+    <div class="user-chip"><div class="user-avatar">JK</div><div><div class="user-name">Joshua K.</div><div class="user-meta">Apex Demo Transport</div></div></div>
+  </div>
+</aside>
+<main class="app-main">
+<header class="dash-header">
+<div><h1>Settings</h1><p>Account, billing, notifications, team — everything you need to manage Compass.</p></div>
+</header>
+
+<section style="display:grid;grid-template-columns:240px 1fr;gap:16px;">
+<aside style="display:flex;flex-direction:column;gap:4px;">
+<a href="#account" style="padding:10px 14px;border-radius:8px;background:rgba(45,212,191,0.1);color:var(--compass-teal);font-size:13px;font-weight:600;">Account</a>
+<a href="#billing" style="padding:10px 14px;border-radius:8px;color:var(--compass-fog);font-size:13px;">Billing</a>
+<a href="#notifications" style="padding:10px 14px;border-radius:8px;color:var(--compass-fog);font-size:13px;">Notifications</a>
+<a href="#team" style="padding:10px 14px;border-radius:8px;color:var(--compass-fog);font-size:13px;">Team</a>
+<a href="#security" style="padding:10px 14px;border-radius:8px;color:var(--compass-fog);font-size:13px;">Security</a>
+<a href="#api" style="padding:10px 14px;border-radius:8px;color:var(--compass-fog);font-size:13px;">API & webhooks</a>
+<a href="#danger" style="padding:10px 14px;border-radius:8px;color:#FCA5A5;font-size:13px;">Danger zone</a>
+</aside>
+<div style="display:flex;flex-direction:column;gap:16px;">
+<div class="dash-card" id="account">
+<div class="dash-card-head"><h3>Account</h3></div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+<label style="display:block;"><span style="font-size:12px;color:var(--compass-fog);font-weight:600;">Carrier name</span><input value="Apex Demo Transport" style="width:100%;background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:10px;border-radius:8px;margin-top:4px;font-size:13px;"></label>
+<label style="display:block;"><span style="font-size:12px;color:var(--compass-fog);font-weight:600;">DOT #</span><input value="1234567" style="width:100%;background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:10px;border-radius:8px;margin-top:4px;font-size:13px;"></label>
+<label style="display:block;"><span style="font-size:12px;color:var(--compass-fog);font-weight:600;">MC #</span><input value="MC-987654" style="width:100%;background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:10px;border-radius:8px;margin-top:4px;font-size:13px;"></label>
+<label style="display:block;"><span style="font-size:12px;color:var(--compass-fog);font-weight:600;">State of operation</span><input value="MI" style="width:100%;background:rgba(10,25,41,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:10px;border-radius:8px;margin-top:4px;font-size:13px;"></label>
+</div>
+<div style="margin-top:14px;"><button class="compass-cta">Save changes</button></div>
+</div>
+
+<div class="dash-card" id="billing">
+<div class="dash-card-head"><h3>Billing</h3></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+<div>
+<div style="font-size:12px;color:var(--compass-mist);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:8px;">CURRENT PLAN</div>
+<div style="font-size:24px;font-weight:800;color:var(--compass-paper);">Pro · $299/mo</div>
+<div style="font-size:13px;color:var(--compass-fog);margin-top:4px;">Next bill: October 13, 2026 · Auto-renew on</div>
+<div style="display:flex;gap:8px;margin-top:14px;">
+<a href="/pricing.html" class="compass-cta" style="font-size:12px;padding:8px 14px;">Upgrade</a>
+<button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Cancel</button>
+</div>
+</div>
+<div>
+<div style="font-size:12px;color:var(--compass-mist);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:8px;">PAYMENT METHOD</div>
+<div style="background:rgba(255,255,255,0.04);padding:12px;border-radius:10px;font-size:13px;color:var(--compass-fog);">Visa ending in •••• 6411<br><span style="font-size:11px;color:var(--compass-mist);">Expires 12/27</span></div>
+<button class="ghost-cta" style="font-size:12px;padding:8px 14px;margin-top:10px;">Update card</button>
+</div>
+</div>
+</div>
+
+<div class="dash-card" id="notifications">
+<div class="dash-card-head"><h3>Notification preferences</h3></div>
+<table style="width:100%;font-size:13px;">
+<thead><tr style="text-align:left;color:var(--compass-mist);font-size:11px;letter-spacing:0.05em;text-transform:uppercase;"><th style="padding:8px 0;">Event</th><th style="padding:8px 0;">Channel</th><th style="padding:8px 0;text-align:center;">Test</th></tr></thead>
+<tbody style="color:var(--compass-fog);">
+<tr style="border-top:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 0;">CDL expiry (1 day before)</td><td><select style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:6px;border-radius:6px;"><option>SMS + Email</option><option>Email only</option><option>SMS only</option></select></td><td style="text-align:center;"><a style="font-size:11px;color:var(--compass-teal);">Send test</a></td></tr>
+<tr style="border-top:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 0;">Medical cert expiry (1 day before)</td><td><select style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:6px;border-radius:6px;"><option>SMS + Email</option></select></td><td style="text-align:center;"><a style="font-size:11px;color:var(--compass-teal);">Send test</a></td></tr>
+<tr style="border-top:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 0;">Inspection event</td><td><select style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:6px;border-radius:6px;"><option>Email</option><option>SMS + Email</option></select></td><td style="text-align:center;"><a style="font-size:11px;color:var(--compass-teal);">Send test</a></td></tr>
+<tr style="border-top:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 0;">DataQ candidate flagged</td><td><select style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:6px;border-radius:6px;"><option>Email</option></select></td><td style="text-align:center;"><a style="font-size:11px;color:var(--compass-teal);">Send test</a></td></tr>
+<tr style="border-top:1px solid rgba(255,255,255,0.06);"><td style="padding:12px 0;">Weekly safety meeting ready</td><td><select style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--compass-paper);padding:6px;border-radius:6px;"><option>Email</option></select></td><td style="text-align:center;"><a style="font-size:11px;color:var(--compass-teal);">Send test</a></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="dash-card" id="team">
+<div class="dash-card-head"><h3>Team</h3><a href="#" class="compass-cta" style="font-size:12px;padding:8px 14px;">+ Invite</a></div>
+<table class="dash-table">
+<thead><tr><th>User</th><th>Email</th><th>Role</th><th>Last sign-in</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Joshua Kovarik</strong></td><td>joshua@x3fleetsafety.com</td><td>Owner</td><td>2 minutes ago</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="dash-card" id="security">
+<div class="dash-card-head"><h3>Security</h3></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><div><strong style="color:var(--compass-paper);font-size:14px;">Two-factor authentication</strong><p style="font-size:12px;color:var(--compass-mist);margin:4px 0 0;">Required for Owner/Admin roles in Pro+ tiers.</p></div><button class="compass-cta" style="font-size:12px;padding:8px 14px;">Enable</button></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);"><div><strong style="color:var(--compass-paper);font-size:14px;">Active sessions</strong><p style="font-size:12px;color:var(--compass-mist);margin:4px 0 0;">1 active session · Macintosh · Detroit, MI</p></div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Sign out all</button></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;"><div><strong style="color:var(--compass-paper);font-size:14px;">Download data export</strong><p style="font-size:12px;color:var(--compass-mist);margin:4px 0 0;">Get all your fleet + conversation data in JSON / CSV.</p></div><button class="ghost-cta" style="font-size:12px;padding:8px 14px;">Request export</button></div>
+</div>
+
+<div class="dash-card" id="danger" style="border-color:rgba(239,68,68,0.3);">
+<div class="dash-card-head"><h3 style="color:#FCA5A5;">Danger zone</h3></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;"><div><strong style="color:var(--compass-paper);font-size:14px;">Cancel subscription</strong><p style="font-size:12px;color:var(--compass-mist);margin:4px 0 0;">Self-serve. No friction. Effective at end of current billing period.</p></div><button style="background:rgba(239,68,68,0.1);color:#FCA5A5;border:1px solid rgba(239,68,68,0.4);font-size:12px;padding:8px 14px;border-radius:8px;cursor:pointer;">Cancel</button></div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(255,255,255,0.06);"><div><strong style="color:var(--compass-paper);font-size:14px;">Delete account</strong><p style="font-size:12px;color:var(--compass-mist);margin:4px 0 0;">Permanently delete all carrier data. This cannot be undone.</p></div><button style="background:rgba(239,68,68,0.1);color:#FCA5A5;border:1px solid rgba(239,68,68,0.4);font-size:12px;padding:8px 14px;border-radius:8px;cursor:pointer;">Delete</button></div>
+</div>
+</div>
+</section>
+</main></body></html>
