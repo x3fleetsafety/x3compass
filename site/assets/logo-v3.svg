@@ -6,12 +6,8 @@
       <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
   </defs>
-
-  <!-- X3 box (navy with yellow X3) -->
-  <rect x="6" y="14" width="62" height="52" rx="6" fill="#0F2540" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.35"/>
-  <text x="37" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="-1" fill="#FBBF24">X3</text>
-
-  <!-- COMPASS in gradient + tagline -->
+  <rect x="6" y="14" width="62" height="52" rx="6" fill="#2DD4BF" stroke="#67E8F9" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="37" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="-1" fill="#0A1929">X3</text>
   <text x="86" y="46" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="30" letter-spacing="1" fill="url(#word-grad)">COMPASS</text>
   <text x="86" y="64" font-family="ui-monospace, monospace" font-weight="700" font-size="8" letter-spacing="2" fill="#94A3B8">AUTOMATED · ACCURATE · AUDITED</text>
 </svg>
