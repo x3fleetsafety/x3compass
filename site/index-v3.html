@@ -205,6 +205,27 @@ button { font-family: inherit; cursor: pointer; }
 .btn-ghost:hover { border-color: var(--text-mute); color: var(--text); }
 .btn-lg { padding: 16px 28px; font-size: 16px; border-radius: 12px; }
 .btn-xl { padding: 18px 36px; font-size: 17px; border-radius: 14px; font-weight: 700; }
+
+/* Start-Free pill */
+.btn-pill-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 22px 11px 22px;
+  border-radius: 999px;
+  font-weight: 700; font-size: 14px;
+  background: linear-gradient(120deg, var(--teal), var(--cyan));
+  color: var(--ink);
+  transition: transform .12s ease, box-shadow .18s ease, filter .15s ease;
+  white-space: nowrap;
+}
+.btn-pill-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(45,212,191,.45);
+  filter: brightness(1.05);
+}
+.btn-pill-cta svg { transition: transform .15s ease; }
+.btn-pill-cta:hover svg { transform: translateX(2px); }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 .arrow::after { content: "→"; transition: transform .15s; }
 .arrow:hover::after { transform: translateX(3px); }
 
@@ -917,12 +938,12 @@ footer {
       </span>
     </a>
     <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#demo">Demo</a>
       <a href="/pricing.html">Pricing</a>
-      <a href="/centers/hazmat" style="color:var(--amber);">Hazmat Center</a>
-      <a href="/partners.html">Partners</a>
-      <a href="/use-cases.html">Use cases</a>
-      <a href="/skills.html">100 Skills</a>
-      <a href="/faq.html">FAQ</a>
+      <a href="/faq.html">FAQs</a>
     </nav>
     <div class="nav-cta">
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
@@ -930,11 +951,15 @@ footer {
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
       <a href="/app/signup.html" class="btn btn-ghost">Sign in</a>
-      <a href="/app/signup.html?tier=free" class="btn btn-primary arrow">Start free </a>
+      <a href="/app/signup.html?tier=free" class="btn-pill-cta">
+        Start Free
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
 </header>
 
+<a id="top"></a>
 <!-- HERO =========================================================== -->
 <section class="hero">
   <div class="hero-inner">
@@ -1048,7 +1073,7 @@ footer {
 </section>
 
 <!-- FEATURE: Q&A COMPASS ========================================== -->
-<section class="tint">
+<section class="tint" id="services">
   <div class="section-inner">
     <div class="section-head center">
       <p class="eyebrow">02 · The product</p>
@@ -1090,7 +1115,7 @@ footer {
     </div>
 
     <!-- CALENDAR -->
-    <div class="feature reverse reveal">
+    <div class="feature reverse reveal" id="dashboard">
       <div class="feature-text">
         <p class="eyebrow eyebrow-dark">Brain 02 · Calendar Compass</p>
         <h3>Nothing expires on your watch.</h3>
@@ -1166,7 +1191,7 @@ footer {
 </section>
 
 <!-- TWELVE BRAINS GRID (dark) ====================================== -->
-<section class="dark" id="how">
+<section class="dark" id="demo">
   <div class="section-inner">
     <div class="section-head center">
       <p class="eyebrow">03 · The full toolset</p>
